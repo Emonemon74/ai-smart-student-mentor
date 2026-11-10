@@ -5,7 +5,7 @@
 | Project | AI Smart Student Mentor & Career Guidance Display (Trialshopy) |
 | Document | High-Level Design (HLD) and technical requirements |
 | Version | 1.1 — 10 Nov 2026 |
-| Prepared by | _<name>_ |
+| Prepared by | Emon |
 | Submission | 13 Nov 2026 |
 | Scope | MVP demo on synthetic data; a laptop acts as the kiosk |
 | Detailed design | `docs/LLD.md` (component contracts, schema, prompts, tests) |
