@@ -4,6 +4,8 @@ import type { NextConfig } from "next";
 const API = `http://127.0.0.1:${process.env.API_PORT ?? "8000"}`;
 
 const config: NextConfig = {
+  // Tailwind is wired through Turbopack in this Next.js template (no postcss config).
+  turbopack: { rules: { "*.css": { loaders: ["@tailwindcss/turbopack"], as: "*.css" } } },
   async rewrites() {
     return [{ source: "/api/:path*", destination: `${API}/api/:path*` }];
   },

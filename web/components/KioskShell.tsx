@@ -15,7 +15,7 @@ export function KioskShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [warn, setWarn] = useState<number | null>(null);
   const [down, setDown] = useState(false);
-  const [humanMsg, setHumanMsg] = useState(false);
+  const [humanMsg, setHumanMsg] = useState<"sent" | "desk" | null>(null);
   const idle = useRef<ReturnType<typeof setTimeout> | null>(null);
   const loggedIn = !!studentName;
 
@@ -27,14 +27,14 @@ export function KioskShell({ children }: { children: React.ReactNode }) {
   }, []);
 
   // Idle timer (only while signed in).
-  const arm = useCallback(() => {
+  const startTimer = useCallback(() => {
     if (idle.current) clearTimeout(idle.current);
-    setWarn(null);
     idle.current = setTimeout(() => setWarn(WARN_SECONDS), WARN_AFTER_MS);
   }, []);
+  const arm = useCallback(() => { setWarn(null); startTimer(); }, [startTimer]);
   useEffect(() => {
     if (!loggedIn) return;
-    arm();
+    startTimer();
     const onActivity = () => { if (warn === null) arm(); };
     window.addEventListener("pointerdown", onActivity);
     window.addEventListener("keydown", onActivity);
@@ -43,7 +43,7 @@ export function KioskShell({ children }: { children: React.ReactNode }) {
       window.removeEventListener("keydown", onActivity);
       if (idle.current) clearTimeout(idle.current);
     };
-  }, [loggedIn, arm, warn]);
+  }, [loggedIn, arm, startTimer, warn]);
   useEffect(() => {
     if (warn === null) return;
     if (warn <= 0) { hardReset(); return; }
@@ -66,8 +66,12 @@ export function KioskShell({ children }: { children: React.ReactNode }) {
   }, []);
 
   async function humanMentor() {
-    try { await api("/requests", { method: "POST", json: { kind: "referral" } }); } catch {}
-    setHumanMsg(true);
+    try {
+      await api("/requests", { method: "POST", json: { kind: "referral" } });
+      setHumanMsg("sent");
+    } catch {
+      setHumanMsg("desk"); // e.g. before consent: be honest and point to the desk instead of claiming it was sent
+    }
   }
 
   const showHeader = loggedIn && pathname !== "/" && pathname !== "/login";
@@ -96,8 +100,8 @@ export function KioskShell({ children }: { children: React.ReactNode }) {
       )}
       {humanMsg && (
         <Modal>
-          <p>{t("human_mentor_msg")}</p>
-          <button autoFocus onClick={() => setHumanMsg(false)} className="mt-4 min-h-12 rounded-lg bg-[#14284b] px-6 text-white">{t("close")}</button>
+          <p>{humanMsg === "sent" ? t("human_mentor_msg") : t("human_mentor_desk")}</p>
+          <button autoFocus onClick={() => setHumanMsg(null)} className="mt-4 min-h-12 rounded-lg bg-[#14284b] px-6 text-white">{t("close")}</button>
         </Modal>
       )}
       {down && (

@@ -14,18 +14,21 @@ const UiContext = createContext<Ui | null>(null);
 
 // sessionStorage can be blocked: every access is wrapped.
 const read = (k: string) => { try { return sessionStorage.getItem(k); } catch { return null; } };
-const write = (k: string, v: string | null) => { try { v === null ? sessionStorage.removeItem(k) : sessionStorage.setItem(k, v); } catch {} };
+const write = (k: string, v: string | null) => { try { if (v === null) sessionStorage.removeItem(k); else sessionStorage.setItem(k, v); } catch {} };
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<Lang>("en");
   const [textSize, setTextSizeState] = useState<TextSize>("normal");
   const [studentName, setNameState] = useState<string | null>(null);
 
+  // Hydrate from sessionStorage after mount (the server render has no storage, so reading during render would mismatch).
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     setLangState(read("lang") === "hi" ? "hi" : "en");
     setTextSizeState(read("textSize") === "large" ? "large" : "normal");
     setNameState(read("studentName"));
   }, []);
+  /* eslint-enable react-hooks/set-state-in-effect */
   useEffect(() => {
     document.documentElement.classList.toggle("text-large", textSize === "large");
     document.documentElement.lang = lang;
