@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Large-text mode (LLD C11.4): scales rem-based sizes. */
+html.text-large { font-size: 20px; }
+
+@media print {
+  @page { size: A4; margin: 16mm; }
+  body { background: #fff; }
+}

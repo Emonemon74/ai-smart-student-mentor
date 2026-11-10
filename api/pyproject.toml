@@ -1,0 +1,16 @@
+[project]
+name = "emon-api"
+version = "0.1.0"
+description = "AI Smart Student Mentor: API"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi[standard]",
+  "psycopg[binary,pool]",
+  "openai",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
