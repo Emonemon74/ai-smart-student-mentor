@@ -39,6 +39,8 @@ def _reset(client):
         conn.execute("TRUNCATE sessions, roadmaps, tasks, share_tokens, requests, feedback, audit_log RESTART IDENTITY CASCADE")
         conn.execute("UPDATE students SET failed_attempts=0, locked_until=NULL")
         conn.execute("DELETE FROM assessments WHERE batch='review'")
+        conn.execute("DELETE FROM attendance WHERE batch='review'")
+        conn.execute("DELETE FROM imports WHERE batch='review'")
         conn.commit()
     client.cookies.clear()
     yield
