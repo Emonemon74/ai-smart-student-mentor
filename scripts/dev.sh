@@ -13,7 +13,21 @@ export API_PORT
 docker compose up -d postgres
 
 PIDS=()
-cleanup() { echo; echo "Stopping..."; for p in "${PIDS[@]:-}"; do kill "$p" 2>/dev/null || true; done; }
+# List a process and everything it started (the API and web server run under subshells and npm/uv wrappers).
+tree() {
+  local pid="$1" child
+  echo "$pid"
+  for child in $(pgrep -P "$pid" 2>/dev/null || true); do tree "$child"; done
+}
+cleanup() {
+  trap - EXIT INT TERM
+  echo; echo "Stopping..."
+  local all=() p
+  for p in "${PIDS[@]:-}"; do [ -n "$p" ] && all+=($(tree "$p")); done
+  [ ${#all[@]} -gt 0 ] && kill "${all[@]}" 2>/dev/null || true
+  sleep 2
+  for p in "${all[@]:-}"; do kill -0 "$p" 2>/dev/null && kill -9 "$p" 2>/dev/null || true; done  # anything slow to exit
+}
 trap cleanup EXIT INT TERM
 
 # Tunnel: only the web port is exposed. Read its log until the public URL appears.
