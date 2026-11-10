@@ -1,0 +1,51 @@
+subject_code,topic,title,url,kind
+DSA,Arrays,Array data structure guide,https://www.geeksforgeeks.org/array-data-structure/,article
+DSA,Arrays,Sorting visualised,https://visualgo.net/en/sorting,practice
+DSA,Linked Lists,Linked list data structure,https://www.geeksforgeeks.org/linked-list-data-structure/,article
+DSA,Linked Lists,Linked list and array visualiser,https://visualgo.net/en/list,practice
+DSA,Stacks & Queues,Stack data structure,https://www.geeksforgeeks.org/stack-data-structure/,article
+DSA,Stacks & Queues,Queue data structure,https://www.geeksforgeeks.org/queue-data-structure/,article
+DSA,Trees,Binary search tree visualiser,https://visualgo.net/en/bst,practice
+DSA,Trees,Binary tree data structure,https://www.geeksforgeeks.org/binary-tree-data-structure/,article
+DSA,Graphs,BFS and DFS visualiser,https://visualgo.net/en/dfsbfs,practice
+DSA,Graphs,Breadth first search,https://cp-algorithms.com/graph/breadth-first-search.html,article
+DBMS,ER Model,Introduction to the ER model,https://www.geeksforgeeks.org/introduction-of-er-model/,article
+DBMS,ER Model,Database management system (NPTEL),https://nptel.ac.in/courses/106105175,course
+DBMS,SQL,SQL tutorial,https://www.geeksforgeeks.org/sql-tutorial/,article
+DBMS,SQL,Intro to SQL (Khan Academy),https://www.khanacademy.org/computing/computer-programming/sql,course
+DBMS,Normalization,Normal forms in DBMS,https://www.geeksforgeeks.org/normal-forms-in-dbms/,article
+DBMS,Normalization,Database normalization introduction,https://www.geeksforgeeks.org/introduction-of-database-normalization/,article
+DBMS,Transactions,Transactions in DBMS,https://www.geeksforgeeks.org/transaction-in-dbms/,article
+DBMS,Transactions,ACID properties in DBMS,https://www.geeksforgeeks.org/acid-properties-in-dbms/,article
+DBMS,Indexing,Indexing in databases,https://www.geeksforgeeks.org/indexing-in-databases-set-1/,article
+DBMS,Indexing,B-tree introduction,https://www.geeksforgeeks.org/introduction-of-b-tree-2/,article
+OS,Processes,Process management,https://www.geeksforgeeks.org/introduction-of-process-management/,article
+OS,Processes,Process schedulers,https://www.geeksforgeeks.org/process-schedulers-in-operating-system/,article
+OS,Scheduling,CPU scheduling,https://www.geeksforgeeks.org/cpu-scheduling-in-operating-systems/,article
+OS,Scheduling,Round robin scheduling,https://www.geeksforgeeks.org/round-robin-scheduling-in-operating-system/,article
+OS,Synchronization,Process synchronization,https://www.geeksforgeeks.org/introduction-of-process-synchronization/,article
+OS,Synchronization,Semaphores,https://www.geeksforgeeks.org/semaphores-in-process-synchronization/,article
+OS,Memory,Memory management,https://www.geeksforgeeks.org/memory-management-in-operating-system/,article
+OS,Memory,Paging,https://www.geeksforgeeks.org/paging-in-operating-system/,article
+OS,File Systems,File systems,https://www.geeksforgeeks.org/file-systems-in-operating-system/,article
+OS,File Systems,File allocation methods,https://www.geeksforgeeks.org/file-allocation-methods/,article
+CN,OSI & TCP/IP,OSI model,https://www.geeksforgeeks.org/open-systems-interconnection-model-osi/,article
+CN,OSI & TCP/IP,TCP/IP model,https://www.geeksforgeeks.org/tcp-ip-model/,article
+CN,Data Link,Data link layer,https://www.geeksforgeeks.org/data-link-layer/,article
+CN,Data Link,Framing,https://www.geeksforgeeks.org/framing-in-data-link-layer/,article
+CN,Routing,Routing protocols,https://www.geeksforgeeks.org/open-shortest-path-first-ospf-protocol-fundamentals/,article
+CN,Routing,Distance vector routing,https://www.geeksforgeeks.org/distance-vector-routing-dvr-protocol/,article
+CN,Transport,Transport layer,https://www.geeksforgeeks.org/transport-layer-responsibilities/,article
+CN,Transport,TCP three-way handshake,https://www.geeksforgeeks.org/tcp-3-way-handshake-process/,article
+CN,Application Layer,Application layer in OSI,https://www.geeksforgeeks.org/application-layer-in-osi-model/,article
+CN,Application Layer,HTTP overview,https://www.geeksforgeeks.org/http-full-form/,article
+DM,Logic,Propositional logic,https://www.geeksforgeeks.org/mathematical-logic/,article
+DM,Logic,Mathematics for CS (MIT OCW),https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/,course
+DM,Sets & Relations,Set theory,https://www.geeksforgeeks.org/set-theory/,article
+DM,Sets & Relations,Relations in discrete mathematics,https://www.geeksforgeeks.org/types-of-relations/,article
+DM,Combinatorics,Combinatorics,https://www.geeksforgeeks.org/permutation-and-combination/,article
+DM,Combinatorics,Binomial coefficients,https://cp-algorithms.com/combinatorics/binomial-coefficients.html,article
+DM,Graph Theory,Graph theory tutorial,https://www.geeksforgeeks.org/graph-theory-tutorial/,article
+DM,Graph Theory,Depth first search,https://cp-algorithms.com/graph/depth-first-search.html,article
+DM,Recurrences,Recurrence relations,https://www.geeksforgeeks.org/recurrence-relations/,article
+DM,Recurrences,Fibonacci numbers,https://cp-algorithms.com/algebra/fibonacci-numbers.html,article

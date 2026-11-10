@@ -1,5 +1,5 @@
 [project]
-name = "emon-api"
+name = "ai-smart-student-mentor-api"
 version = "0.1.0"
 description = "AI Smart Student Mentor: API"
 requires-python = ">=3.12"

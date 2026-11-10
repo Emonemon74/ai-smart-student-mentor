@@ -1,0 +1,2851 @@
+roll_no,subject_code,topic,kind,score,max,taken_on,batch
+CS23001,DSA,Arrays,quiz,7.0,10,2026-08-10,baseline
+CS23001,DSA,Arrays,quiz,7.0,10,2026-08-17,baseline
+CS23001,DSA,Linked Lists,quiz,7.0,10,2026-08-24,baseline
+CS23001,DSA,Linked Lists,quiz,7.0,10,2026-08-31,baseline
+CS23001,DSA,Stacks & Queues,quiz,7.0,10,2026-09-07,baseline
+CS23001,DSA,Stacks & Queues,quiz,7.0,10,2026-09-14,baseline
+CS23001,DSA,Trees,quiz,5.5,10,2026-09-21,baseline
+CS23001,DSA,Graphs,quiz,4.0,10,2026-09-28,baseline
+CS23001,DSA,Trees,quiz,5.5,10,2026-10-05,baseline
+CS23001,DSA,Graphs,quiz,4.0,10,2026-10-12,baseline
+CS23001,DSA,All,internal,17.0,30,2026-09-15,baseline
+CS23001,DSA,All,internal,17.5,30,2026-10-20,baseline
+CS23001,DSA,All,internal,,30,2026-11-24,baseline
+CS23001,DSA,Arrays,quiz,9.0,10,2026-11-26,review
+CS23001,DSA,Linked Lists,quiz,6.5,10,2026-11-27,review
+CS23001,DSA,Stacks & Queues,quiz,8.0,10,2026-11-28,review
+CS23001,DSA,Trees,quiz,7.0,10,2026-11-26,review
+CS23001,DSA,Graphs,quiz,6.0,10,2026-11-27,review
+CS23001,DSA,All,internal,25.5,30,2026-11-28,review
+CS23001,DBMS,ER Model,quiz,9.0,10,2026-08-10,baseline
+CS23001,DBMS,ER Model,quiz,7.0,10,2026-08-17,baseline
+CS23001,DBMS,SQL,quiz,7.5,10,2026-08-24,baseline
+CS23001,DBMS,SQL,quiz,7.0,10,2026-08-31,baseline
+CS23001,DBMS,Normalization,quiz,7.0,10,2026-09-07,baseline
+CS23001,DBMS,Normalization,quiz,7.5,10,2026-09-14,baseline
+CS23001,DBMS,Transactions,quiz,7.5,10,2026-09-21,baseline
+CS23001,DBMS,Indexing,quiz,7.5,10,2026-09-28,baseline
+CS23001,DBMS,Transactions,quiz,6.0,10,2026-10-05,baseline
+CS23001,DBMS,Indexing,quiz,8.5,10,2026-10-12,baseline
+CS23001,DBMS,All,internal,22.0,30,2026-09-15,baseline
+CS23001,DBMS,All,internal,25.5,30,2026-10-20,baseline
+CS23001,DBMS,All,internal,,30,2026-11-24,baseline
+CS23001,DBMS,ER Model,quiz,8.0,10,2026-11-26,review
+CS23001,DBMS,SQL,quiz,9.5,10,2026-11-27,review
+CS23001,DBMS,Normalization,quiz,7.5,10,2026-11-28,review
+CS23001,DBMS,Transactions,quiz,7.0,10,2026-11-26,review
+CS23001,DBMS,Indexing,quiz,7.5,10,2026-11-27,review
+CS23001,DBMS,All,internal,24.5,30,2026-11-28,review
+CS23001,OS,Processes,quiz,8.0,10,2026-08-10,baseline
+CS23001,OS,Processes,quiz,7.0,10,2026-08-17,baseline
+CS23001,OS,Scheduling,quiz,6.5,10,2026-08-24,baseline
+CS23001,OS,Scheduling,quiz,7.0,10,2026-08-31,baseline
+CS23001,OS,Synchronization,quiz,8.0,10,2026-09-07,baseline
+CS23001,OS,Synchronization,quiz,7.5,10,2026-09-14,baseline
+CS23001,OS,Memory,quiz,6.0,10,2026-09-21,baseline
+CS23001,OS,File Systems,quiz,7.5,10,2026-09-28,baseline
+CS23001,OS,Memory,quiz,8.0,10,2026-10-05,baseline
+CS23001,OS,File Systems,quiz,8.5,10,2026-10-12,baseline
+CS23001,OS,All,internal,23.0,30,2026-09-15,baseline
+CS23001,OS,All,internal,22.5,30,2026-10-20,baseline
+CS23001,OS,All,internal,,30,2026-11-24,baseline
+CS23001,OS,Processes,quiz,7.0,10,2026-11-26,review
+CS23001,OS,Scheduling,quiz,7.5,10,2026-11-27,review
+CS23001,OS,Synchronization,quiz,8.0,10,2026-11-28,review
+CS23001,OS,Memory,quiz,8.0,10,2026-11-26,review
+CS23001,OS,File Systems,quiz,7.5,10,2026-11-27,review
+CS23001,OS,All,internal,20.5,30,2026-11-28,review
+CS23001,CN,OSI & TCP/IP,quiz,6.5,10,2026-08-10,baseline
+CS23001,CN,OSI & TCP/IP,quiz,8.0,10,2026-08-17,baseline
+CS23001,CN,Data Link,quiz,6.0,10,2026-08-24,baseline
+CS23001,CN,Data Link,quiz,7.0,10,2026-08-31,baseline
+CS23001,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23001,CN,Routing,quiz,8.5,10,2026-09-14,baseline
+CS23001,CN,Transport,quiz,7.5,10,2026-09-21,baseline
+CS23001,CN,Application Layer,quiz,8.0,10,2026-09-28,baseline
+CS23001,CN,Transport,quiz,7.0,10,2026-10-05,baseline
+CS23001,CN,Application Layer,quiz,7.0,10,2026-10-12,baseline
+CS23001,CN,All,internal,21.0,30,2026-09-15,baseline
+CS23001,CN,All,internal,25.0,30,2026-10-20,baseline
+CS23001,CN,All,internal,,30,2026-11-24,baseline
+CS23001,CN,OSI & TCP/IP,quiz,8.0,10,2026-11-26,review
+CS23001,CN,Data Link,quiz,9.5,10,2026-11-27,review
+CS23001,CN,Routing,quiz,7.5,10,2026-11-28,review
+CS23001,CN,Transport,quiz,8.0,10,2026-11-26,review
+CS23001,CN,Application Layer,quiz,8.0,10,2026-11-27,review
+CS23001,CN,All,internal,22.5,30,2026-11-28,review
+CS23001,DM,Logic,quiz,8.0,10,2026-08-10,baseline
+CS23001,DM,Logic,quiz,6.5,10,2026-08-17,baseline
+CS23001,DM,Sets & Relations,quiz,7.0,10,2026-08-24,baseline
+CS23001,DM,Sets & Relations,quiz,7.5,10,2026-08-31,baseline
+CS23001,DM,Combinatorics,quiz,7.5,10,2026-09-07,baseline
+CS23001,DM,Combinatorics,quiz,6.5,10,2026-09-14,baseline
+CS23001,DM,Graph Theory,quiz,6.0,10,2026-09-21,baseline
+CS23001,DM,Recurrences,quiz,6.0,10,2026-09-28,baseline
+CS23001,DM,Graph Theory,quiz,7.0,10,2026-10-05,baseline
+CS23001,DM,Recurrences,quiz,7.0,10,2026-10-12,baseline
+CS23001,DM,All,internal,22.0,30,2026-09-15,baseline
+CS23001,DM,All,internal,20.0,30,2026-10-20,baseline
+CS23001,DM,All,internal,,30,2026-11-24,baseline
+CS23001,DM,Logic,quiz,6.5,10,2026-11-26,review
+CS23001,DM,Sets & Relations,quiz,7.5,10,2026-11-27,review
+CS23001,DM,Combinatorics,quiz,7.5,10,2026-11-28,review
+CS23001,DM,Graph Theory,quiz,8.0,10,2026-11-26,review
+CS23001,DM,Recurrences,quiz,8.0,10,2026-11-27,review
+CS23001,DM,All,internal,22.0,30,2026-11-28,review
+CS23002,DSA,Arrays,quiz,7.0,10,2026-08-10,baseline
+CS23002,DSA,Arrays,quiz,6.5,10,2026-08-17,baseline
+CS23002,DSA,Linked Lists,quiz,7.0,10,2026-08-24,baseline
+CS23002,DSA,Linked Lists,quiz,6.5,10,2026-08-31,baseline
+CS23002,DSA,Stacks & Queues,quiz,6.0,10,2026-09-07,baseline
+CS23002,DSA,Stacks & Queues,quiz,7.0,10,2026-09-14,baseline
+CS23002,DSA,Trees,quiz,7.0,10,2026-09-21,baseline
+CS23002,DSA,Graphs,quiz,7.0,10,2026-09-28,baseline
+CS23002,DSA,Trees,quiz,6.5,10,2026-10-05,baseline
+CS23002,DSA,Graphs,quiz,7.5,10,2026-10-12,baseline
+CS23002,DSA,All,internal,24.5,30,2026-09-15,baseline
+CS23002,DSA,All,internal,21.5,30,2026-10-20,baseline
+CS23002,DSA,All,internal,,30,2026-11-24,baseline
+CS23002,DSA,Arrays,quiz,7.0,10,2026-11-26,review
+CS23002,DSA,Linked Lists,quiz,7.5,10,2026-11-27,review
+CS23002,DSA,Stacks & Queues,quiz,6.5,10,2026-11-28,review
+CS23002,DSA,Trees,quiz,7.5,10,2026-11-26,review
+CS23002,DSA,Graphs,quiz,7.5,10,2026-11-27,review
+CS23002,DSA,All,internal,25.5,30,2026-11-28,review
+CS23002,DBMS,ER Model,quiz,8.0,10,2026-08-10,baseline
+CS23002,DBMS,ER Model,quiz,7.0,10,2026-08-17,baseline
+CS23002,DBMS,SQL,quiz,8.0,10,2026-08-24,baseline
+CS23002,DBMS,SQL,quiz,6.5,10,2026-08-31,baseline
+CS23002,DBMS,Normalization,quiz,7.5,10,2026-09-07,baseline
+CS23002,DBMS,Normalization,quiz,7.5,10,2026-09-14,baseline
+CS23002,DBMS,Transactions,quiz,7.0,10,2026-09-21,baseline
+CS23002,DBMS,Indexing,quiz,8.5,10,2026-09-28,baseline
+CS23002,DBMS,Transactions,quiz,7.5,10,2026-10-05,baseline
+CS23002,DBMS,Indexing,quiz,6.5,10,2026-10-12,baseline
+CS23002,DBMS,All,internal,23.0,30,2026-09-15,baseline
+CS23002,DBMS,All,internal,21.5,30,2026-10-20,baseline
+CS23002,DBMS,All,internal,,30,2026-11-24,baseline
+CS23002,DBMS,ER Model,quiz,8.0,10,2026-11-26,review
+CS23002,DBMS,SQL,quiz,8.0,10,2026-11-27,review
+CS23002,DBMS,Normalization,quiz,6.5,10,2026-11-28,review
+CS23002,DBMS,Transactions,quiz,7.0,10,2026-11-26,review
+CS23002,DBMS,Indexing,quiz,8.0,10,2026-11-27,review
+CS23002,DBMS,All,internal,25.5,30,2026-11-28,review
+CS23002,OS,Processes,quiz,7.5,10,2026-08-10,baseline
+CS23002,OS,Processes,quiz,5.0,10,2026-08-17,baseline
+CS23002,OS,Scheduling,quiz,6.5,10,2026-08-24,baseline
+CS23002,OS,Scheduling,quiz,5.0,10,2026-08-31,baseline
+CS23002,OS,Synchronization,quiz,7.0,10,2026-09-07,baseline
+CS23002,OS,Synchronization,quiz,6.5,10,2026-09-14,baseline
+CS23002,OS,Memory,quiz,5.5,10,2026-09-21,baseline
+CS23002,OS,File Systems,quiz,7.5,10,2026-09-28,baseline
+CS23002,OS,Memory,quiz,6.5,10,2026-10-05,baseline
+CS23002,OS,File Systems,quiz,5.0,10,2026-10-12,baseline
+CS23002,OS,All,internal,19.5,30,2026-09-15,baseline
+CS23002,OS,All,internal,17.5,30,2026-10-20,baseline
+CS23002,OS,All,internal,,30,2026-11-24,baseline
+CS23002,OS,Processes,quiz,6.5,10,2026-11-26,review
+CS23002,OS,Scheduling,quiz,6.5,10,2026-11-27,review
+CS23002,OS,Synchronization,quiz,7.5,10,2026-11-28,review
+CS23002,OS,Memory,quiz,5.5,10,2026-11-26,review
+CS23002,OS,File Systems,quiz,6.5,10,2026-11-27,review
+CS23002,OS,All,internal,23.0,30,2026-11-28,review
+CS23002,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-10,baseline
+CS23002,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-17,baseline
+CS23002,CN,Data Link,quiz,7.0,10,2026-08-24,baseline
+CS23002,CN,Data Link,quiz,8.0,10,2026-08-31,baseline
+CS23002,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23002,CN,Routing,quiz,7.0,10,2026-09-14,baseline
+CS23002,CN,Transport,quiz,8.5,10,2026-09-21,baseline
+CS23002,CN,Application Layer,quiz,8.0,10,2026-09-28,baseline
+CS23002,CN,Transport,quiz,7.5,10,2026-10-05,baseline
+CS23002,CN,Application Layer,quiz,7.0,10,2026-10-12,baseline
+CS23002,CN,All,internal,20.5,30,2026-09-15,baseline
+CS23002,CN,All,internal,24.5,30,2026-10-20,baseline
+CS23002,CN,All,internal,,30,2026-11-24,baseline
+CS23002,CN,OSI & TCP/IP,quiz,8.0,10,2026-11-26,review
+CS23002,CN,Data Link,quiz,7.5,10,2026-11-27,review
+CS23002,CN,Routing,quiz,8.0,10,2026-11-28,review
+CS23002,CN,Transport,quiz,7.5,10,2026-11-26,review
+CS23002,CN,Application Layer,quiz,8.0,10,2026-11-27,review
+CS23002,CN,All,internal,22.5,30,2026-11-28,review
+CS23002,DM,Logic,quiz,6.5,10,2026-08-10,baseline
+CS23002,DM,Logic,quiz,6.0,10,2026-08-17,baseline
+CS23002,DM,Sets & Relations,quiz,5.5,10,2026-08-24,baseline
+CS23002,DM,Sets & Relations,quiz,5.5,10,2026-08-31,baseline
+CS23002,DM,Combinatorics,quiz,6.0,10,2026-09-07,baseline
+CS23002,DM,Combinatorics,quiz,5.5,10,2026-09-14,baseline
+CS23002,DM,Graph Theory,quiz,7.0,10,2026-09-21,baseline
+CS23002,DM,Recurrences,quiz,6.0,10,2026-09-28,baseline
+CS23002,DM,Graph Theory,quiz,7.0,10,2026-10-05,baseline
+CS23002,DM,Recurrences,quiz,7.5,10,2026-10-12,baseline
+CS23002,DM,All,internal,19.0,30,2026-09-15,baseline
+CS23002,DM,All,internal,16.0,30,2026-10-20,baseline
+CS23002,DM,All,internal,,30,2026-11-24,baseline
+CS23002,DM,Logic,quiz,6.5,10,2026-11-26,review
+CS23002,DM,Sets & Relations,quiz,5.5,10,2026-11-27,review
+CS23002,DM,Combinatorics,quiz,6.5,10,2026-11-28,review
+CS23002,DM,Graph Theory,quiz,6.5,10,2026-11-26,review
+CS23002,DM,Recurrences,quiz,6.5,10,2026-11-27,review
+CS23002,DM,All,internal,18.5,30,2026-11-28,review
+CS23003,DSA,Arrays,quiz,7.5,10,2026-08-10,baseline
+CS23003,DSA,Arrays,quiz,6.5,10,2026-08-17,baseline
+CS23003,DSA,Linked Lists,quiz,6.0,10,2026-08-24,baseline
+CS23003,DSA,Linked Lists,quiz,6.5,10,2026-08-31,baseline
+CS23003,DSA,Stacks & Queues,quiz,7.0,10,2026-09-07,baseline
+CS23003,DSA,Stacks & Queues,quiz,6.5,10,2026-09-14,baseline
+CS23003,DSA,Trees,quiz,7.0,10,2026-09-21,baseline
+CS23003,DSA,Graphs,quiz,7.0,10,2026-09-28,baseline
+CS23003,DSA,Trees,quiz,7.0,10,2026-10-05,baseline
+CS23003,DSA,Graphs,quiz,7.5,10,2026-10-12,baseline
+CS23003,DSA,All,internal,19.0,30,2026-09-15,baseline
+CS23003,DSA,All,internal,22.0,30,2026-10-20,baseline
+CS23003,DSA,All,internal,,30,2026-11-24,baseline
+CS23003,DSA,Arrays,quiz,6.5,10,2026-11-26,review
+CS23003,DSA,Linked Lists,quiz,7.5,10,2026-11-27,review
+CS23003,DSA,Stacks & Queues,quiz,7.5,10,2026-11-28,review
+CS23003,DSA,Trees,quiz,7.0,10,2026-11-26,review
+CS23003,DSA,Graphs,quiz,6.5,10,2026-11-27,review
+CS23003,DSA,All,internal,22.0,30,2026-11-28,review
+CS23003,DBMS,ER Model,quiz,6.5,10,2026-08-10,baseline
+CS23003,DBMS,ER Model,quiz,6.5,10,2026-08-17,baseline
+CS23003,DBMS,SQL,quiz,7.0,10,2026-08-24,baseline
+CS23003,DBMS,SQL,quiz,5.5,10,2026-08-31,baseline
+CS23003,DBMS,Normalization,quiz,7.0,10,2026-09-07,baseline
+CS23003,DBMS,Normalization,quiz,7.0,10,2026-09-14,baseline
+CS23003,DBMS,Transactions,quiz,6.5,10,2026-09-21,baseline
+CS23003,DBMS,Indexing,quiz,7.5,10,2026-09-28,baseline
+CS23003,DBMS,Transactions,quiz,7.5,10,2026-10-05,baseline
+CS23003,DBMS,Indexing,quiz,6.5,10,2026-10-12,baseline
+CS23003,DBMS,All,internal,19.5,30,2026-09-15,baseline
+CS23003,DBMS,All,internal,,30,2026-10-20,baseline
+CS23003,DBMS,All,internal,,30,2026-11-24,baseline
+CS23003,DBMS,ER Model,quiz,7.0,10,2026-11-26,review
+CS23003,DBMS,SQL,quiz,7.0,10,2026-11-27,review
+CS23003,DBMS,Normalization,quiz,7.5,10,2026-11-28,review
+CS23003,DBMS,Transactions,quiz,7.5,10,2026-11-26,review
+CS23003,DBMS,Indexing,quiz,7.5,10,2026-11-27,review
+CS23003,DBMS,All,internal,24.0,30,2026-11-28,review
+CS23003,OS,Processes,quiz,7.0,10,2026-08-10,baseline
+CS23003,OS,Processes,quiz,6.0,10,2026-08-17,baseline
+CS23003,OS,Scheduling,quiz,7.5,10,2026-08-24,baseline
+CS23003,OS,Scheduling,quiz,7.5,10,2026-08-31,baseline
+CS23003,OS,Synchronization,quiz,8.0,10,2026-09-07,baseline
+CS23003,OS,Synchronization,quiz,6.5,10,2026-09-14,baseline
+CS23003,OS,Memory,quiz,7.0,10,2026-09-21,baseline
+CS23003,OS,File Systems,quiz,7.0,10,2026-09-28,baseline
+CS23003,OS,Memory,quiz,7.0,10,2026-10-05,baseline
+CS23003,OS,File Systems,quiz,7.0,10,2026-10-12,baseline
+CS23003,OS,All,internal,18.0,30,2026-09-15,baseline
+CS23003,OS,All,internal,22.5,30,2026-10-20,baseline
+CS23003,OS,All,internal,,30,2026-11-24,baseline
+CS23003,OS,Processes,quiz,8.0,10,2026-11-26,review
+CS23003,OS,Scheduling,quiz,8.5,10,2026-11-27,review
+CS23003,OS,Synchronization,quiz,7.0,10,2026-11-28,review
+CS23003,OS,Memory,quiz,7.0,10,2026-11-26,review
+CS23003,OS,File Systems,quiz,7.5,10,2026-11-27,review
+CS23003,OS,All,internal,25.5,30,2026-11-28,review
+CS23003,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-10,baseline
+CS23003,CN,OSI & TCP/IP,quiz,6.5,10,2026-08-17,baseline
+CS23003,CN,Data Link,quiz,6.0,10,2026-08-24,baseline
+CS23003,CN,Data Link,quiz,6.0,10,2026-08-31,baseline
+CS23003,CN,Routing,quiz,6.5,10,2026-09-07,baseline
+CS23003,CN,Routing,quiz,8.0,10,2026-09-14,baseline
+CS23003,CN,Transport,quiz,7.0,10,2026-09-21,baseline
+CS23003,CN,Application Layer,quiz,7.5,10,2026-09-28,baseline
+CS23003,CN,Transport,quiz,6.5,10,2026-10-05,baseline
+CS23003,CN,Application Layer,quiz,8.0,10,2026-10-12,baseline
+CS23003,CN,All,internal,20.5,30,2026-09-15,baseline
+CS23003,CN,All,internal,24.5,30,2026-10-20,baseline
+CS23003,CN,All,internal,,30,2026-11-24,baseline
+CS23003,CN,OSI & TCP/IP,quiz,7.5,10,2026-11-26,review
+CS23003,CN,Data Link,quiz,8.0,10,2026-11-27,review
+CS23003,CN,Routing,quiz,7.5,10,2026-11-28,review
+CS23003,CN,Transport,quiz,8.5,10,2026-11-26,review
+CS23003,CN,Application Layer,quiz,8.0,10,2026-11-27,review
+CS23003,CN,All,internal,21.0,30,2026-11-28,review
+CS23003,DM,Logic,quiz,7.0,10,2026-08-10,baseline
+CS23003,DM,Logic,quiz,7.5,10,2026-08-17,baseline
+CS23003,DM,Sets & Relations,quiz,7.5,10,2026-08-24,baseline
+CS23003,DM,Sets & Relations,quiz,7.0,10,2026-08-31,baseline
+CS23003,DM,Combinatorics,quiz,7.5,10,2026-09-07,baseline
+CS23003,DM,Combinatorics,quiz,7.0,10,2026-09-14,baseline
+CS23003,DM,Graph Theory,quiz,7.0,10,2026-09-21,baseline
+CS23003,DM,Recurrences,quiz,7.0,10,2026-09-28,baseline
+CS23003,DM,Graph Theory,quiz,8.0,10,2026-10-05,baseline
+CS23003,DM,Recurrences,quiz,7.0,10,2026-10-12,baseline
+CS23003,DM,All,internal,21.0,30,2026-09-15,baseline
+CS23003,DM,All,internal,19.5,30,2026-10-20,baseline
+CS23003,DM,All,internal,,30,2026-11-24,baseline
+CS23003,DM,Logic,quiz,7.0,10,2026-11-26,review
+CS23003,DM,Sets & Relations,quiz,7.5,10,2026-11-27,review
+CS23003,DM,Combinatorics,quiz,6.5,10,2026-11-28,review
+CS23003,DM,Graph Theory,quiz,8.0,10,2026-11-26,review
+CS23003,DM,Recurrences,quiz,6.5,10,2026-11-27,review
+CS23003,DM,All,internal,21.0,30,2026-11-28,review
+CS23004,DSA,Arrays,quiz,6.5,10,2026-08-10,baseline
+CS23004,DSA,Arrays,quiz,7.5,10,2026-08-17,baseline
+CS23004,DSA,Linked Lists,quiz,7.5,10,2026-08-24,baseline
+CS23004,DSA,Linked Lists,quiz,7.0,10,2026-08-31,baseline
+CS23004,DSA,Stacks & Queues,quiz,8.5,10,2026-09-07,baseline
+CS23004,DSA,Stacks & Queues,quiz,8.5,10,2026-09-14,baseline
+CS23004,DSA,Trees,quiz,6.5,10,2026-09-21,baseline
+CS23004,DSA,Graphs,quiz,6.5,10,2026-09-28,baseline
+CS23004,DSA,Trees,quiz,8.0,10,2026-10-05,baseline
+CS23004,DSA,Graphs,quiz,7.0,10,2026-10-12,baseline
+CS23004,DSA,All,internal,22.0,30,2026-09-15,baseline
+CS23004,DSA,All,internal,23.0,30,2026-10-20,baseline
+CS23004,DSA,All,internal,,30,2026-11-24,baseline
+CS23004,DSA,Arrays,quiz,7.5,10,2026-11-26,review
+CS23004,DSA,Linked Lists,quiz,8.0,10,2026-11-27,review
+CS23004,DSA,Stacks & Queues,quiz,7.5,10,2026-11-28,review
+CS23004,DSA,Trees,quiz,8.5,10,2026-11-26,review
+CS23004,DSA,Graphs,quiz,7.5,10,2026-11-27,review
+CS23004,DSA,All,internal,24.0,30,2026-11-28,review
+CS23004,DBMS,ER Model,quiz,8.0,10,2026-08-10,baseline
+CS23004,DBMS,ER Model,quiz,8.0,10,2026-08-17,baseline
+CS23004,DBMS,SQL,quiz,8.0,10,2026-08-24,baseline
+CS23004,DBMS,SQL,quiz,7.5,10,2026-08-31,baseline
+CS23004,DBMS,Normalization,quiz,8.5,10,2026-09-07,baseline
+CS23004,DBMS,Normalization,quiz,9.0,10,2026-09-14,baseline
+CS23004,DBMS,Transactions,quiz,8.0,10,2026-09-21,baseline
+CS23004,DBMS,Indexing,quiz,8.5,10,2026-09-28,baseline
+CS23004,DBMS,Transactions,quiz,8.5,10,2026-10-05,baseline
+CS23004,DBMS,Indexing,quiz,8.5,10,2026-10-12,baseline
+CS23004,DBMS,All,internal,25.0,30,2026-09-15,baseline
+CS23004,DBMS,All,internal,24.5,30,2026-10-20,baseline
+CS23004,DBMS,All,internal,,30,2026-11-24,baseline
+CS23004,DBMS,ER Model,quiz,8.5,10,2026-11-26,review
+CS23004,DBMS,SQL,quiz,8.0,10,2026-11-27,review
+CS23004,DBMS,Normalization,quiz,8.5,10,2026-11-28,review
+CS23004,DBMS,Transactions,quiz,7.5,10,2026-11-26,review
+CS23004,DBMS,Indexing,quiz,8.5,10,2026-11-27,review
+CS23004,DBMS,All,internal,26.0,30,2026-11-28,review
+CS23004,OS,Processes,quiz,8.0,10,2026-08-10,baseline
+CS23004,OS,Processes,quiz,8.5,10,2026-08-17,baseline
+CS23004,OS,Scheduling,quiz,8.0,10,2026-08-24,baseline
+CS23004,OS,Scheduling,quiz,7.0,10,2026-08-31,baseline
+CS23004,OS,Synchronization,quiz,7.0,10,2026-09-07,baseline
+CS23004,OS,Synchronization,quiz,7.0,10,2026-09-14,baseline
+CS23004,OS,Memory,quiz,7.0,10,2026-09-21,baseline
+CS23004,OS,File Systems,quiz,8.0,10,2026-09-28,baseline
+CS23004,OS,Memory,quiz,7.5,10,2026-10-05,baseline
+CS23004,OS,File Systems,quiz,8.0,10,2026-10-12,baseline
+CS23004,OS,All,internal,23.5,30,2026-09-15,baseline
+CS23004,OS,All,internal,25.5,30,2026-10-20,baseline
+CS23004,OS,All,internal,,30,2026-11-24,baseline
+CS23004,OS,Processes,quiz,7.5,10,2026-11-26,review
+CS23004,OS,Scheduling,quiz,8.0,10,2026-11-27,review
+CS23004,OS,Synchronization,quiz,8.0,10,2026-11-28,review
+CS23004,OS,Memory,quiz,7.0,10,2026-11-26,review
+CS23004,OS,File Systems,quiz,8.5,10,2026-11-27,review
+CS23004,OS,All,internal,26.5,30,2026-11-28,review
+CS23004,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-10,baseline
+CS23004,CN,OSI & TCP/IP,quiz,8.0,10,2026-08-17,baseline
+CS23004,CN,Data Link,quiz,6.0,10,2026-08-24,baseline
+CS23004,CN,Data Link,quiz,7.5,10,2026-08-31,baseline
+CS23004,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23004,CN,Routing,quiz,7.0,10,2026-09-14,baseline
+CS23004,CN,Transport,quiz,8.0,10,2026-09-21,baseline
+CS23004,CN,Application Layer,quiz,8.0,10,2026-09-28,baseline
+CS23004,CN,Transport,quiz,7.0,10,2026-10-05,baseline
+CS23004,CN,Application Layer,quiz,7.5,10,2026-10-12,baseline
+CS23004,CN,All,internal,21.5,30,2026-09-15,baseline
+CS23004,CN,All,internal,21.0,30,2026-10-20,baseline
+CS23004,CN,All,internal,,30,2026-11-24,baseline
+CS23004,CN,OSI & TCP/IP,quiz,8.5,10,2026-11-26,review
+CS23004,CN,Data Link,quiz,8.5,10,2026-11-27,review
+CS23004,CN,Routing,quiz,8.0,10,2026-11-28,review
+CS23004,CN,Transport,quiz,7.0,10,2026-11-26,review
+CS23004,CN,Application Layer,quiz,9.0,10,2026-11-27,review
+CS23004,CN,All,internal,26.5,30,2026-11-28,review
+CS23004,DM,Logic,quiz,6.5,10,2026-08-10,baseline
+CS23004,DM,Logic,quiz,6.5,10,2026-08-17,baseline
+CS23004,DM,Sets & Relations,quiz,7.5,10,2026-08-24,baseline
+CS23004,DM,Sets & Relations,quiz,6.5,10,2026-08-31,baseline
+CS23004,DM,Combinatorics,quiz,7.0,10,2026-09-07,baseline
+CS23004,DM,Combinatorics,quiz,8.0,10,2026-09-14,baseline
+CS23004,DM,Graph Theory,quiz,6.0,10,2026-09-21,baseline
+CS23004,DM,Recurrences,quiz,8.5,10,2026-09-28,baseline
+CS23004,DM,Graph Theory,quiz,8.0,10,2026-10-05,baseline
+CS23004,DM,Recurrences,quiz,6.5,10,2026-10-12,baseline
+CS23004,DM,All,internal,19.0,30,2026-09-15,baseline
+CS23004,DM,All,internal,21.0,30,2026-10-20,baseline
+CS23004,DM,All,internal,,30,2026-11-24,baseline
+CS23004,DM,Logic,quiz,7.0,10,2026-11-26,review
+CS23004,DM,Sets & Relations,quiz,6.0,10,2026-11-27,review
+CS23004,DM,Combinatorics,quiz,7.5,10,2026-11-28,review
+CS23004,DM,Graph Theory,quiz,8.5,10,2026-11-26,review
+CS23004,DM,Recurrences,quiz,6.5,10,2026-11-27,review
+CS23004,DM,All,internal,21.5,30,2026-11-28,review
+CS23005,DSA,Arrays,quiz,7.0,10,2026-08-10,baseline
+CS23005,DSA,Arrays,quiz,6.5,10,2026-08-17,baseline
+CS23005,DSA,Linked Lists,quiz,7.5,10,2026-08-24,baseline
+CS23005,DSA,Linked Lists,quiz,6.5,10,2026-08-31,baseline
+CS23005,DSA,Stacks & Queues,quiz,6.0,10,2026-09-07,baseline
+CS23005,DSA,Stacks & Queues,quiz,7.0,10,2026-09-14,baseline
+CS23005,DSA,Trees,quiz,6.0,10,2026-09-21,baseline
+CS23005,DSA,Graphs,quiz,5.5,10,2026-09-28,baseline
+CS23005,DSA,Trees,quiz,6.5,10,2026-10-05,baseline
+CS23005,DSA,Graphs,quiz,6.5,10,2026-10-12,baseline
+CS23005,DSA,All,internal,19.5,30,2026-09-15,baseline
+CS23005,DSA,All,internal,20.0,30,2026-10-20,baseline
+CS23005,DSA,All,internal,,30,2026-11-24,baseline
+CS23005,DSA,Arrays,quiz,7.0,10,2026-11-26,review
+CS23005,DSA,Linked Lists,quiz,8.0,10,2026-11-27,review
+CS23005,DSA,Stacks & Queues,quiz,6.0,10,2026-11-28,review
+CS23005,DSA,Trees,quiz,8.0,10,2026-11-26,review
+CS23005,DSA,Graphs,quiz,6.5,10,2026-11-27,review
+CS23005,DSA,All,internal,19.0,30,2026-11-28,review
+CS23005,DBMS,ER Model,quiz,7.5,10,2026-08-10,baseline
+CS23005,DBMS,ER Model,quiz,8.0,10,2026-08-17,baseline
+CS23005,DBMS,SQL,quiz,8.0,10,2026-08-24,baseline
+CS23005,DBMS,SQL,quiz,6.5,10,2026-08-31,baseline
+CS23005,DBMS,Normalization,quiz,7.5,10,2026-09-07,baseline
+CS23005,DBMS,Normalization,quiz,7.0,10,2026-09-14,baseline
+CS23005,DBMS,Transactions,quiz,6.5,10,2026-09-21,baseline
+CS23005,DBMS,Indexing,quiz,6.5,10,2026-09-28,baseline
+CS23005,DBMS,Transactions,quiz,7.5,10,2026-10-05,baseline
+CS23005,DBMS,Indexing,quiz,7.5,10,2026-10-12,baseline
+CS23005,DBMS,All,internal,22.5,30,2026-09-15,baseline
+CS23005,DBMS,All,internal,21.5,30,2026-10-20,baseline
+CS23005,DBMS,All,internal,,30,2026-11-24,baseline
+CS23005,DBMS,ER Model,quiz,7.0,10,2026-11-26,review
+CS23005,DBMS,SQL,quiz,7.5,10,2026-11-27,review
+CS23005,DBMS,Normalization,quiz,7.0,10,2026-11-28,review
+CS23005,DBMS,Transactions,quiz,7.5,10,2026-11-26,review
+CS23005,DBMS,Indexing,quiz,7.5,10,2026-11-27,review
+CS23005,DBMS,All,internal,21.5,30,2026-11-28,review
+CS23005,OS,Processes,quiz,6.5,10,2026-08-10,baseline
+CS23005,OS,Processes,quiz,7.0,10,2026-08-17,baseline
+CS23005,OS,Scheduling,quiz,7.0,10,2026-08-24,baseline
+CS23005,OS,Scheduling,quiz,7.0,10,2026-08-31,baseline
+CS23005,OS,Synchronization,quiz,7.0,10,2026-09-07,baseline
+CS23005,OS,Synchronization,quiz,6.0,10,2026-09-14,baseline
+CS23005,OS,Memory,quiz,6.5,10,2026-09-21,baseline
+CS23005,OS,File Systems,quiz,7.0,10,2026-09-28,baseline
+CS23005,OS,Memory,quiz,7.0,10,2026-10-05,baseline
+CS23005,OS,File Systems,quiz,6.0,10,2026-10-12,baseline
+CS23005,OS,All,internal,20.5,30,2026-09-15,baseline
+CS23005,OS,All,internal,22.5,30,2026-10-20,baseline
+CS23005,OS,All,internal,,30,2026-11-24,baseline
+CS23005,OS,Processes,quiz,7.0,10,2026-11-26,review
+CS23005,OS,Scheduling,quiz,7.5,10,2026-11-27,review
+CS23005,OS,Synchronization,quiz,7.0,10,2026-11-28,review
+CS23005,OS,Memory,quiz,7.5,10,2026-11-26,review
+CS23005,OS,File Systems,quiz,7.0,10,2026-11-27,review
+CS23005,OS,All,internal,21.5,30,2026-11-28,review
+CS23005,CN,OSI & TCP/IP,quiz,8.0,10,2026-08-10,baseline
+CS23005,CN,OSI & TCP/IP,quiz,9.0,10,2026-08-17,baseline
+CS23005,CN,Data Link,quiz,8.0,10,2026-08-24,baseline
+CS23005,CN,Data Link,quiz,8.0,10,2026-08-31,baseline
+CS23005,CN,Routing,quiz,8.0,10,2026-09-07,baseline
+CS23005,CN,Routing,quiz,8.5,10,2026-09-14,baseline
+CS23005,CN,Transport,quiz,7.5,10,2026-09-21,baseline
+CS23005,CN,Application Layer,quiz,8.5,10,2026-09-28,baseline
+CS23005,CN,Transport,quiz,7.5,10,2026-10-05,baseline
+CS23005,CN,Application Layer,quiz,7.5,10,2026-10-12,baseline
+CS23005,CN,All,internal,25.0,30,2026-09-15,baseline
+CS23005,CN,All,internal,24.5,30,2026-10-20,baseline
+CS23005,CN,All,internal,,30,2026-11-24,baseline
+CS23005,CN,OSI & TCP/IP,quiz,9.0,10,2026-11-26,review
+CS23005,CN,Data Link,quiz,8.0,10,2026-11-27,review
+CS23005,CN,Routing,quiz,8.5,10,2026-11-28,review
+CS23005,CN,Transport,quiz,8.0,10,2026-11-26,review
+CS23005,CN,Application Layer,quiz,9.0,10,2026-11-27,review
+CS23005,CN,All,internal,26.5,30,2026-11-28,review
+CS23005,DM,Logic,quiz,6.5,10,2026-08-10,baseline
+CS23005,DM,Logic,quiz,6.0,10,2026-08-17,baseline
+CS23005,DM,Sets & Relations,quiz,6.0,10,2026-08-24,baseline
+CS23005,DM,Sets & Relations,quiz,6.5,10,2026-08-31,baseline
+CS23005,DM,Combinatorics,quiz,6.5,10,2026-09-07,baseline
+CS23005,DM,Combinatorics,quiz,6.5,10,2026-09-14,baseline
+CS23005,DM,Graph Theory,quiz,5.5,10,2026-09-21,baseline
+CS23005,DM,Recurrences,quiz,6.5,10,2026-09-28,baseline
+CS23005,DM,Graph Theory,quiz,6.0,10,2026-10-05,baseline
+CS23005,DM,Recurrences,quiz,5.5,10,2026-10-12,baseline
+CS23005,DM,All,internal,19.0,30,2026-09-15,baseline
+CS23005,DM,All,internal,16.0,30,2026-10-20,baseline
+CS23005,DM,All,internal,,30,2026-11-24,baseline
+CS23005,DM,Logic,quiz,7.0,10,2026-11-26,review
+CS23005,DM,Sets & Relations,quiz,6.5,10,2026-11-27,review
+CS23005,DM,Combinatorics,quiz,6.0,10,2026-11-28,review
+CS23005,DM,Graph Theory,quiz,6.0,10,2026-11-26,review
+CS23005,DM,Recurrences,quiz,6.5,10,2026-11-27,review
+CS23005,DM,All,internal,15.5,30,2026-11-28,review
+CS23006,DSA,Arrays,quiz,5.5,10,2026-08-10,baseline
+CS23006,DSA,Arrays,quiz,5.0,10,2026-08-17,baseline
+CS23006,DSA,Linked Lists,quiz,5.0,10,2026-08-24,baseline
+CS23006,DSA,Linked Lists,quiz,5.0,10,2026-08-31,baseline
+CS23006,DSA,Stacks & Queues,quiz,5.5,10,2026-09-07,baseline
+CS23006,DSA,Stacks & Queues,quiz,5.5,10,2026-09-14,baseline
+CS23006,DSA,Trees,quiz,5.0,10,2026-09-21,baseline
+CS23006,DSA,Graphs,quiz,4.5,10,2026-09-28,baseline
+CS23006,DSA,Trees,quiz,5.0,10,2026-10-05,baseline
+CS23006,DSA,Graphs,quiz,5.0,10,2026-10-12,baseline
+CS23006,DSA,All,internal,18.0,30,2026-09-15,baseline
+CS23006,DSA,All,internal,14.5,30,2026-10-20,baseline
+CS23006,DSA,All,internal,,30,2026-11-24,baseline
+CS23006,DSA,Arrays,quiz,5.0,10,2026-11-26,review
+CS23006,DSA,Linked Lists,quiz,4.0,10,2026-11-27,review
+CS23006,DSA,Stacks & Queues,quiz,5.5,10,2026-11-28,review
+CS23006,DSA,Trees,quiz,4.5,10,2026-11-26,review
+CS23006,DSA,Graphs,quiz,4.5,10,2026-11-27,review
+CS23006,DSA,All,internal,12.5,30,2026-11-28,review
+CS23006,DBMS,ER Model,quiz,6.5,10,2026-08-10,baseline
+CS23006,DBMS,ER Model,quiz,5.5,10,2026-08-17,baseline
+CS23006,DBMS,SQL,quiz,5.5,10,2026-08-24,baseline
+CS23006,DBMS,SQL,quiz,6.5,10,2026-08-31,baseline
+CS23006,DBMS,Normalization,quiz,6.0,10,2026-09-07,baseline
+CS23006,DBMS,Normalization,quiz,6.5,10,2026-09-14,baseline
+CS23006,DBMS,Transactions,quiz,7.0,10,2026-09-21,baseline
+CS23006,DBMS,Indexing,quiz,6.5,10,2026-09-28,baseline
+CS23006,DBMS,Transactions,quiz,5.5,10,2026-10-05,baseline
+CS23006,DBMS,Indexing,quiz,6.5,10,2026-10-12,baseline
+CS23006,DBMS,All,internal,20.0,30,2026-09-15,baseline
+CS23006,DBMS,All,internal,18.0,30,2026-10-20,baseline
+CS23006,DBMS,All,internal,,30,2026-11-24,baseline
+CS23006,DBMS,ER Model,quiz,7.5,10,2026-11-26,review
+CS23006,DBMS,SQL,quiz,6.5,10,2026-11-27,review
+CS23006,DBMS,Normalization,quiz,6.5,10,2026-11-28,review
+CS23006,DBMS,Transactions,quiz,6.5,10,2026-11-26,review
+CS23006,DBMS,Indexing,quiz,7.5,10,2026-11-27,review
+CS23006,DBMS,All,internal,20.5,30,2026-11-28,review
+CS23006,OS,Processes,quiz,7.0,10,2026-08-10,baseline
+CS23006,OS,Processes,quiz,8.0,10,2026-08-17,baseline
+CS23006,OS,Scheduling,quiz,7.5,10,2026-08-24,baseline
+CS23006,OS,Scheduling,quiz,7.0,10,2026-08-31,baseline
+CS23006,OS,Synchronization,quiz,6.0,10,2026-09-07,baseline
+CS23006,OS,Synchronization,quiz,9.0,10,2026-09-14,baseline
+CS23006,OS,Memory,quiz,6.0,10,2026-09-21,baseline
+CS23006,OS,File Systems,quiz,6.5,10,2026-09-28,baseline
+CS23006,OS,Memory,quiz,6.0,10,2026-10-05,baseline
+CS23006,OS,File Systems,quiz,7.5,10,2026-10-12,baseline
+CS23006,OS,All,internal,20.5,30,2026-09-15,baseline
+CS23006,OS,All,internal,17.0,30,2026-10-20,baseline
+CS23006,OS,All,internal,,30,2026-11-24,baseline
+CS23006,OS,Processes,quiz,7.0,10,2026-11-26,review
+CS23006,OS,Scheduling,quiz,6.5,10,2026-11-27,review
+CS23006,OS,Synchronization,quiz,6.0,10,2026-11-28,review
+CS23006,OS,Memory,quiz,6.5,10,2026-11-26,review
+CS23006,OS,File Systems,quiz,6.5,10,2026-11-27,review
+CS23006,OS,All,internal,20.5,30,2026-11-28,review
+CS23006,CN,OSI & TCP/IP,quiz,6.5,10,2026-08-10,baseline
+CS23006,CN,OSI & TCP/IP,quiz,5.5,10,2026-08-17,baseline
+CS23006,CN,Data Link,quiz,5.0,10,2026-08-24,baseline
+CS23006,CN,Data Link,quiz,5.5,10,2026-08-31,baseline
+CS23006,CN,Routing,quiz,7.0,10,2026-09-07,baseline
+CS23006,CN,Routing,quiz,6.0,10,2026-09-14,baseline
+CS23006,CN,Transport,quiz,7.5,10,2026-09-21,baseline
+CS23006,CN,Application Layer,quiz,6.5,10,2026-09-28,baseline
+CS23006,CN,Transport,quiz,5.5,10,2026-10-05,baseline
+CS23006,CN,Application Layer,quiz,5.5,10,2026-10-12,baseline
+CS23006,CN,All,internal,19.0,30,2026-09-15,baseline
+CS23006,CN,All,internal,16.5,30,2026-10-20,baseline
+CS23006,CN,All,internal,,30,2026-11-24,baseline
+CS23006,CN,OSI & TCP/IP,quiz,6.0,10,2026-11-26,review
+CS23006,CN,Data Link,quiz,7.0,10,2026-11-27,review
+CS23006,CN,Routing,quiz,7.5,10,2026-11-28,review
+CS23006,CN,Transport,quiz,6.5,10,2026-11-26,review
+CS23006,CN,Application Layer,quiz,6.0,10,2026-11-27,review
+CS23006,CN,All,internal,19.0,30,2026-11-28,review
+CS23006,DM,Logic,quiz,6.5,10,2026-08-10,baseline
+CS23006,DM,Logic,quiz,6.0,10,2026-08-17,baseline
+CS23006,DM,Sets & Relations,quiz,5.5,10,2026-08-24,baseline
+CS23006,DM,Sets & Relations,quiz,6.0,10,2026-08-31,baseline
+CS23006,DM,Combinatorics,quiz,5.5,10,2026-09-07,baseline
+CS23006,DM,Combinatorics,quiz,5.0,10,2026-09-14,baseline
+CS23006,DM,Graph Theory,quiz,5.5,10,2026-09-21,baseline
+CS23006,DM,Recurrences,quiz,5.5,10,2026-09-28,baseline
+CS23006,DM,Graph Theory,quiz,6.5,10,2026-10-05,baseline
+CS23006,DM,Recurrences,quiz,7.5,10,2026-10-12,baseline
+CS23006,DM,All,internal,21.5,30,2026-09-15,baseline
+CS23006,DM,All,internal,17.5,30,2026-10-20,baseline
+CS23006,DM,All,internal,,30,2026-11-24,baseline
+CS23006,DM,Logic,quiz,7.0,10,2026-11-26,review
+CS23006,DM,Sets & Relations,quiz,7.0,10,2026-11-27,review
+CS23006,DM,Combinatorics,quiz,6.0,10,2026-11-28,review
+CS23006,DM,Graph Theory,quiz,6.5,10,2026-11-26,review
+CS23006,DM,Recurrences,quiz,7.5,10,2026-11-27,review
+CS23006,DM,All,internal,19.0,30,2026-11-28,review
+CS23007,DSA,Arrays,quiz,8.0,10,2026-08-10,baseline
+CS23007,DSA,Arrays,quiz,8.0,10,2026-08-17,baseline
+CS23007,DSA,Linked Lists,quiz,7.0,10,2026-08-24,baseline
+CS23007,DSA,Linked Lists,quiz,7.5,10,2026-08-31,baseline
+CS23007,DSA,Stacks & Queues,quiz,7.0,10,2026-09-07,baseline
+CS23007,DSA,Stacks & Queues,quiz,7.5,10,2026-09-14,baseline
+CS23007,DSA,Trees,quiz,9.0,10,2026-09-21,baseline
+CS23007,DSA,Graphs,quiz,8.0,10,2026-09-28,baseline
+CS23007,DSA,Trees,quiz,7.5,10,2026-10-05,baseline
+CS23007,DSA,Graphs,quiz,7.0,10,2026-10-12,baseline
+CS23007,DSA,All,internal,23.0,30,2026-09-15,baseline
+CS23007,DSA,All,internal,25.0,30,2026-10-20,baseline
+CS23007,DSA,All,internal,,30,2026-11-24,baseline
+CS23007,DSA,Arrays,quiz,9.0,10,2026-11-26,review
+CS23007,DSA,Linked Lists,quiz,7.5,10,2026-11-27,review
+CS23007,DSA,Stacks & Queues,quiz,8.0,10,2026-11-28,review
+CS23007,DSA,Trees,quiz,9.0,10,2026-11-26,review
+CS23007,DSA,Graphs,quiz,7.0,10,2026-11-27,review
+CS23007,DSA,All,internal,26.5,30,2026-11-28,review
+CS23007,DBMS,ER Model,quiz,7.5,10,2026-08-10,baseline
+CS23007,DBMS,ER Model,quiz,7.5,10,2026-08-17,baseline
+CS23007,DBMS,SQL,quiz,8.0,10,2026-08-24,baseline
+CS23007,DBMS,SQL,quiz,5.5,10,2026-08-31,baseline
+CS23007,DBMS,Normalization,quiz,6.5,10,2026-09-07,baseline
+CS23007,DBMS,Normalization,quiz,7.0,10,2026-09-14,baseline
+CS23007,DBMS,Transactions,quiz,7.5,10,2026-09-21,baseline
+CS23007,DBMS,Indexing,quiz,7.0,10,2026-09-28,baseline
+CS23007,DBMS,Transactions,quiz,7.5,10,2026-10-05,baseline
+CS23007,DBMS,Indexing,quiz,6.5,10,2026-10-12,baseline
+CS23007,DBMS,All,internal,21.5,30,2026-09-15,baseline
+CS23007,DBMS,All,internal,20.5,30,2026-10-20,baseline
+CS23007,DBMS,All,internal,,30,2026-11-24,baseline
+CS23007,DBMS,ER Model,quiz,8.0,10,2026-11-26,review
+CS23007,DBMS,SQL,quiz,8.5,10,2026-11-27,review
+CS23007,DBMS,Normalization,quiz,7.5,10,2026-11-28,review
+CS23007,DBMS,Transactions,quiz,7.5,10,2026-11-26,review
+CS23007,DBMS,Indexing,quiz,7.5,10,2026-11-27,review
+CS23007,DBMS,All,internal,22.5,30,2026-11-28,review
+CS23007,OS,Processes,quiz,5.5,10,2026-08-10,baseline
+CS23007,OS,Processes,quiz,7.0,10,2026-08-17,baseline
+CS23007,OS,Scheduling,quiz,6.0,10,2026-08-24,baseline
+CS23007,OS,Scheduling,quiz,6.0,10,2026-08-31,baseline
+CS23007,OS,Synchronization,quiz,5.5,10,2026-09-07,baseline
+CS23007,OS,Synchronization,quiz,7.5,10,2026-09-14,baseline
+CS23007,OS,Memory,quiz,6.5,10,2026-09-21,baseline
+CS23007,OS,File Systems,quiz,7.0,10,2026-09-28,baseline
+CS23007,OS,Memory,quiz,6.5,10,2026-10-05,baseline
+CS23007,OS,File Systems,quiz,5.5,10,2026-10-12,baseline
+CS23007,OS,All,internal,17.5,30,2026-09-15,baseline
+CS23007,OS,All,internal,21.0,30,2026-10-20,baseline
+CS23007,OS,All,internal,,30,2026-11-24,baseline
+CS23007,OS,Processes,quiz,6.0,10,2026-11-26,review
+CS23007,OS,Scheduling,quiz,6.5,10,2026-11-27,review
+CS23007,OS,Synchronization,quiz,6.5,10,2026-11-28,review
+CS23007,OS,Memory,quiz,6.0,10,2026-11-26,review
+CS23007,OS,File Systems,quiz,6.5,10,2026-11-27,review
+CS23007,OS,All,internal,19.5,30,2026-11-28,review
+CS23007,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-10,baseline
+CS23007,CN,OSI & TCP/IP,quiz,6.5,10,2026-08-17,baseline
+CS23007,CN,Data Link,quiz,8.0,10,2026-08-24,baseline
+CS23007,CN,Data Link,quiz,6.5,10,2026-08-31,baseline
+CS23007,CN,Routing,quiz,6.0,10,2026-09-07,baseline
+CS23007,CN,Routing,quiz,8.0,10,2026-09-14,baseline
+CS23007,CN,Transport,quiz,6.0,10,2026-09-21,baseline
+CS23007,CN,Application Layer,quiz,6.5,10,2026-09-28,baseline
+CS23007,CN,Transport,quiz,7.5,10,2026-10-05,baseline
+CS23007,CN,Application Layer,quiz,7.0,10,2026-10-12,baseline
+CS23007,CN,All,internal,18.5,30,2026-09-15,baseline
+CS23007,CN,All,internal,21.5,30,2026-10-20,baseline
+CS23007,CN,All,internal,,30,2026-11-24,baseline
+CS23007,CN,OSI & TCP/IP,quiz,8.0,10,2026-11-26,review
+CS23007,CN,Data Link,quiz,8.0,10,2026-11-27,review
+CS23007,CN,Routing,quiz,9.0,10,2026-11-28,review
+CS23007,CN,Transport,quiz,6.5,10,2026-11-26,review
+CS23007,CN,Application Layer,quiz,7.5,10,2026-11-27,review
+CS23007,CN,All,internal,20.5,30,2026-11-28,review
+CS23007,DM,Logic,quiz,8.0,10,2026-08-10,baseline
+CS23007,DM,Logic,quiz,8.0,10,2026-08-17,baseline
+CS23007,DM,Sets & Relations,quiz,7.0,10,2026-08-24,baseline
+CS23007,DM,Sets & Relations,quiz,7.0,10,2026-08-31,baseline
+CS23007,DM,Combinatorics,quiz,6.5,10,2026-09-07,baseline
+CS23007,DM,Combinatorics,quiz,8.5,10,2026-09-14,baseline
+CS23007,DM,Graph Theory,quiz,8.0,10,2026-09-21,baseline
+CS23007,DM,Recurrences,quiz,7.5,10,2026-09-28,baseline
+CS23007,DM,Graph Theory,quiz,8.0,10,2026-10-05,baseline
+CS23007,DM,Recurrences,quiz,8.0,10,2026-10-12,baseline
+CS23007,DM,All,internal,24.5,30,2026-09-15,baseline
+CS23007,DM,All,internal,20.0,30,2026-10-20,baseline
+CS23007,DM,All,internal,,30,2026-11-24,baseline
+CS23007,DM,Logic,quiz,8.0,10,2026-11-26,review
+CS23007,DM,Sets & Relations,quiz,8.0,10,2026-11-27,review
+CS23007,DM,Combinatorics,quiz,8.5,10,2026-11-28,review
+CS23007,DM,Graph Theory,quiz,7.5,10,2026-11-26,review
+CS23007,DM,Recurrences,quiz,8.0,10,2026-11-27,review
+CS23007,DM,All,internal,28.0,30,2026-11-28,review
+CS23008,DSA,Arrays,quiz,6.5,10,2026-08-10,baseline
+CS23008,DSA,Arrays,quiz,6.0,10,2026-08-17,baseline
+CS23008,DSA,Linked Lists,quiz,6.5,10,2026-08-24,baseline
+CS23008,DSA,Linked Lists,quiz,7.0,10,2026-08-31,baseline
+CS23008,DSA,Stacks & Queues,quiz,6.0,10,2026-09-07,baseline
+CS23008,DSA,Stacks & Queues,quiz,6.5,10,2026-09-14,baseline
+CS23008,DSA,Trees,quiz,5.5,10,2026-09-21,baseline
+CS23008,DSA,Graphs,quiz,6.0,10,2026-09-28,baseline
+CS23008,DSA,Trees,quiz,6.5,10,2026-10-05,baseline
+CS23008,DSA,Graphs,quiz,5.5,10,2026-10-12,baseline
+CS23008,DSA,All,internal,19.5,30,2026-09-15,baseline
+CS23008,DSA,All,internal,16.5,30,2026-10-20,baseline
+CS23008,DSA,All,internal,,30,2026-11-24,baseline
+CS23008,DSA,Arrays,quiz,6.0,10,2026-11-26,review
+CS23008,DSA,Linked Lists,quiz,7.5,10,2026-11-27,review
+CS23008,DSA,Stacks & Queues,quiz,6.5,10,2026-11-28,review
+CS23008,DSA,Trees,quiz,6.5,10,2026-11-26,review
+CS23008,DSA,Graphs,quiz,5.5,10,2026-11-27,review
+CS23008,DSA,All,internal,18.5,30,2026-11-28,review
+CS23008,DBMS,ER Model,quiz,6.5,10,2026-08-10,baseline
+CS23008,DBMS,ER Model,quiz,7.5,10,2026-08-17,baseline
+CS23008,DBMS,SQL,quiz,7.0,10,2026-08-24,baseline
+CS23008,DBMS,SQL,quiz,8.0,10,2026-08-31,baseline
+CS23008,DBMS,Normalization,quiz,7.0,10,2026-09-07,baseline
+CS23008,DBMS,Normalization,quiz,7.0,10,2026-09-14,baseline
+CS23008,DBMS,Transactions,quiz,8.0,10,2026-09-21,baseline
+CS23008,DBMS,Indexing,quiz,6.5,10,2026-09-28,baseline
+CS23008,DBMS,Transactions,quiz,6.0,10,2026-10-05,baseline
+CS23008,DBMS,Indexing,quiz,8.0,10,2026-10-12,baseline
+CS23008,DBMS,All,internal,22.0,30,2026-09-15,baseline
+CS23008,DBMS,All,internal,17.0,30,2026-10-20,baseline
+CS23008,DBMS,All,internal,,30,2026-11-24,baseline
+CS23008,DBMS,ER Model,quiz,7.0,10,2026-11-26,review
+CS23008,DBMS,SQL,quiz,8.5,10,2026-11-27,review
+CS23008,DBMS,Normalization,quiz,7.0,10,2026-11-28,review
+CS23008,DBMS,Transactions,quiz,7.0,10,2026-11-26,review
+CS23008,DBMS,Indexing,quiz,7.0,10,2026-11-27,review
+CS23008,DBMS,All,internal,20.0,30,2026-11-28,review
+CS23008,OS,Processes,quiz,6.0,10,2026-08-10,baseline
+CS23008,OS,Processes,quiz,6.5,10,2026-08-17,baseline
+CS23008,OS,Scheduling,quiz,6.0,10,2026-08-24,baseline
+CS23008,OS,Scheduling,quiz,6.0,10,2026-08-31,baseline
+CS23008,OS,Synchronization,quiz,6.0,10,2026-09-07,baseline
+CS23008,OS,Synchronization,quiz,6.5,10,2026-09-14,baseline
+CS23008,OS,Memory,quiz,6.5,10,2026-09-21,baseline
+CS23008,OS,File Systems,quiz,6.0,10,2026-09-28,baseline
+CS23008,OS,Memory,quiz,7.0,10,2026-10-05,baseline
+CS23008,OS,File Systems,quiz,7.0,10,2026-10-12,baseline
+CS23008,OS,All,internal,20.0,30,2026-09-15,baseline
+CS23008,OS,All,internal,20.0,30,2026-10-20,baseline
+CS23008,OS,All,internal,,30,2026-11-24,baseline
+CS23008,OS,Processes,quiz,7.5,10,2026-11-26,review
+CS23008,OS,Scheduling,quiz,7.5,10,2026-11-27,review
+CS23008,OS,Synchronization,quiz,5.5,10,2026-11-28,review
+CS23008,OS,Memory,quiz,7.0,10,2026-11-26,review
+CS23008,OS,File Systems,quiz,6.0,10,2026-11-27,review
+CS23008,OS,All,internal,21.0,30,2026-11-28,review
+CS23008,CN,OSI & TCP/IP,quiz,6.5,10,2026-08-10,baseline
+CS23008,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-17,baseline
+CS23008,CN,Data Link,quiz,6.0,10,2026-08-24,baseline
+CS23008,CN,Data Link,quiz,7.0,10,2026-08-31,baseline
+CS23008,CN,Routing,quiz,6.0,10,2026-09-07,baseline
+CS23008,CN,Routing,quiz,6.5,10,2026-09-14,baseline
+CS23008,CN,Transport,quiz,7.0,10,2026-09-21,baseline
+CS23008,CN,Application Layer,quiz,7.0,10,2026-09-28,baseline
+CS23008,CN,Transport,quiz,6.5,10,2026-10-05,baseline
+CS23008,CN,Application Layer,quiz,8.0,10,2026-10-12,baseline
+CS23008,CN,All,internal,19.5,30,2026-09-15,baseline
+CS23008,CN,All,internal,19.5,30,2026-10-20,baseline
+CS23008,CN,All,internal,,30,2026-11-24,baseline
+CS23008,CN,OSI & TCP/IP,quiz,8.0,10,2026-11-26,review
+CS23008,CN,Data Link,quiz,7.0,10,2026-11-27,review
+CS23008,CN,Routing,quiz,6.5,10,2026-11-28,review
+CS23008,CN,Transport,quiz,8.0,10,2026-11-26,review
+CS23008,CN,Application Layer,quiz,8.0,10,2026-11-27,review
+CS23008,CN,All,internal,21.5,30,2026-11-28,review
+CS23008,DM,Logic,quiz,7.5,10,2026-08-10,baseline
+CS23008,DM,Logic,quiz,6.5,10,2026-08-17,baseline
+CS23008,DM,Sets & Relations,quiz,6.5,10,2026-08-24,baseline
+CS23008,DM,Sets & Relations,quiz,7.5,10,2026-08-31,baseline
+CS23008,DM,Combinatorics,quiz,6.0,10,2026-09-07,baseline
+CS23008,DM,Combinatorics,quiz,7.5,10,2026-09-14,baseline
+CS23008,DM,Graph Theory,quiz,7.5,10,2026-09-21,baseline
+CS23008,DM,Recurrences,quiz,8.5,10,2026-09-28,baseline
+CS23008,DM,Graph Theory,quiz,7.0,10,2026-10-05,baseline
+CS23008,DM,Recurrences,quiz,6.0,10,2026-10-12,baseline
+CS23008,DM,All,internal,19.5,30,2026-09-15,baseline
+CS23008,DM,All,internal,21.5,30,2026-10-20,baseline
+CS23008,DM,All,internal,,30,2026-11-24,baseline
+CS23008,DM,Logic,quiz,8.0,10,2026-11-26,review
+CS23008,DM,Sets & Relations,quiz,6.0,10,2026-11-27,review
+CS23008,DM,Combinatorics,quiz,7.0,10,2026-11-28,review
+CS23008,DM,Graph Theory,quiz,8.0,10,2026-11-26,review
+CS23008,DM,Recurrences,quiz,8.5,10,2026-11-27,review
+CS23008,DM,All,internal,25.5,30,2026-11-28,review
+CS23009,DSA,Arrays,quiz,7.5,10,2026-08-10,baseline
+CS23009,DSA,Arrays,quiz,8.0,10,2026-08-17,baseline
+CS23009,DSA,Linked Lists,quiz,7.5,10,2026-08-24,baseline
+CS23009,DSA,Linked Lists,quiz,7.5,10,2026-08-31,baseline
+CS23009,DSA,Stacks & Queues,quiz,7.5,10,2026-09-07,baseline
+CS23009,DSA,Stacks & Queues,quiz,6.5,10,2026-09-14,baseline
+CS23009,DSA,Trees,quiz,6.0,10,2026-09-21,baseline
+CS23009,DSA,Graphs,quiz,7.5,10,2026-09-28,baseline
+CS23009,DSA,Trees,quiz,6.5,10,2026-10-05,baseline
+CS23009,DSA,Graphs,quiz,7.0,10,2026-10-12,baseline
+CS23009,DSA,All,internal,19.5,30,2026-09-15,baseline
+CS23009,DSA,All,internal,20.0,30,2026-10-20,baseline
+CS23009,DSA,All,internal,,30,2026-11-24,baseline
+CS23009,DSA,Arrays,quiz,6.5,10,2026-11-26,review
+CS23009,DSA,Linked Lists,quiz,7.5,10,2026-11-27,review
+CS23009,DSA,Stacks & Queues,quiz,7.5,10,2026-11-28,review
+CS23009,DSA,Trees,quiz,7.0,10,2026-11-26,review
+CS23009,DSA,Graphs,quiz,7.0,10,2026-11-27,review
+CS23009,DSA,All,internal,23.0,30,2026-11-28,review
+CS23009,DBMS,ER Model,quiz,8.0,10,2026-08-10,baseline
+CS23009,DBMS,ER Model,quiz,9.0,10,2026-08-17,baseline
+CS23009,DBMS,SQL,quiz,8.5,10,2026-08-24,baseline
+CS23009,DBMS,SQL,quiz,6.5,10,2026-08-31,baseline
+CS23009,DBMS,Normalization,quiz,7.5,10,2026-09-07,baseline
+CS23009,DBMS,Normalization,quiz,8.0,10,2026-09-14,baseline
+CS23009,DBMS,Transactions,quiz,8.5,10,2026-09-21,baseline
+CS23009,DBMS,Indexing,quiz,8.5,10,2026-09-28,baseline
+CS23009,DBMS,Transactions,quiz,8.5,10,2026-10-05,baseline
+CS23009,DBMS,Indexing,quiz,8.5,10,2026-10-12,baseline
+CS23009,DBMS,All,internal,23.0,30,2026-09-15,baseline
+CS23009,DBMS,All,internal,23.0,30,2026-10-20,baseline
+CS23009,DBMS,All,internal,,30,2026-11-24,baseline
+CS23009,DBMS,ER Model,quiz,8.5,10,2026-11-26,review
+CS23009,DBMS,SQL,quiz,8.5,10,2026-11-27,review
+CS23009,DBMS,Normalization,quiz,8.5,10,2026-11-28,review
+CS23009,DBMS,Transactions,quiz,8.0,10,2026-11-26,review
+CS23009,DBMS,Indexing,quiz,9.0,10,2026-11-27,review
+CS23009,DBMS,All,internal,27.0,30,2026-11-28,review
+CS23009,OS,Processes,quiz,7.5,10,2026-08-10,baseline
+CS23009,OS,Processes,quiz,7.0,10,2026-08-17,baseline
+CS23009,OS,Scheduling,quiz,7.5,10,2026-08-24,baseline
+CS23009,OS,Scheduling,quiz,7.5,10,2026-08-31,baseline
+CS23009,OS,Synchronization,quiz,6.5,10,2026-09-07,baseline
+CS23009,OS,Synchronization,quiz,8.0,10,2026-09-14,baseline
+CS23009,OS,Memory,quiz,8.0,10,2026-09-21,baseline
+CS23009,OS,File Systems,quiz,8.5,10,2026-09-28,baseline
+CS23009,OS,Memory,quiz,7.0,10,2026-10-05,baseline
+CS23009,OS,File Systems,quiz,7.5,10,2026-10-12,baseline
+CS23009,OS,All,internal,22.0,30,2026-09-15,baseline
+CS23009,OS,All,internal,21.5,30,2026-10-20,baseline
+CS23009,OS,All,internal,,30,2026-11-24,baseline
+CS23009,OS,Processes,quiz,7.5,10,2026-11-26,review
+CS23009,OS,Scheduling,quiz,7.5,10,2026-11-27,review
+CS23009,OS,Synchronization,quiz,8.5,10,2026-11-28,review
+CS23009,OS,Memory,quiz,7.5,10,2026-11-26,review
+CS23009,OS,File Systems,quiz,7.5,10,2026-11-27,review
+CS23009,OS,All,internal,24.0,30,2026-11-28,review
+CS23009,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-10,baseline
+CS23009,CN,OSI & TCP/IP,quiz,6.5,10,2026-08-17,baseline
+CS23009,CN,Data Link,quiz,6.0,10,2026-08-24,baseline
+CS23009,CN,Data Link,quiz,6.5,10,2026-08-31,baseline
+CS23009,CN,Routing,quiz,6.0,10,2026-09-07,baseline
+CS23009,CN,Routing,quiz,6.5,10,2026-09-14,baseline
+CS23009,CN,Transport,quiz,6.0,10,2026-09-21,baseline
+CS23009,CN,Application Layer,quiz,7.0,10,2026-09-28,baseline
+CS23009,CN,Transport,quiz,7.0,10,2026-10-05,baseline
+CS23009,CN,Application Layer,quiz,7.0,10,2026-10-12,baseline
+CS23009,CN,All,internal,19.5,30,2026-09-15,baseline
+CS23009,CN,All,internal,20.5,30,2026-10-20,baseline
+CS23009,CN,All,internal,,30,2026-11-24,baseline
+CS23009,CN,OSI & TCP/IP,quiz,6.5,10,2026-11-26,review
+CS23009,CN,Data Link,quiz,7.0,10,2026-11-27,review
+CS23009,CN,Routing,quiz,7.0,10,2026-11-28,review
+CS23009,CN,Transport,quiz,7.0,10,2026-11-26,review
+CS23009,CN,Application Layer,quiz,6.5,10,2026-11-27,review
+CS23009,CN,All,internal,21.0,30,2026-11-28,review
+CS23009,DM,Logic,quiz,6.0,10,2026-08-10,baseline
+CS23009,DM,Logic,quiz,6.5,10,2026-08-17,baseline
+CS23009,DM,Sets & Relations,quiz,6.5,10,2026-08-24,baseline
+CS23009,DM,Sets & Relations,quiz,7.0,10,2026-08-31,baseline
+CS23009,DM,Combinatorics,quiz,7.0,10,2026-09-07,baseline
+CS23009,DM,Combinatorics,quiz,7.0,10,2026-09-14,baseline
+CS23009,DM,Graph Theory,quiz,6.5,10,2026-09-21,baseline
+CS23009,DM,Recurrences,quiz,6.0,10,2026-09-28,baseline
+CS23009,DM,Graph Theory,quiz,6.0,10,2026-10-05,baseline
+CS23009,DM,Recurrences,quiz,5.5,10,2026-10-12,baseline
+CS23009,DM,All,internal,24.5,30,2026-09-15,baseline
+CS23009,DM,All,internal,17.5,30,2026-10-20,baseline
+CS23009,DM,All,internal,,30,2026-11-24,baseline
+CS23009,DM,Logic,quiz,6.5,10,2026-11-26,review
+CS23009,DM,Sets & Relations,quiz,6.5,10,2026-11-27,review
+CS23009,DM,Combinatorics,quiz,6.5,10,2026-11-28,review
+CS23009,DM,Graph Theory,quiz,5.5,10,2026-11-26,review
+CS23009,DM,Recurrences,quiz,6.0,10,2026-11-27,review
+CS23009,DM,All,internal,17.5,30,2026-11-28,review
+CS23010,DSA,Arrays,quiz,6.0,10,2026-08-10,baseline
+CS23010,DSA,Arrays,quiz,6.0,10,2026-08-17,baseline
+CS23010,DSA,Linked Lists,quiz,6.5,10,2026-08-24,baseline
+CS23010,DSA,Linked Lists,quiz,6.0,10,2026-08-31,baseline
+CS23010,DSA,Stacks & Queues,quiz,7.0,10,2026-09-07,baseline
+CS23010,DSA,Stacks & Queues,quiz,6.0,10,2026-09-14,baseline
+CS23010,DSA,Trees,quiz,6.5,10,2026-09-21,baseline
+CS23010,DSA,Graphs,quiz,5.5,10,2026-09-28,baseline
+CS23010,DSA,Trees,quiz,7.0,10,2026-10-05,baseline
+CS23010,DSA,Graphs,quiz,6.0,10,2026-10-12,baseline
+CS23010,DSA,All,internal,20.0,30,2026-09-15,baseline
+CS23010,DSA,All,internal,20.0,30,2026-10-20,baseline
+CS23010,DSA,All,internal,,30,2026-11-24,baseline
+CS23010,DSA,Arrays,quiz,7.0,10,2026-11-26,review
+CS23010,DSA,Linked Lists,quiz,6.5,10,2026-11-27,review
+CS23010,DSA,Stacks & Queues,quiz,7.5,10,2026-11-28,review
+CS23010,DSA,Trees,quiz,7.5,10,2026-11-26,review
+CS23010,DSA,Graphs,quiz,7.0,10,2026-11-27,review
+CS23010,DSA,All,internal,18.0,30,2026-11-28,review
+CS23010,DBMS,ER Model,quiz,7.5,10,2026-08-10,baseline
+CS23010,DBMS,ER Model,quiz,7.5,10,2026-08-17,baseline
+CS23010,DBMS,SQL,quiz,8.0,10,2026-08-24,baseline
+CS23010,DBMS,SQL,quiz,7.0,10,2026-08-31,baseline
+CS23010,DBMS,Normalization,quiz,8.5,10,2026-09-07,baseline
+CS23010,DBMS,Normalization,quiz,8.0,10,2026-09-14,baseline
+CS23010,DBMS,Transactions,quiz,6.5,10,2026-09-21,baseline
+CS23010,DBMS,Indexing,quiz,7.5,10,2026-09-28,baseline
+CS23010,DBMS,Transactions,quiz,6.0,10,2026-10-05,baseline
+CS23010,DBMS,Indexing,quiz,7.5,10,2026-10-12,baseline
+CS23010,DBMS,All,internal,22.5,30,2026-09-15,baseline
+CS23010,DBMS,All,internal,22.0,30,2026-10-20,baseline
+CS23010,DBMS,All,internal,,30,2026-11-24,baseline
+CS23010,DBMS,ER Model,quiz,8.0,10,2026-11-26,review
+CS23010,DBMS,SQL,quiz,7.5,10,2026-11-27,review
+CS23010,DBMS,Normalization,quiz,9.0,10,2026-11-28,review
+CS23010,DBMS,Transactions,quiz,9.0,10,2026-11-26,review
+CS23010,DBMS,Indexing,quiz,7.5,10,2026-11-27,review
+CS23010,DBMS,All,internal,26.5,30,2026-11-28,review
+CS23010,OS,Processes,quiz,6.5,10,2026-08-10,baseline
+CS23010,OS,Processes,quiz,7.5,10,2026-08-17,baseline
+CS23010,OS,Scheduling,quiz,5.5,10,2026-08-24,baseline
+CS23010,OS,Scheduling,quiz,7.0,10,2026-08-31,baseline
+CS23010,OS,Synchronization,quiz,6.0,10,2026-09-07,baseline
+CS23010,OS,Synchronization,quiz,6.5,10,2026-09-14,baseline
+CS23010,OS,Memory,quiz,6.5,10,2026-09-21,baseline
+CS23010,OS,File Systems,quiz,8.0,10,2026-09-28,baseline
+CS23010,OS,Memory,quiz,6.5,10,2026-10-05,baseline
+CS23010,OS,File Systems,quiz,7.0,10,2026-10-12,baseline
+CS23010,OS,All,internal,21.5,30,2026-09-15,baseline
+CS23010,OS,All,internal,20.0,30,2026-10-20,baseline
+CS23010,OS,All,internal,,30,2026-11-24,baseline
+CS23010,OS,Processes,quiz,7.0,10,2026-11-26,review
+CS23010,OS,Scheduling,quiz,7.0,10,2026-11-27,review
+CS23010,OS,Synchronization,quiz,7.5,10,2026-11-28,review
+CS23010,OS,Memory,quiz,6.5,10,2026-11-26,review
+CS23010,OS,File Systems,quiz,7.0,10,2026-11-27,review
+CS23010,OS,All,internal,22.0,30,2026-11-28,review
+CS23010,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-10,baseline
+CS23010,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-17,baseline
+CS23010,CN,Data Link,quiz,6.5,10,2026-08-24,baseline
+CS23010,CN,Data Link,quiz,6.5,10,2026-08-31,baseline
+CS23010,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23010,CN,Routing,quiz,6.5,10,2026-09-14,baseline
+CS23010,CN,Transport,quiz,8.0,10,2026-09-21,baseline
+CS23010,CN,Application Layer,quiz,7.5,10,2026-09-28,baseline
+CS23010,CN,Transport,quiz,6.5,10,2026-10-05,baseline
+CS23010,CN,Application Layer,quiz,7.5,10,2026-10-12,baseline
+CS23010,CN,All,internal,22.0,30,2026-09-15,baseline
+CS23010,CN,All,internal,23.0,30,2026-10-20,baseline
+CS23010,CN,All,internal,,30,2026-11-24,baseline
+CS23010,CN,OSI & TCP/IP,quiz,7.0,10,2026-11-26,review
+CS23010,CN,Data Link,quiz,7.0,10,2026-11-27,review
+CS23010,CN,Routing,quiz,7.0,10,2026-11-28,review
+CS23010,CN,Transport,quiz,7.0,10,2026-11-26,review
+CS23010,CN,Application Layer,quiz,7.0,10,2026-11-27,review
+CS23010,CN,All,internal,23.0,30,2026-11-28,review
+CS23010,DM,Logic,quiz,7.0,10,2026-08-10,baseline
+CS23010,DM,Logic,quiz,7.0,10,2026-08-17,baseline
+CS23010,DM,Sets & Relations,quiz,7.5,10,2026-08-24,baseline
+CS23010,DM,Sets & Relations,quiz,7.0,10,2026-08-31,baseline
+CS23010,DM,Combinatorics,quiz,6.5,10,2026-09-07,baseline
+CS23010,DM,Combinatorics,quiz,7.5,10,2026-09-14,baseline
+CS23010,DM,Graph Theory,quiz,7.0,10,2026-09-21,baseline
+CS23010,DM,Recurrences,quiz,6.5,10,2026-09-28,baseline
+CS23010,DM,Graph Theory,quiz,8.0,10,2026-10-05,baseline
+CS23010,DM,Recurrences,quiz,8.0,10,2026-10-12,baseline
+CS23010,DM,All,internal,22.0,30,2026-09-15,baseline
+CS23010,DM,All,internal,22.5,30,2026-10-20,baseline
+CS23010,DM,All,internal,,30,2026-11-24,baseline
+CS23010,DM,Logic,quiz,7.5,10,2026-11-26,review
+CS23010,DM,Sets & Relations,quiz,8.0,10,2026-11-27,review
+CS23010,DM,Combinatorics,quiz,8.5,10,2026-11-28,review
+CS23010,DM,Graph Theory,quiz,7.5,10,2026-11-26,review
+CS23010,DM,Recurrences,quiz,8.0,10,2026-11-27,review
+CS23010,DM,All,internal,24.5,30,2026-11-28,review
+CS23011,DSA,Arrays,quiz,6.0,10,2026-08-10,baseline
+CS23011,DSA,Arrays,quiz,7.0,10,2026-08-17,baseline
+CS23011,DSA,Linked Lists,quiz,5.5,10,2026-08-24,baseline
+CS23011,DSA,Linked Lists,quiz,7.5,10,2026-08-31,baseline
+CS23011,DSA,Stacks & Queues,quiz,7.0,10,2026-09-07,baseline
+CS23011,DSA,Stacks & Queues,quiz,6.5,10,2026-09-14,baseline
+CS23011,DSA,Trees,quiz,6.5,10,2026-09-21,baseline
+CS23011,DSA,Graphs,quiz,7.5,10,2026-09-28,baseline
+CS23011,DSA,Trees,quiz,6.0,10,2026-10-05,baseline
+CS23011,DSA,Graphs,quiz,6.0,10,2026-10-12,baseline
+CS23011,DSA,All,internal,19.0,30,2026-09-15,baseline
+CS23011,DSA,All,internal,19.5,30,2026-10-20,baseline
+CS23011,DSA,All,internal,,30,2026-11-24,baseline
+CS23011,DSA,Arrays,quiz,7.0,10,2026-11-26,review
+CS23011,DSA,Linked Lists,quiz,7.0,10,2026-11-27,review
+CS23011,DSA,Stacks & Queues,quiz,6.5,10,2026-11-28,review
+CS23011,DSA,Trees,quiz,8.0,10,2026-11-26,review
+CS23011,DSA,Graphs,quiz,6.0,10,2026-11-27,review
+CS23011,DSA,All,internal,18.5,30,2026-11-28,review
+CS23011,DBMS,ER Model,quiz,7.0,10,2026-08-10,baseline
+CS23011,DBMS,ER Model,quiz,7.5,10,2026-08-17,baseline
+CS23011,DBMS,SQL,quiz,7.0,10,2026-08-24,baseline
+CS23011,DBMS,SQL,quiz,6.5,10,2026-08-31,baseline
+CS23011,DBMS,Normalization,quiz,7.0,10,2026-09-07,baseline
+CS23011,DBMS,Normalization,quiz,7.0,10,2026-09-14,baseline
+CS23011,DBMS,Transactions,quiz,7.5,10,2026-09-21,baseline
+CS23011,DBMS,Indexing,quiz,7.0,10,2026-09-28,baseline
+CS23011,DBMS,Transactions,quiz,7.5,10,2026-10-05,baseline
+CS23011,DBMS,Indexing,quiz,7.5,10,2026-10-12,baseline
+CS23011,DBMS,All,internal,23.5,30,2026-09-15,baseline
+CS23011,DBMS,All,internal,23.5,30,2026-10-20,baseline
+CS23011,DBMS,All,internal,,30,2026-11-24,baseline
+CS23011,DBMS,ER Model,quiz,8.0,10,2026-11-26,review
+CS23011,DBMS,SQL,quiz,7.0,10,2026-11-27,review
+CS23011,DBMS,Normalization,quiz,7.5,10,2026-11-28,review
+CS23011,DBMS,Transactions,quiz,6.5,10,2026-11-26,review
+CS23011,DBMS,Indexing,quiz,7.5,10,2026-11-27,review
+CS23011,DBMS,All,internal,21.5,30,2026-11-28,review
+CS23011,OS,Processes,quiz,6.5,10,2026-08-10,baseline
+CS23011,OS,Processes,quiz,5.5,10,2026-08-17,baseline
+CS23011,OS,Scheduling,quiz,5.5,10,2026-08-24,baseline
+CS23011,OS,Scheduling,quiz,6.0,10,2026-08-31,baseline
+CS23011,OS,Synchronization,quiz,6.0,10,2026-09-07,baseline
+CS23011,OS,Synchronization,quiz,6.5,10,2026-09-14,baseline
+CS23011,OS,Memory,quiz,5.5,10,2026-09-21,baseline
+CS23011,OS,File Systems,quiz,6.5,10,2026-09-28,baseline
+CS23011,OS,Memory,quiz,5.5,10,2026-10-05,baseline
+CS23011,OS,File Systems,quiz,5.0,10,2026-10-12,baseline
+CS23011,OS,All,internal,20.0,30,2026-09-15,baseline
+CS23011,OS,All,internal,16.5,30,2026-10-20,baseline
+CS23011,OS,All,internal,,30,2026-11-24,baseline
+CS23011,OS,Processes,quiz,5.5,10,2026-11-26,review
+CS23011,OS,Scheduling,quiz,5.5,10,2026-11-27,review
+CS23011,OS,Synchronization,quiz,6.5,10,2026-11-28,review
+CS23011,OS,Memory,quiz,6.5,10,2026-11-26,review
+CS23011,OS,File Systems,quiz,7.0,10,2026-11-27,review
+CS23011,OS,All,internal,20.5,30,2026-11-28,review
+CS23011,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-10,baseline
+CS23011,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-17,baseline
+CS23011,CN,Data Link,quiz,7.0,10,2026-08-24,baseline
+CS23011,CN,Data Link,quiz,6.5,10,2026-08-31,baseline
+CS23011,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23011,CN,Routing,quiz,8.0,10,2026-09-14,baseline
+CS23011,CN,Transport,quiz,7.0,10,2026-09-21,baseline
+CS23011,CN,Application Layer,quiz,8.0,10,2026-09-28,baseline
+CS23011,CN,Transport,quiz,7.5,10,2026-10-05,baseline
+CS23011,CN,Application Layer,quiz,7.5,10,2026-10-12,baseline
+CS23011,CN,All,internal,18.5,30,2026-09-15,baseline
+CS23011,CN,All,internal,18.0,30,2026-10-20,baseline
+CS23011,CN,All,internal,,30,2026-11-24,baseline
+CS23011,CN,OSI & TCP/IP,quiz,6.0,10,2026-11-26,review
+CS23011,CN,Data Link,quiz,6.5,10,2026-11-27,review
+CS23011,CN,Routing,quiz,7.5,10,2026-11-28,review
+CS23011,CN,Transport,quiz,6.5,10,2026-11-26,review
+CS23011,CN,Application Layer,quiz,7.5,10,2026-11-27,review
+CS23011,CN,All,internal,18.5,30,2026-11-28,review
+CS23011,DM,Logic,quiz,7.5,10,2026-08-10,baseline
+CS23011,DM,Logic,quiz,7.0,10,2026-08-17,baseline
+CS23011,DM,Sets & Relations,quiz,7.0,10,2026-08-24,baseline
+CS23011,DM,Sets & Relations,quiz,8.0,10,2026-08-31,baseline
+CS23011,DM,Combinatorics,quiz,7.5,10,2026-09-07,baseline
+CS23011,DM,Combinatorics,quiz,6.5,10,2026-09-14,baseline
+CS23011,DM,Graph Theory,quiz,7.5,10,2026-09-21,baseline
+CS23011,DM,Recurrences,quiz,6.5,10,2026-09-28,baseline
+CS23011,DM,Graph Theory,quiz,7.0,10,2026-10-05,baseline
+CS23011,DM,Recurrences,quiz,7.0,10,2026-10-12,baseline
+CS23011,DM,All,internal,22.5,30,2026-09-15,baseline
+CS23011,DM,All,internal,18.5,30,2026-10-20,baseline
+CS23011,DM,All,internal,,30,2026-11-24,baseline
+CS23011,DM,Logic,quiz,7.5,10,2026-11-26,review
+CS23011,DM,Sets & Relations,quiz,7.5,10,2026-11-27,review
+CS23011,DM,Combinatorics,quiz,7.0,10,2026-11-28,review
+CS23011,DM,Graph Theory,quiz,7.5,10,2026-11-26,review
+CS23011,DM,Recurrences,quiz,6.5,10,2026-11-27,review
+CS23011,DM,All,internal,23.5,30,2026-11-28,review
+CS23012,DSA,Arrays,quiz,7.0,10,2026-08-10,baseline
+CS23012,DSA,Arrays,quiz,8.0,10,2026-08-17,baseline
+CS23012,DSA,Linked Lists,quiz,8.0,10,2026-08-24,baseline
+CS23012,DSA,Linked Lists,quiz,7.5,10,2026-08-31,baseline
+CS23012,DSA,Stacks & Queues,quiz,7.5,10,2026-09-07,baseline
+CS23012,DSA,Stacks & Queues,quiz,8.0,10,2026-09-14,baseline
+CS23012,DSA,Trees,quiz,7.0,10,2026-09-21,baseline
+CS23012,DSA,Graphs,quiz,9.0,10,2026-09-28,baseline
+CS23012,DSA,Trees,quiz,7.5,10,2026-10-05,baseline
+CS23012,DSA,Graphs,quiz,7.5,10,2026-10-12,baseline
+CS23012,DSA,All,internal,26.0,30,2026-09-15,baseline
+CS23012,DSA,All,internal,25.0,30,2026-10-20,baseline
+CS23012,DSA,All,internal,,30,2026-11-24,baseline
+CS23012,DSA,Arrays,quiz,9.0,10,2026-11-26,review
+CS23012,DSA,Linked Lists,quiz,8.0,10,2026-11-27,review
+CS23012,DSA,Stacks & Queues,quiz,7.5,10,2026-11-28,review
+CS23012,DSA,Trees,quiz,8.5,10,2026-11-26,review
+CS23012,DSA,Graphs,quiz,8.5,10,2026-11-27,review
+CS23012,DSA,All,internal,24.0,30,2026-11-28,review
+CS23012,DBMS,ER Model,quiz,9.5,10,2026-08-10,baseline
+CS23012,DBMS,ER Model,quiz,9.0,10,2026-08-17,baseline
+CS23012,DBMS,SQL,quiz,8.0,10,2026-08-24,baseline
+CS23012,DBMS,SQL,quiz,9.0,10,2026-08-31,baseline
+CS23012,DBMS,Normalization,quiz,8.0,10,2026-09-07,baseline
+CS23012,DBMS,Normalization,quiz,8.5,10,2026-09-14,baseline
+CS23012,DBMS,Transactions,quiz,8.0,10,2026-09-21,baseline
+CS23012,DBMS,Indexing,quiz,8.5,10,2026-09-28,baseline
+CS23012,DBMS,Transactions,quiz,8.0,10,2026-10-05,baseline
+CS23012,DBMS,Indexing,quiz,8.5,10,2026-10-12,baseline
+CS23012,DBMS,All,internal,27.5,30,2026-09-15,baseline
+CS23012,DBMS,All,internal,26.5,30,2026-10-20,baseline
+CS23012,DBMS,All,internal,,30,2026-11-24,baseline
+CS23012,DBMS,ER Model,quiz,9.5,10,2026-11-26,review
+CS23012,DBMS,SQL,quiz,9.0,10,2026-11-27,review
+CS23012,DBMS,Normalization,quiz,9.0,10,2026-11-28,review
+CS23012,DBMS,Transactions,quiz,9.5,10,2026-11-26,review
+CS23012,DBMS,Indexing,quiz,10.0,10,2026-11-27,review
+CS23012,DBMS,All,internal,28.5,30,2026-11-28,review
+CS23012,OS,Processes,quiz,8.5,10,2026-08-10,baseline
+CS23012,OS,Processes,quiz,8.5,10,2026-08-17,baseline
+CS23012,OS,Scheduling,quiz,7.0,10,2026-08-24,baseline
+CS23012,OS,Scheduling,quiz,8.5,10,2026-08-31,baseline
+CS23012,OS,Synchronization,quiz,8.0,10,2026-09-07,baseline
+CS23012,OS,Synchronization,quiz,8.0,10,2026-09-14,baseline
+CS23012,OS,Memory,quiz,7.5,10,2026-09-21,baseline
+CS23012,OS,File Systems,quiz,7.5,10,2026-09-28,baseline
+CS23012,OS,Memory,quiz,8.0,10,2026-10-05,baseline
+CS23012,OS,File Systems,quiz,8.5,10,2026-10-12,baseline
+CS23012,OS,All,internal,21.0,30,2026-09-15,baseline
+CS23012,OS,All,internal,24.0,30,2026-10-20,baseline
+CS23012,OS,All,internal,,30,2026-11-24,baseline
+CS23012,OS,Processes,quiz,7.5,10,2026-11-26,review
+CS23012,OS,Scheduling,quiz,8.5,10,2026-11-27,review
+CS23012,OS,Synchronization,quiz,8.0,10,2026-11-28,review
+CS23012,OS,Memory,quiz,8.0,10,2026-11-26,review
+CS23012,OS,File Systems,quiz,8.0,10,2026-11-27,review
+CS23012,OS,All,internal,25.0,30,2026-11-28,review
+CS23012,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-10,baseline
+CS23012,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-17,baseline
+CS23012,CN,Data Link,quiz,8.0,10,2026-08-24,baseline
+CS23012,CN,Data Link,quiz,8.5,10,2026-08-31,baseline
+CS23012,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23012,CN,Routing,quiz,8.5,10,2026-09-14,baseline
+CS23012,CN,Transport,quiz,7.5,10,2026-09-21,baseline
+CS23012,CN,Application Layer,quiz,10.0,10,2026-09-28,baseline
+CS23012,CN,Transport,quiz,7.5,10,2026-10-05,baseline
+CS23012,CN,Application Layer,quiz,7.5,10,2026-10-12,baseline
+CS23012,CN,All,internal,25.0,30,2026-09-15,baseline
+CS23012,CN,All,internal,23.0,30,2026-10-20,baseline
+CS23012,CN,All,internal,,30,2026-11-24,baseline
+CS23012,CN,OSI & TCP/IP,quiz,9.5,10,2026-11-26,review
+CS23012,CN,Data Link,quiz,8.0,10,2026-11-27,review
+CS23012,CN,Routing,quiz,8.5,10,2026-11-28,review
+CS23012,CN,Transport,quiz,8.0,10,2026-11-26,review
+CS23012,CN,Application Layer,quiz,8.5,10,2026-11-27,review
+CS23012,CN,All,internal,28.0,30,2026-11-28,review
+CS23012,DM,Logic,quiz,7.5,10,2026-08-10,baseline
+CS23012,DM,Logic,quiz,9.0,10,2026-08-17,baseline
+CS23012,DM,Sets & Relations,quiz,8.5,10,2026-08-24,baseline
+CS23012,DM,Sets & Relations,quiz,8.0,10,2026-08-31,baseline
+CS23012,DM,Combinatorics,quiz,7.5,10,2026-09-07,baseline
+CS23012,DM,Combinatorics,quiz,8.0,10,2026-09-14,baseline
+CS23012,DM,Graph Theory,quiz,7.5,10,2026-09-21,baseline
+CS23012,DM,Recurrences,quiz,8.0,10,2026-09-28,baseline
+CS23012,DM,Graph Theory,quiz,7.5,10,2026-10-05,baseline
+CS23012,DM,Recurrences,quiz,6.5,10,2026-10-12,baseline
+CS23012,DM,All,internal,25.5,30,2026-09-15,baseline
+CS23012,DM,All,internal,24.0,30,2026-10-20,baseline
+CS23012,DM,All,internal,,30,2026-11-24,baseline
+CS23012,DM,Logic,quiz,8.0,10,2026-11-26,review
+CS23012,DM,Sets & Relations,quiz,8.5,10,2026-11-27,review
+CS23012,DM,Combinatorics,quiz,9.0,10,2026-11-28,review
+CS23012,DM,Graph Theory,quiz,8.5,10,2026-11-26,review
+CS23012,DM,Recurrences,quiz,8.5,10,2026-11-27,review
+CS23012,DM,All,internal,30.0,30,2026-11-28,review
+CS23013,DSA,Arrays,quiz,8.0,10,2026-08-10,baseline
+CS23013,DSA,Arrays,quiz,9.0,10,2026-08-17,baseline
+CS23013,DSA,Linked Lists,quiz,7.5,10,2026-08-24,baseline
+CS23013,DSA,Linked Lists,quiz,7.0,10,2026-08-31,baseline
+CS23013,DSA,Stacks & Queues,quiz,7.0,10,2026-09-07,baseline
+CS23013,DSA,Stacks & Queues,quiz,8.0,10,2026-09-14,baseline
+CS23013,DSA,Trees,quiz,8.0,10,2026-09-21,baseline
+CS23013,DSA,Graphs,quiz,8.5,10,2026-09-28,baseline
+CS23013,DSA,Trees,quiz,7.0,10,2026-10-05,baseline
+CS23013,DSA,Graphs,quiz,8.5,10,2026-10-12,baseline
+CS23013,DSA,All,internal,26.0,30,2026-09-15,baseline
+CS23013,DSA,All,internal,23.5,30,2026-10-20,baseline
+CS23013,DSA,All,internal,,30,2026-11-24,baseline
+CS23013,DSA,Arrays,quiz,8.5,10,2026-11-26,review
+CS23013,DSA,Linked Lists,quiz,8.5,10,2026-11-27,review
+CS23013,DSA,Stacks & Queues,quiz,8.5,10,2026-11-28,review
+CS23013,DSA,Trees,quiz,7.5,10,2026-11-26,review
+CS23013,DSA,Graphs,quiz,8.0,10,2026-11-27,review
+CS23013,DSA,All,internal,22.5,30,2026-11-28,review
+CS23013,DBMS,ER Model,quiz,8.5,10,2026-08-10,baseline
+CS23013,DBMS,ER Model,quiz,8.0,10,2026-08-17,baseline
+CS23013,DBMS,SQL,quiz,8.5,10,2026-08-24,baseline
+CS23013,DBMS,SQL,quiz,7.0,10,2026-08-31,baseline
+CS23013,DBMS,Normalization,quiz,8.5,10,2026-09-07,baseline
+CS23013,DBMS,Normalization,quiz,8.0,10,2026-09-14,baseline
+CS23013,DBMS,Transactions,quiz,8.0,10,2026-09-21,baseline
+CS23013,DBMS,Indexing,quiz,9.0,10,2026-09-28,baseline
+CS23013,DBMS,Transactions,quiz,7.5,10,2026-10-05,baseline
+CS23013,DBMS,Indexing,quiz,9.0,10,2026-10-12,baseline
+CS23013,DBMS,All,internal,24.5,30,2026-09-15,baseline
+CS23013,DBMS,All,internal,24.5,30,2026-10-20,baseline
+CS23013,DBMS,All,internal,,30,2026-11-24,baseline
+CS23013,DBMS,ER Model,quiz,7.5,10,2026-11-26,review
+CS23013,DBMS,SQL,quiz,9.0,10,2026-11-27,review
+CS23013,DBMS,Normalization,quiz,8.5,10,2026-11-28,review
+CS23013,DBMS,Transactions,quiz,9.0,10,2026-11-26,review
+CS23013,DBMS,Indexing,quiz,8.5,10,2026-11-27,review
+CS23013,DBMS,All,internal,25.0,30,2026-11-28,review
+CS23013,OS,Processes,quiz,7.5,10,2026-08-10,baseline
+CS23013,OS,Processes,quiz,7.0,10,2026-08-17,baseline
+CS23013,OS,Scheduling,quiz,7.5,10,2026-08-24,baseline
+CS23013,OS,Scheduling,quiz,8.5,10,2026-08-31,baseline
+CS23013,OS,Synchronization,quiz,7.5,10,2026-09-07,baseline
+CS23013,OS,Synchronization,quiz,7.0,10,2026-09-14,baseline
+CS23013,OS,Memory,quiz,8.0,10,2026-09-21,baseline
+CS23013,OS,File Systems,quiz,6.5,10,2026-09-28,baseline
+CS23013,OS,Memory,quiz,6.5,10,2026-10-05,baseline
+CS23013,OS,File Systems,quiz,7.5,10,2026-10-12,baseline
+CS23013,OS,All,internal,23.5,30,2026-09-15,baseline
+CS23013,OS,All,internal,23.5,30,2026-10-20,baseline
+CS23013,OS,All,internal,,30,2026-11-24,baseline
+CS23013,OS,Processes,quiz,8.0,10,2026-11-26,review
+CS23013,OS,Scheduling,quiz,7.0,10,2026-11-27,review
+CS23013,OS,Synchronization,quiz,8.0,10,2026-11-28,review
+CS23013,OS,Memory,quiz,7.0,10,2026-11-26,review
+CS23013,OS,File Systems,quiz,8.0,10,2026-11-27,review
+CS23013,OS,All,internal,24.5,30,2026-11-28,review
+CS23013,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-10,baseline
+CS23013,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-17,baseline
+CS23013,CN,Data Link,quiz,8.0,10,2026-08-24,baseline
+CS23013,CN,Data Link,quiz,6.0,10,2026-08-31,baseline
+CS23013,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23013,CN,Routing,quiz,6.5,10,2026-09-14,baseline
+CS23013,CN,Transport,quiz,6.5,10,2026-09-21,baseline
+CS23013,CN,Application Layer,quiz,8.0,10,2026-09-28,baseline
+CS23013,CN,Transport,quiz,7.5,10,2026-10-05,baseline
+CS23013,CN,Application Layer,quiz,6.5,10,2026-10-12,baseline
+CS23013,CN,All,internal,22.0,30,2026-09-15,baseline
+CS23013,CN,All,internal,22.5,30,2026-10-20,baseline
+CS23013,CN,All,internal,,30,2026-11-24,baseline
+CS23013,CN,OSI & TCP/IP,quiz,9.0,10,2026-11-26,review
+CS23013,CN,Data Link,quiz,8.0,10,2026-11-27,review
+CS23013,CN,Routing,quiz,5.5,10,2026-11-28,review
+CS23013,CN,Transport,quiz,7.0,10,2026-11-26,review
+CS23013,CN,Application Layer,quiz,7.0,10,2026-11-27,review
+CS23013,CN,All,internal,22.0,30,2026-11-28,review
+CS23013,DM,Logic,quiz,7.5,10,2026-08-10,baseline
+CS23013,DM,Logic,quiz,7.0,10,2026-08-17,baseline
+CS23013,DM,Sets & Relations,quiz,8.5,10,2026-08-24,baseline
+CS23013,DM,Sets & Relations,quiz,8.0,10,2026-08-31,baseline
+CS23013,DM,Combinatorics,quiz,7.5,10,2026-09-07,baseline
+CS23013,DM,Combinatorics,quiz,8.5,10,2026-09-14,baseline
+CS23013,DM,Graph Theory,quiz,8.5,10,2026-09-21,baseline
+CS23013,DM,Recurrences,quiz,8.5,10,2026-09-28,baseline
+CS23013,DM,Graph Theory,quiz,7.0,10,2026-10-05,baseline
+CS23013,DM,Recurrences,quiz,8.5,10,2026-10-12,baseline
+CS23013,DM,All,internal,22.5,30,2026-09-15,baseline
+CS23013,DM,All,internal,25.5,30,2026-10-20,baseline
+CS23013,DM,All,internal,,30,2026-11-24,baseline
+CS23013,DM,Logic,quiz,7.0,10,2026-11-26,review
+CS23013,DM,Sets & Relations,quiz,8.0,10,2026-11-27,review
+CS23013,DM,Combinatorics,quiz,7.0,10,2026-11-28,review
+CS23013,DM,Graph Theory,quiz,8.0,10,2026-11-26,review
+CS23013,DM,Recurrences,quiz,8.0,10,2026-11-27,review
+CS23013,DM,All,internal,24.0,30,2026-11-28,review
+CS23014,DSA,Arrays,quiz,6.5,10,2026-08-10,baseline
+CS23014,DSA,Arrays,quiz,6.5,10,2026-08-17,baseline
+CS23014,DSA,Linked Lists,quiz,7.0,10,2026-08-24,baseline
+CS23014,DSA,Linked Lists,quiz,8.0,10,2026-08-31,baseline
+CS23014,DSA,Stacks & Queues,quiz,7.5,10,2026-09-07,baseline
+CS23014,DSA,Stacks & Queues,quiz,7.0,10,2026-09-14,baseline
+CS23014,DSA,Trees,quiz,8.0,10,2026-09-21,baseline
+CS23014,DSA,Graphs,quiz,6.5,10,2026-09-28,baseline
+CS23014,DSA,Trees,quiz,7.5,10,2026-10-05,baseline
+CS23014,DSA,Graphs,quiz,7.0,10,2026-10-12,baseline
+CS23014,DSA,All,internal,21.5,30,2026-09-15,baseline
+CS23014,DSA,All,internal,22.5,30,2026-10-20,baseline
+CS23014,DSA,All,internal,,30,2026-11-24,baseline
+CS23014,DSA,Arrays,quiz,8.0,10,2026-11-26,review
+CS23014,DSA,Linked Lists,quiz,7.5,10,2026-11-27,review
+CS23014,DSA,Stacks & Queues,quiz,9.0,10,2026-11-28,review
+CS23014,DSA,Trees,quiz,7.0,10,2026-11-26,review
+CS23014,DSA,Graphs,quiz,8.0,10,2026-11-27,review
+CS23014,DSA,All,internal,23.5,30,2026-11-28,review
+CS23014,DBMS,ER Model,quiz,8.5,10,2026-08-10,baseline
+CS23014,DBMS,ER Model,quiz,7.5,10,2026-08-17,baseline
+CS23014,DBMS,SQL,quiz,6.5,10,2026-08-24,baseline
+CS23014,DBMS,SQL,quiz,8.5,10,2026-08-31,baseline
+CS23014,DBMS,Normalization,quiz,8.5,10,2026-09-07,baseline
+CS23014,DBMS,Normalization,quiz,8.0,10,2026-09-14,baseline
+CS23014,DBMS,Transactions,quiz,7.5,10,2026-09-21,baseline
+CS23014,DBMS,Indexing,quiz,9.0,10,2026-09-28,baseline
+CS23014,DBMS,Transactions,quiz,8.5,10,2026-10-05,baseline
+CS23014,DBMS,Indexing,quiz,7.5,10,2026-10-12,baseline
+CS23014,DBMS,All,internal,25.0,30,2026-09-15,baseline
+CS23014,DBMS,All,internal,21.5,30,2026-10-20,baseline
+CS23014,DBMS,All,internal,,30,2026-11-24,baseline
+CS23014,DBMS,ER Model,quiz,7.5,10,2026-11-26,review
+CS23014,DBMS,SQL,quiz,7.0,10,2026-11-27,review
+CS23014,DBMS,Normalization,quiz,7.5,10,2026-11-28,review
+CS23014,DBMS,Transactions,quiz,9.0,10,2026-11-26,review
+CS23014,DBMS,Indexing,quiz,7.5,10,2026-11-27,review
+CS23014,DBMS,All,internal,23.5,30,2026-11-28,review
+CS23014,OS,Processes,quiz,7.5,10,2026-08-10,baseline
+CS23014,OS,Processes,quiz,7.0,10,2026-08-17,baseline
+CS23014,OS,Scheduling,quiz,7.5,10,2026-08-24,baseline
+CS23014,OS,Scheduling,quiz,7.0,10,2026-08-31,baseline
+CS23014,OS,Synchronization,quiz,6.5,10,2026-09-07,baseline
+CS23014,OS,Synchronization,quiz,6.5,10,2026-09-14,baseline
+CS23014,OS,Memory,quiz,7.5,10,2026-09-21,baseline
+CS23014,OS,File Systems,quiz,7.0,10,2026-09-28,baseline
+CS23014,OS,Memory,quiz,7.5,10,2026-10-05,baseline
+CS23014,OS,File Systems,quiz,5.0,10,2026-10-12,baseline
+CS23014,OS,All,internal,23.0,30,2026-09-15,baseline
+CS23014,OS,All,internal,20.5,30,2026-10-20,baseline
+CS23014,OS,All,internal,,30,2026-11-24,baseline
+CS23014,OS,Processes,quiz,7.0,10,2026-11-26,review
+CS23014,OS,Scheduling,quiz,7.5,10,2026-11-27,review
+CS23014,OS,Synchronization,quiz,8.0,10,2026-11-28,review
+CS23014,OS,Memory,quiz,7.0,10,2026-11-26,review
+CS23014,OS,File Systems,quiz,8.0,10,2026-11-27,review
+CS23014,OS,All,internal,21.0,30,2026-11-28,review
+CS23014,CN,OSI & TCP/IP,quiz,8.5,10,2026-08-10,baseline
+CS23014,CN,OSI & TCP/IP,quiz,8.5,10,2026-08-17,baseline
+CS23014,CN,Data Link,quiz,7.5,10,2026-08-24,baseline
+CS23014,CN,Data Link,quiz,8.0,10,2026-08-31,baseline
+CS23014,CN,Routing,quiz,8.5,10,2026-09-07,baseline
+CS23014,CN,Routing,quiz,7.0,10,2026-09-14,baseline
+CS23014,CN,Transport,quiz,8.0,10,2026-09-21,baseline
+CS23014,CN,Application Layer,quiz,8.5,10,2026-09-28,baseline
+CS23014,CN,Transport,quiz,7.5,10,2026-10-05,baseline
+CS23014,CN,Application Layer,quiz,9.0,10,2026-10-12,baseline
+CS23014,CN,All,internal,23.5,30,2026-09-15,baseline
+CS23014,CN,All,internal,25.0,30,2026-10-20,baseline
+CS23014,CN,All,internal,,30,2026-11-24,baseline
+CS23014,CN,OSI & TCP/IP,quiz,9.0,10,2026-11-26,review
+CS23014,CN,Data Link,quiz,8.5,10,2026-11-27,review
+CS23014,CN,Routing,quiz,9.0,10,2026-11-28,review
+CS23014,CN,Transport,quiz,9.5,10,2026-11-26,review
+CS23014,CN,Application Layer,quiz,9.0,10,2026-11-27,review
+CS23014,CN,All,internal,26.0,30,2026-11-28,review
+CS23014,DM,Logic,quiz,7.5,10,2026-08-10,baseline
+CS23014,DM,Logic,quiz,6.0,10,2026-08-17,baseline
+CS23014,DM,Sets & Relations,quiz,6.5,10,2026-08-24,baseline
+CS23014,DM,Sets & Relations,quiz,7.5,10,2026-08-31,baseline
+CS23014,DM,Combinatorics,quiz,7.0,10,2026-09-07,baseline
+CS23014,DM,Combinatorics,quiz,8.0,10,2026-09-14,baseline
+CS23014,DM,Graph Theory,quiz,7.0,10,2026-09-21,baseline
+CS23014,DM,Recurrences,quiz,6.0,10,2026-09-28,baseline
+CS23014,DM,Graph Theory,quiz,6.5,10,2026-10-05,baseline
+CS23014,DM,Recurrences,quiz,7.0,10,2026-10-12,baseline
+CS23014,DM,All,internal,20.0,30,2026-09-15,baseline
+CS23014,DM,All,internal,23.0,30,2026-10-20,baseline
+CS23014,DM,All,internal,,30,2026-11-24,baseline
+CS23014,DM,Logic,quiz,6.0,10,2026-11-26,review
+CS23014,DM,Sets & Relations,quiz,7.5,10,2026-11-27,review
+CS23014,DM,Combinatorics,quiz,6.5,10,2026-11-28,review
+CS23014,DM,Graph Theory,quiz,8.0,10,2026-11-26,review
+CS23014,DM,Recurrences,quiz,7.5,10,2026-11-27,review
+CS23014,DM,All,internal,19.0,30,2026-11-28,review
+CS23015,DSA,Arrays,quiz,8.5,10,2026-08-10,baseline
+CS23015,DSA,Arrays,quiz,6.0,10,2026-08-17,baseline
+CS23015,DSA,Linked Lists,quiz,7.5,10,2026-08-24,baseline
+CS23015,DSA,Linked Lists,quiz,7.5,10,2026-08-31,baseline
+CS23015,DSA,Stacks & Queues,quiz,7.0,10,2026-09-07,baseline
+CS23015,DSA,Stacks & Queues,quiz,7.0,10,2026-09-14,baseline
+CS23015,DSA,Trees,quiz,7.5,10,2026-09-21,baseline
+CS23015,DSA,Graphs,quiz,6.5,10,2026-09-28,baseline
+CS23015,DSA,Trees,quiz,8.0,10,2026-10-05,baseline
+CS23015,DSA,Graphs,quiz,6.0,10,2026-10-12,baseline
+CS23015,DSA,All,internal,24.5,30,2026-09-15,baseline
+CS23015,DSA,All,internal,24.0,30,2026-10-20,baseline
+CS23015,DSA,All,internal,,30,2026-11-24,baseline
+CS23015,DSA,Arrays,quiz,7.5,10,2026-11-26,review
+CS23015,DSA,Linked Lists,quiz,8.0,10,2026-11-27,review
+CS23015,DSA,Stacks & Queues,quiz,7.0,10,2026-11-28,review
+CS23015,DSA,Trees,quiz,7.0,10,2026-11-26,review
+CS23015,DSA,Graphs,quiz,7.0,10,2026-11-27,review
+CS23015,DSA,All,internal,24.0,30,2026-11-28,review
+CS23015,DBMS,ER Model,quiz,6.5,10,2026-08-10,baseline
+CS23015,DBMS,ER Model,quiz,7.0,10,2026-08-17,baseline
+CS23015,DBMS,SQL,quiz,6.5,10,2026-08-24,baseline
+CS23015,DBMS,SQL,quiz,6.0,10,2026-08-31,baseline
+CS23015,DBMS,Normalization,quiz,6.0,10,2026-09-07,baseline
+CS23015,DBMS,Normalization,quiz,6.0,10,2026-09-14,baseline
+CS23015,DBMS,Transactions,quiz,6.0,10,2026-09-21,baseline
+CS23015,DBMS,Indexing,quiz,5.5,10,2026-09-28,baseline
+CS23015,DBMS,Transactions,quiz,6.0,10,2026-10-05,baseline
+CS23015,DBMS,Indexing,quiz,7.0,10,2026-10-12,baseline
+CS23015,DBMS,All,internal,20.0,30,2026-09-15,baseline
+CS23015,DBMS,All,internal,18.5,30,2026-10-20,baseline
+CS23015,DBMS,All,internal,,30,2026-11-24,baseline
+CS23015,DBMS,ER Model,quiz,6.5,10,2026-11-26,review
+CS23015,DBMS,SQL,quiz,6.0,10,2026-11-27,review
+CS23015,DBMS,Normalization,quiz,6.0,10,2026-11-28,review
+CS23015,DBMS,Transactions,quiz,7.5,10,2026-11-26,review
+CS23015,DBMS,Indexing,quiz,6.0,10,2026-11-27,review
+CS23015,DBMS,All,internal,21.0,30,2026-11-28,review
+CS23015,OS,Processes,quiz,7.5,10,2026-08-10,baseline
+CS23015,OS,Processes,quiz,5.0,10,2026-08-17,baseline
+CS23015,OS,Scheduling,quiz,6.5,10,2026-08-24,baseline
+CS23015,OS,Scheduling,quiz,6.0,10,2026-08-31,baseline
+CS23015,OS,Synchronization,quiz,5.5,10,2026-09-07,baseline
+CS23015,OS,Synchronization,quiz,6.5,10,2026-09-14,baseline
+CS23015,OS,Memory,quiz,6.0,10,2026-09-21,baseline
+CS23015,OS,File Systems,quiz,5.5,10,2026-09-28,baseline
+CS23015,OS,Memory,quiz,6.5,10,2026-10-05,baseline
+CS23015,OS,File Systems,quiz,6.5,10,2026-10-12,baseline
+CS23015,OS,All,internal,21.0,30,2026-09-15,baseline
+CS23015,OS,All,internal,17.5,30,2026-10-20,baseline
+CS23015,OS,All,internal,,30,2026-11-24,baseline
+CS23015,OS,Processes,quiz,6.5,10,2026-11-26,review
+CS23015,OS,Scheduling,quiz,5.5,10,2026-11-27,review
+CS23015,OS,Synchronization,quiz,7.0,10,2026-11-28,review
+CS23015,OS,Memory,quiz,6.5,10,2026-11-26,review
+CS23015,OS,File Systems,quiz,6.0,10,2026-11-27,review
+CS23015,OS,All,internal,21.0,30,2026-11-28,review
+CS23015,CN,OSI & TCP/IP,quiz,6.5,10,2026-08-10,baseline
+CS23015,CN,OSI & TCP/IP,quiz,6.0,10,2026-08-17,baseline
+CS23015,CN,Data Link,quiz,6.5,10,2026-08-24,baseline
+CS23015,CN,Data Link,quiz,6.5,10,2026-08-31,baseline
+CS23015,CN,Routing,quiz,6.0,10,2026-09-07,baseline
+CS23015,CN,Routing,quiz,5.5,10,2026-09-14,baseline
+CS23015,CN,Transport,quiz,6.5,10,2026-09-21,baseline
+CS23015,CN,Application Layer,quiz,6.0,10,2026-09-28,baseline
+CS23015,CN,Transport,quiz,7.0,10,2026-10-05,baseline
+CS23015,CN,Application Layer,quiz,6.0,10,2026-10-12,baseline
+CS23015,CN,All,internal,19.0,30,2026-09-15,baseline
+CS23015,CN,All,internal,16.5,30,2026-10-20,baseline
+CS23015,CN,All,internal,,30,2026-11-24,baseline
+CS23015,CN,OSI & TCP/IP,quiz,6.5,10,2026-11-26,review
+CS23015,CN,Data Link,quiz,5.5,10,2026-11-27,review
+CS23015,CN,Routing,quiz,5.5,10,2026-11-28,review
+CS23015,CN,Transport,quiz,6.0,10,2026-11-26,review
+CS23015,CN,Application Layer,quiz,6.0,10,2026-11-27,review
+CS23015,CN,All,internal,19.0,30,2026-11-28,review
+CS23015,DM,Logic,quiz,6.0,10,2026-08-10,baseline
+CS23015,DM,Logic,quiz,6.5,10,2026-08-17,baseline
+CS23015,DM,Sets & Relations,quiz,6.0,10,2026-08-24,baseline
+CS23015,DM,Sets & Relations,quiz,6.0,10,2026-08-31,baseline
+CS23015,DM,Combinatorics,quiz,6.5,10,2026-09-07,baseline
+CS23015,DM,Combinatorics,quiz,5.0,10,2026-09-14,baseline
+CS23015,DM,Graph Theory,quiz,6.5,10,2026-09-21,baseline
+CS23015,DM,Recurrences,quiz,6.0,10,2026-09-28,baseline
+CS23015,DM,Graph Theory,quiz,5.5,10,2026-10-05,baseline
+CS23015,DM,Recurrences,quiz,5.0,10,2026-10-12,baseline
+CS23015,DM,All,internal,18.0,30,2026-09-15,baseline
+CS23015,DM,All,internal,15.5,30,2026-10-20,baseline
+CS23015,DM,All,internal,,30,2026-11-24,baseline
+CS23015,DM,Logic,quiz,6.5,10,2026-11-26,review
+CS23015,DM,Sets & Relations,quiz,5.5,10,2026-11-27,review
+CS23015,DM,Combinatorics,quiz,6.0,10,2026-11-28,review
+CS23015,DM,Graph Theory,quiz,7.0,10,2026-11-26,review
+CS23015,DM,Recurrences,quiz,6.0,10,2026-11-27,review
+CS23015,DM,All,internal,19.0,30,2026-11-28,review
+CS23016,DSA,Arrays,quiz,6.5,10,2026-08-10,baseline
+CS23016,DSA,Arrays,quiz,5.5,10,2026-08-17,baseline
+CS23016,DSA,Linked Lists,quiz,6.5,10,2026-08-24,baseline
+CS23016,DSA,Linked Lists,quiz,6.5,10,2026-08-31,baseline
+CS23016,DSA,Stacks & Queues,quiz,8.5,10,2026-09-07,baseline
+CS23016,DSA,Stacks & Queues,quiz,6.5,10,2026-09-14,baseline
+CS23016,DSA,Trees,quiz,6.5,10,2026-09-21,baseline
+CS23016,DSA,Graphs,quiz,7.5,10,2026-09-28,baseline
+CS23016,DSA,Trees,quiz,6.5,10,2026-10-05,baseline
+CS23016,DSA,Graphs,quiz,7.0,10,2026-10-12,baseline
+CS23016,DSA,All,internal,18.5,30,2026-09-15,baseline
+CS23016,DSA,All,internal,23.0,30,2026-10-20,baseline
+CS23016,DSA,All,internal,,30,2026-11-24,baseline
+CS23016,DSA,Arrays,quiz,7.0,10,2026-11-26,review
+CS23016,DSA,Linked Lists,quiz,7.5,10,2026-11-27,review
+CS23016,DSA,Stacks & Queues,quiz,7.0,10,2026-11-28,review
+CS23016,DSA,Trees,quiz,7.0,10,2026-11-26,review
+CS23016,DSA,Graphs,quiz,7.5,10,2026-11-27,review
+CS23016,DSA,All,internal,22.0,30,2026-11-28,review
+CS23016,DBMS,ER Model,quiz,7.0,10,2026-08-10,baseline
+CS23016,DBMS,ER Model,quiz,6.0,10,2026-08-17,baseline
+CS23016,DBMS,SQL,quiz,6.5,10,2026-08-24,baseline
+CS23016,DBMS,SQL,quiz,6.5,10,2026-08-31,baseline
+CS23016,DBMS,Normalization,quiz,7.5,10,2026-09-07,baseline
+CS23016,DBMS,Normalization,quiz,8.0,10,2026-09-14,baseline
+CS23016,DBMS,Transactions,quiz,8.5,10,2026-09-21,baseline
+CS23016,DBMS,Indexing,quiz,7.0,10,2026-09-28,baseline
+CS23016,DBMS,Transactions,quiz,6.5,10,2026-10-05,baseline
+CS23016,DBMS,Indexing,quiz,6.0,10,2026-10-12,baseline
+CS23016,DBMS,All,internal,23.5,30,2026-09-15,baseline
+CS23016,DBMS,All,internal,17.5,30,2026-10-20,baseline
+CS23016,DBMS,All,internal,,30,2026-11-24,baseline
+CS23016,DBMS,ER Model,quiz,7.0,10,2026-11-26,review
+CS23016,DBMS,SQL,quiz,8.0,10,2026-11-27,review
+CS23016,DBMS,Normalization,quiz,6.5,10,2026-11-28,review
+CS23016,DBMS,Transactions,quiz,8.0,10,2026-11-26,review
+CS23016,DBMS,Indexing,quiz,8.0,10,2026-11-27,review
+CS23016,DBMS,All,internal,21.0,30,2026-11-28,review
+CS23016,OS,Processes,quiz,5.5,10,2026-08-10,baseline
+CS23016,OS,Processes,quiz,6.5,10,2026-08-17,baseline
+CS23016,OS,Scheduling,quiz,6.5,10,2026-08-24,baseline
+CS23016,OS,Scheduling,quiz,5.0,10,2026-08-31,baseline
+CS23016,OS,Synchronization,quiz,7.0,10,2026-09-07,baseline
+CS23016,OS,Synchronization,quiz,6.5,10,2026-09-14,baseline
+CS23016,OS,Memory,quiz,5.5,10,2026-09-21,baseline
+CS23016,OS,File Systems,quiz,5.5,10,2026-09-28,baseline
+CS23016,OS,Memory,quiz,6.0,10,2026-10-05,baseline
+CS23016,OS,File Systems,quiz,6.0,10,2026-10-12,baseline
+CS23016,OS,All,internal,19.0,30,2026-09-15,baseline
+CS23016,OS,All,internal,18.0,30,2026-10-20,baseline
+CS23016,OS,All,internal,,30,2026-11-24,baseline
+CS23016,OS,Processes,quiz,7.0,10,2026-11-26,review
+CS23016,OS,Scheduling,quiz,6.5,10,2026-11-27,review
+CS23016,OS,Synchronization,quiz,7.0,10,2026-11-28,review
+CS23016,OS,Memory,quiz,6.5,10,2026-11-26,review
+CS23016,OS,File Systems,quiz,7.0,10,2026-11-27,review
+CS23016,OS,All,internal,20.0,30,2026-11-28,review
+CS23016,CN,OSI & TCP/IP,quiz,5.0,10,2026-08-10,baseline
+CS23016,CN,OSI & TCP/IP,quiz,5.5,10,2026-08-17,baseline
+CS23016,CN,Data Link,quiz,6.0,10,2026-08-24,baseline
+CS23016,CN,Data Link,quiz,4.0,10,2026-08-31,baseline
+CS23016,CN,Routing,quiz,5.5,10,2026-09-07,baseline
+CS23016,CN,Routing,quiz,6.0,10,2026-09-14,baseline
+CS23016,CN,Transport,quiz,4.5,10,2026-09-21,baseline
+CS23016,CN,Application Layer,quiz,5.0,10,2026-09-28,baseline
+CS23016,CN,Transport,quiz,5.0,10,2026-10-05,baseline
+CS23016,CN,Application Layer,quiz,5.5,10,2026-10-12,baseline
+CS23016,CN,All,internal,16.0,30,2026-09-15,baseline
+CS23016,CN,All,internal,14.0,30,2026-10-20,baseline
+CS23016,CN,All,internal,,30,2026-11-24,baseline
+CS23016,CN,OSI & TCP/IP,quiz,5.0,10,2026-11-26,review
+CS23016,CN,Data Link,quiz,5.5,10,2026-11-27,review
+CS23016,CN,Routing,quiz,6.0,10,2026-11-28,review
+CS23016,CN,Transport,quiz,6.5,10,2026-11-26,review
+CS23016,CN,Application Layer,quiz,5.0,10,2026-11-27,review
+CS23016,CN,All,internal,17.5,30,2026-11-28,review
+CS23016,DM,Logic,quiz,5.5,10,2026-08-10,baseline
+CS23016,DM,Logic,quiz,6.0,10,2026-08-17,baseline
+CS23016,DM,Sets & Relations,quiz,5.5,10,2026-08-24,baseline
+CS23016,DM,Sets & Relations,quiz,6.0,10,2026-08-31,baseline
+CS23016,DM,Combinatorics,quiz,6.0,10,2026-09-07,baseline
+CS23016,DM,Combinatorics,quiz,6.5,10,2026-09-14,baseline
+CS23016,DM,Graph Theory,quiz,7.0,10,2026-09-21,baseline
+CS23016,DM,Recurrences,quiz,6.5,10,2026-09-28,baseline
+CS23016,DM,Graph Theory,quiz,8.0,10,2026-10-05,baseline
+CS23016,DM,Recurrences,quiz,6.5,10,2026-10-12,baseline
+CS23016,DM,All,internal,21.0,30,2026-09-15,baseline
+CS23016,DM,All,internal,20.0,30,2026-10-20,baseline
+CS23016,DM,All,internal,,30,2026-11-24,baseline
+CS23016,DM,Logic,quiz,6.5,10,2026-11-26,review
+CS23016,DM,Sets & Relations,quiz,7.5,10,2026-11-27,review
+CS23016,DM,Combinatorics,quiz,7.5,10,2026-11-28,review
+CS23016,DM,Graph Theory,quiz,6.5,10,2026-11-26,review
+CS23016,DM,Recurrences,quiz,6.5,10,2026-11-27,review
+CS23016,DM,All,internal,21.0,30,2026-11-28,review
+CS23017,DSA,Arrays,quiz,6.5,10,2026-08-10,baseline
+CS23017,DSA,Arrays,quiz,8.5,10,2026-08-17,baseline
+CS23017,DSA,Linked Lists,quiz,7.0,10,2026-08-24,baseline
+CS23017,DSA,Linked Lists,quiz,8.5,10,2026-08-31,baseline
+CS23017,DSA,Stacks & Queues,quiz,7.0,10,2026-09-07,baseline
+CS23017,DSA,Stacks & Queues,quiz,7.0,10,2026-09-14,baseline
+CS23017,DSA,Trees,quiz,8.0,10,2026-09-21,baseline
+CS23017,DSA,Graphs,quiz,7.0,10,2026-09-28,baseline
+CS23017,DSA,Trees,quiz,6.5,10,2026-10-05,baseline
+CS23017,DSA,Graphs,quiz,7.0,10,2026-10-12,baseline
+CS23017,DSA,All,internal,22.5,30,2026-09-15,baseline
+CS23017,DSA,All,internal,20.5,30,2026-10-20,baseline
+CS23017,DSA,All,internal,,30,2026-11-24,baseline
+CS23017,DSA,Arrays,quiz,6.0,10,2026-11-26,review
+CS23017,DSA,Linked Lists,quiz,7.0,10,2026-11-27,review
+CS23017,DSA,Stacks & Queues,quiz,7.5,10,2026-11-28,review
+CS23017,DSA,Trees,quiz,7.5,10,2026-11-26,review
+CS23017,DSA,Graphs,quiz,7.0,10,2026-11-27,review
+CS23017,DSA,All,internal,21.0,30,2026-11-28,review
+CS23017,DBMS,ER Model,quiz,8.0,10,2026-08-10,baseline
+CS23017,DBMS,ER Model,quiz,6.5,10,2026-08-17,baseline
+CS23017,DBMS,SQL,quiz,7.0,10,2026-08-24,baseline
+CS23017,DBMS,SQL,quiz,7.5,10,2026-08-31,baseline
+CS23017,DBMS,Normalization,quiz,7.5,10,2026-09-07,baseline
+CS23017,DBMS,Normalization,quiz,7.0,10,2026-09-14,baseline
+CS23017,DBMS,Transactions,quiz,7.0,10,2026-09-21,baseline
+CS23017,DBMS,Indexing,quiz,7.0,10,2026-09-28,baseline
+CS23017,DBMS,Transactions,quiz,7.0,10,2026-10-05,baseline
+CS23017,DBMS,Indexing,quiz,6.0,10,2026-10-12,baseline
+CS23017,DBMS,All,internal,20.0,30,2026-09-15,baseline
+CS23017,DBMS,All,internal,18.0,30,2026-10-20,baseline
+CS23017,DBMS,All,internal,,30,2026-11-24,baseline
+CS23017,DBMS,ER Model,quiz,8.0,10,2026-11-26,review
+CS23017,DBMS,SQL,quiz,7.0,10,2026-11-27,review
+CS23017,DBMS,Normalization,quiz,8.0,10,2026-11-28,review
+CS23017,DBMS,Transactions,quiz,9.0,10,2026-11-26,review
+CS23017,DBMS,Indexing,quiz,7.0,10,2026-11-27,review
+CS23017,DBMS,All,internal,24.5,30,2026-11-28,review
+CS23017,OS,Processes,quiz,6.5,10,2026-08-10,baseline
+CS23017,OS,Processes,quiz,6.0,10,2026-08-17,baseline
+CS23017,OS,Scheduling,quiz,6.5,10,2026-08-24,baseline
+CS23017,OS,Scheduling,quiz,6.5,10,2026-08-31,baseline
+CS23017,OS,Synchronization,quiz,5.5,10,2026-09-07,baseline
+CS23017,OS,Synchronization,quiz,7.0,10,2026-09-14,baseline
+CS23017,OS,Memory,quiz,6.5,10,2026-09-21,baseline
+CS23017,OS,File Systems,quiz,7.0,10,2026-09-28,baseline
+CS23017,OS,Memory,quiz,6.5,10,2026-10-05,baseline
+CS23017,OS,File Systems,quiz,8.5,10,2026-10-12,baseline
+CS23017,OS,All,internal,17.5,30,2026-09-15,baseline
+CS23017,OS,All,internal,19.0,30,2026-10-20,baseline
+CS23017,OS,All,internal,,30,2026-11-24,baseline
+CS23017,OS,Processes,quiz,8.5,10,2026-11-26,review
+CS23017,OS,Scheduling,quiz,6.5,10,2026-11-27,review
+CS23017,OS,Synchronization,quiz,8.5,10,2026-11-28,review
+CS23017,OS,Memory,quiz,6.5,10,2026-11-26,review
+CS23017,OS,File Systems,quiz,8.0,10,2026-11-27,review
+CS23017,OS,All,internal,21.5,30,2026-11-28,review
+CS23017,CN,OSI & TCP/IP,quiz,8.5,10,2026-08-10,baseline
+CS23017,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-17,baseline
+CS23017,CN,Data Link,quiz,9.0,10,2026-08-24,baseline
+CS23017,CN,Data Link,quiz,6.5,10,2026-08-31,baseline
+CS23017,CN,Routing,quiz,7.0,10,2026-09-07,baseline
+CS23017,CN,Routing,quiz,8.5,10,2026-09-14,baseline
+CS23017,CN,Transport,quiz,7.0,10,2026-09-21,baseline
+CS23017,CN,Application Layer,quiz,7.0,10,2026-09-28,baseline
+CS23017,CN,Transport,quiz,7.5,10,2026-10-05,baseline
+CS23017,CN,Application Layer,quiz,7.5,10,2026-10-12,baseline
+CS23017,CN,All,internal,22.5,30,2026-09-15,baseline
+CS23017,CN,All,internal,20.5,30,2026-10-20,baseline
+CS23017,CN,All,internal,,30,2026-11-24,baseline
+CS23017,CN,OSI & TCP/IP,quiz,8.0,10,2026-11-26,review
+CS23017,CN,Data Link,quiz,8.5,10,2026-11-27,review
+CS23017,CN,Routing,quiz,8.0,10,2026-11-28,review
+CS23017,CN,Transport,quiz,7.0,10,2026-11-26,review
+CS23017,CN,Application Layer,quiz,7.5,10,2026-11-27,review
+CS23017,CN,All,internal,21.5,30,2026-11-28,review
+CS23017,DM,Logic,quiz,7.0,10,2026-08-10,baseline
+CS23017,DM,Logic,quiz,8.5,10,2026-08-17,baseline
+CS23017,DM,Sets & Relations,quiz,7.5,10,2026-08-24,baseline
+CS23017,DM,Sets & Relations,quiz,8.5,10,2026-08-31,baseline
+CS23017,DM,Combinatorics,quiz,8.5,10,2026-09-07,baseline
+CS23017,DM,Combinatorics,quiz,8.0,10,2026-09-14,baseline
+CS23017,DM,Graph Theory,quiz,8.5,10,2026-09-21,baseline
+CS23017,DM,Recurrences,quiz,8.0,10,2026-09-28,baseline
+CS23017,DM,Graph Theory,quiz,8.5,10,2026-10-05,baseline
+CS23017,DM,Recurrences,quiz,8.0,10,2026-10-12,baseline
+CS23017,DM,All,internal,25.0,30,2026-09-15,baseline
+CS23017,DM,All,internal,24.0,30,2026-10-20,baseline
+CS23017,DM,All,internal,,30,2026-11-24,baseline
+CS23017,DM,Logic,quiz,8.0,10,2026-11-26,review
+CS23017,DM,Sets & Relations,quiz,9.0,10,2026-11-27,review
+CS23017,DM,Combinatorics,quiz,9.0,10,2026-11-28,review
+CS23017,DM,Graph Theory,quiz,8.5,10,2026-11-26,review
+CS23017,DM,Recurrences,quiz,8.0,10,2026-11-27,review
+CS23017,DM,All,internal,24.0,30,2026-11-28,review
+CS23018,DSA,Arrays,quiz,7.5,10,2026-08-10,baseline
+CS23018,DSA,Arrays,quiz,6.5,10,2026-08-17,baseline
+CS23018,DSA,Linked Lists,quiz,7.5,10,2026-08-24,baseline
+CS23018,DSA,Linked Lists,quiz,8.0,10,2026-08-31,baseline
+CS23018,DSA,Stacks & Queues,quiz,6.5,10,2026-09-07,baseline
+CS23018,DSA,Stacks & Queues,quiz,7.0,10,2026-09-14,baseline
+CS23018,DSA,Trees,quiz,7.5,10,2026-09-21,baseline
+CS23018,DSA,Graphs,quiz,8.0,10,2026-09-28,baseline
+CS23018,DSA,Trees,quiz,7.0,10,2026-10-05,baseline
+CS23018,DSA,Graphs,quiz,7.0,10,2026-10-12,baseline
+CS23018,DSA,All,internal,21.0,30,2026-09-15,baseline
+CS23018,DSA,All,internal,22.5,30,2026-10-20,baseline
+CS23018,DSA,All,internal,,30,2026-11-24,baseline
+CS23018,DSA,Arrays,quiz,7.5,10,2026-11-26,review
+CS23018,DSA,Linked Lists,quiz,7.0,10,2026-11-27,review
+CS23018,DSA,Stacks & Queues,quiz,7.0,10,2026-11-28,review
+CS23018,DSA,Trees,quiz,8.0,10,2026-11-26,review
+CS23018,DSA,Graphs,quiz,7.0,10,2026-11-27,review
+CS23018,DSA,All,internal,23.5,30,2026-11-28,review
+CS23018,DBMS,ER Model,quiz,7.5,10,2026-08-10,baseline
+CS23018,DBMS,ER Model,quiz,8.0,10,2026-08-17,baseline
+CS23018,DBMS,SQL,quiz,9.0,10,2026-08-24,baseline
+CS23018,DBMS,SQL,quiz,8.0,10,2026-08-31,baseline
+CS23018,DBMS,Normalization,quiz,8.0,10,2026-09-07,baseline
+CS23018,DBMS,Normalization,quiz,7.0,10,2026-09-14,baseline
+CS23018,DBMS,Transactions,quiz,8.5,10,2026-09-21,baseline
+CS23018,DBMS,Indexing,quiz,8.5,10,2026-09-28,baseline
+CS23018,DBMS,Transactions,quiz,8.5,10,2026-10-05,baseline
+CS23018,DBMS,Indexing,quiz,8.5,10,2026-10-12,baseline
+CS23018,DBMS,All,internal,25.0,30,2026-09-15,baseline
+CS23018,DBMS,All,internal,22.0,30,2026-10-20,baseline
+CS23018,DBMS,All,internal,,30,2026-11-24,baseline
+CS23018,DBMS,ER Model,quiz,8.5,10,2026-11-26,review
+CS23018,DBMS,SQL,quiz,9.0,10,2026-11-27,review
+CS23018,DBMS,Normalization,quiz,8.0,10,2026-11-28,review
+CS23018,DBMS,Transactions,quiz,8.5,10,2026-11-26,review
+CS23018,DBMS,Indexing,quiz,8.5,10,2026-11-27,review
+CS23018,DBMS,All,internal,27.5,30,2026-11-28,review
+CS23018,OS,Processes,quiz,9.0,10,2026-08-10,baseline
+CS23018,OS,Processes,quiz,9.0,10,2026-08-17,baseline
+CS23018,OS,Scheduling,quiz,8.0,10,2026-08-24,baseline
+CS23018,OS,Scheduling,quiz,8.0,10,2026-08-31,baseline
+CS23018,OS,Synchronization,quiz,8.5,10,2026-09-07,baseline
+CS23018,OS,Synchronization,quiz,9.5,10,2026-09-14,baseline
+CS23018,OS,Memory,quiz,9.0,10,2026-09-21,baseline
+CS23018,OS,File Systems,quiz,9.0,10,2026-09-28,baseline
+CS23018,OS,Memory,quiz,8.0,10,2026-10-05,baseline
+CS23018,OS,File Systems,quiz,8.0,10,2026-10-12,baseline
+CS23018,OS,All,internal,28.0,30,2026-09-15,baseline
+CS23018,OS,All,internal,26.0,30,2026-10-20,baseline
+CS23018,OS,All,internal,,30,2026-11-24,baseline
+CS23018,OS,Processes,quiz,9.5,10,2026-11-26,review
+CS23018,OS,Scheduling,quiz,9.0,10,2026-11-27,review
+CS23018,OS,Synchronization,quiz,10.0,10,2026-11-28,review
+CS23018,OS,Memory,quiz,10.0,10,2026-11-26,review
+CS23018,OS,File Systems,quiz,9.0,10,2026-11-27,review
+CS23018,OS,All,internal,27.0,30,2026-11-28,review
+CS23018,CN,OSI & TCP/IP,quiz,8.0,10,2026-08-10,baseline
+CS23018,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-17,baseline
+CS23018,CN,Data Link,quiz,8.5,10,2026-08-24,baseline
+CS23018,CN,Data Link,quiz,8.0,10,2026-08-31,baseline
+CS23018,CN,Routing,quiz,6.5,10,2026-09-07,baseline
+CS23018,CN,Routing,quiz,7.5,10,2026-09-14,baseline
+CS23018,CN,Transport,quiz,7.5,10,2026-09-21,baseline
+CS23018,CN,Application Layer,quiz,8.5,10,2026-09-28,baseline
+CS23018,CN,Transport,quiz,8.0,10,2026-10-05,baseline
+CS23018,CN,Application Layer,quiz,9.0,10,2026-10-12,baseline
+CS23018,CN,All,internal,21.0,30,2026-09-15,baseline
+CS23018,CN,All,internal,22.0,30,2026-10-20,baseline
+CS23018,CN,All,internal,,30,2026-11-24,baseline
+CS23018,CN,OSI & TCP/IP,quiz,8.0,10,2026-11-26,review
+CS23018,CN,Data Link,quiz,7.5,10,2026-11-27,review
+CS23018,CN,Routing,quiz,8.0,10,2026-11-28,review
+CS23018,CN,Transport,quiz,8.0,10,2026-11-26,review
+CS23018,CN,Application Layer,quiz,8.5,10,2026-11-27,review
+CS23018,CN,All,internal,26.5,30,2026-11-28,review
+CS23018,DM,Logic,quiz,7.5,10,2026-08-10,baseline
+CS23018,DM,Logic,quiz,8.0,10,2026-08-17,baseline
+CS23018,DM,Sets & Relations,quiz,8.0,10,2026-08-24,baseline
+CS23018,DM,Sets & Relations,quiz,8.5,10,2026-08-31,baseline
+CS23018,DM,Combinatorics,quiz,8.0,10,2026-09-07,baseline
+CS23018,DM,Combinatorics,quiz,7.5,10,2026-09-14,baseline
+CS23018,DM,Graph Theory,quiz,7.0,10,2026-09-21,baseline
+CS23018,DM,Recurrences,quiz,6.5,10,2026-09-28,baseline
+CS23018,DM,Graph Theory,quiz,7.5,10,2026-10-05,baseline
+CS23018,DM,Recurrences,quiz,8.0,10,2026-10-12,baseline
+CS23018,DM,All,internal,25.0,30,2026-09-15,baseline
+CS23018,DM,All,internal,22.5,30,2026-10-20,baseline
+CS23018,DM,All,internal,,30,2026-11-24,baseline
+CS23018,DM,Logic,quiz,8.0,10,2026-11-26,review
+CS23018,DM,Sets & Relations,quiz,8.0,10,2026-11-27,review
+CS23018,DM,Combinatorics,quiz,8.5,10,2026-11-28,review
+CS23018,DM,Graph Theory,quiz,7.5,10,2026-11-26,review
+CS23018,DM,Recurrences,quiz,8.0,10,2026-11-27,review
+CS23018,DM,All,internal,20.5,30,2026-11-28,review
+CS23019,DSA,Arrays,quiz,7.0,10,2026-08-10,baseline
+CS23019,DSA,Arrays,quiz,7.0,10,2026-08-17,baseline
+CS23019,DSA,Linked Lists,quiz,7.0,10,2026-08-24,baseline
+CS23019,DSA,Linked Lists,quiz,6.0,10,2026-08-31,baseline
+CS23019,DSA,Stacks & Queues,quiz,6.5,10,2026-09-07,baseline
+CS23019,DSA,Stacks & Queues,quiz,8.0,10,2026-09-14,baseline
+CS23019,DSA,Trees,quiz,7.0,10,2026-09-21,baseline
+CS23019,DSA,Graphs,quiz,6.5,10,2026-09-28,baseline
+CS23019,DSA,Trees,quiz,7.0,10,2026-10-05,baseline
+CS23019,DSA,Graphs,quiz,7.0,10,2026-10-12,baseline
+CS23019,DSA,All,internal,24.0,30,2026-09-15,baseline
+CS23019,DSA,All,internal,22.5,30,2026-10-20,baseline
+CS23019,DSA,All,internal,,30,2026-11-24,baseline
+CS23019,DSA,Arrays,quiz,7.0,10,2026-11-26,review
+CS23019,DSA,Linked Lists,quiz,8.5,10,2026-11-27,review
+CS23019,DSA,Stacks & Queues,quiz,7.0,10,2026-11-28,review
+CS23019,DSA,Trees,quiz,6.5,10,2026-11-26,review
+CS23019,DSA,Graphs,quiz,6.5,10,2026-11-27,review
+CS23019,DSA,All,internal,20.0,30,2026-11-28,review
+CS23019,DBMS,ER Model,quiz,7.0,10,2026-08-10,baseline
+CS23019,DBMS,ER Model,quiz,7.0,10,2026-08-17,baseline
+CS23019,DBMS,SQL,quiz,7.5,10,2026-08-24,baseline
+CS23019,DBMS,SQL,quiz,6.5,10,2026-08-31,baseline
+CS23019,DBMS,Normalization,quiz,7.0,10,2026-09-07,baseline
+CS23019,DBMS,Normalization,quiz,8.0,10,2026-09-14,baseline
+CS23019,DBMS,Transactions,quiz,7.0,10,2026-09-21,baseline
+CS23019,DBMS,Indexing,quiz,7.5,10,2026-09-28,baseline
+CS23019,DBMS,Transactions,quiz,5.5,10,2026-10-05,baseline
+CS23019,DBMS,Indexing,quiz,6.0,10,2026-10-12,baseline
+CS23019,DBMS,All,internal,18.5,30,2026-09-15,baseline
+CS23019,DBMS,All,internal,15.0,30,2026-10-20,baseline
+CS23019,DBMS,All,internal,,30,2026-11-24,baseline
+CS23019,DBMS,ER Model,quiz,7.5,10,2026-11-26,review
+CS23019,DBMS,SQL,quiz,6.5,10,2026-11-27,review
+CS23019,DBMS,Normalization,quiz,7.0,10,2026-11-28,review
+CS23019,DBMS,Transactions,quiz,6.5,10,2026-11-26,review
+CS23019,DBMS,Indexing,quiz,6.5,10,2026-11-27,review
+CS23019,DBMS,All,internal,21.5,30,2026-11-28,review
+CS23019,OS,Processes,quiz,8.0,10,2026-08-10,baseline
+CS23019,OS,Processes,quiz,6.0,10,2026-08-17,baseline
+CS23019,OS,Scheduling,quiz,7.5,10,2026-08-24,baseline
+CS23019,OS,Scheduling,quiz,7.0,10,2026-08-31,baseline
+CS23019,OS,Synchronization,quiz,8.0,10,2026-09-07,baseline
+CS23019,OS,Synchronization,quiz,7.5,10,2026-09-14,baseline
+CS23019,OS,Memory,quiz,6.0,10,2026-09-21,baseline
+CS23019,OS,File Systems,quiz,5.5,10,2026-09-28,baseline
+CS23019,OS,Memory,quiz,6.5,10,2026-10-05,baseline
+CS23019,OS,File Systems,quiz,7.0,10,2026-10-12,baseline
+CS23019,OS,All,internal,21.0,30,2026-09-15,baseline
+CS23019,OS,All,internal,21.5,30,2026-10-20,baseline
+CS23019,OS,All,internal,,30,2026-11-24,baseline
+CS23019,OS,Processes,quiz,6.5,10,2026-11-26,review
+CS23019,OS,Scheduling,quiz,6.5,10,2026-11-27,review
+CS23019,OS,Synchronization,quiz,7.5,10,2026-11-28,review
+CS23019,OS,Memory,quiz,7.0,10,2026-11-26,review
+CS23019,OS,File Systems,quiz,7.5,10,2026-11-27,review
+CS23019,OS,All,internal,21.0,30,2026-11-28,review
+CS23019,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-10,baseline
+CS23019,CN,OSI & TCP/IP,quiz,5.5,10,2026-08-17,baseline
+CS23019,CN,Data Link,quiz,6.0,10,2026-08-24,baseline
+CS23019,CN,Data Link,quiz,7.0,10,2026-08-31,baseline
+CS23019,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23019,CN,Routing,quiz,6.5,10,2026-09-14,baseline
+CS23019,CN,Transport,quiz,6.0,10,2026-09-21,baseline
+CS23019,CN,Application Layer,quiz,5.5,10,2026-09-28,baseline
+CS23019,CN,Transport,quiz,6.5,10,2026-10-05,baseline
+CS23019,CN,Application Layer,quiz,6.0,10,2026-10-12,baseline
+CS23019,CN,All,internal,23.5,30,2026-09-15,baseline
+CS23019,CN,All,internal,24.0,30,2026-10-20,baseline
+CS23019,CN,All,internal,,30,2026-11-24,baseline
+CS23019,CN,OSI & TCP/IP,quiz,7.0,10,2026-11-26,review
+CS23019,CN,Data Link,quiz,7.0,10,2026-11-27,review
+CS23019,CN,Routing,quiz,7.5,10,2026-11-28,review
+CS23019,CN,Transport,quiz,7.0,10,2026-11-26,review
+CS23019,CN,Application Layer,quiz,7.0,10,2026-11-27,review
+CS23019,CN,All,internal,23.0,30,2026-11-28,review
+CS23019,DM,Logic,quiz,8.5,10,2026-08-10,baseline
+CS23019,DM,Logic,quiz,6.5,10,2026-08-17,baseline
+CS23019,DM,Sets & Relations,quiz,7.0,10,2026-08-24,baseline
+CS23019,DM,Sets & Relations,quiz,7.0,10,2026-08-31,baseline
+CS23019,DM,Combinatorics,quiz,8.0,10,2026-09-07,baseline
+CS23019,DM,Combinatorics,quiz,7.0,10,2026-09-14,baseline
+CS23019,DM,Graph Theory,quiz,7.5,10,2026-09-21,baseline
+CS23019,DM,Recurrences,quiz,6.5,10,2026-09-28,baseline
+CS23019,DM,Graph Theory,quiz,7.5,10,2026-10-05,baseline
+CS23019,DM,Recurrences,quiz,9.0,10,2026-10-12,baseline
+CS23019,DM,All,internal,25.0,30,2026-09-15,baseline
+CS23019,DM,All,internal,18.5,30,2026-10-20,baseline
+CS23019,DM,All,internal,,30,2026-11-24,baseline
+CS23019,DM,Logic,quiz,8.0,10,2026-11-26,review
+CS23019,DM,Sets & Relations,quiz,7.5,10,2026-11-27,review
+CS23019,DM,Combinatorics,quiz,7.0,10,2026-11-28,review
+CS23019,DM,Graph Theory,quiz,8.0,10,2026-11-26,review
+CS23019,DM,Recurrences,quiz,7.5,10,2026-11-27,review
+CS23019,DM,All,internal,24.0,30,2026-11-28,review
+CS23020,DSA,Arrays,quiz,8.0,10,2026-08-10,baseline
+CS23020,DSA,Arrays,quiz,6.0,10,2026-08-17,baseline
+CS23020,DSA,Linked Lists,quiz,6.5,10,2026-08-24,baseline
+CS23020,DSA,Linked Lists,quiz,7.0,10,2026-08-31,baseline
+CS23020,DSA,Stacks & Queues,quiz,7.0,10,2026-09-07,baseline
+CS23020,DSA,Stacks & Queues,quiz,6.0,10,2026-09-14,baseline
+CS23020,DSA,Trees,quiz,7.5,10,2026-09-21,baseline
+CS23020,DSA,Graphs,quiz,6.0,10,2026-09-28,baseline
+CS23020,DSA,Trees,quiz,6.5,10,2026-10-05,baseline
+CS23020,DSA,Graphs,quiz,6.5,10,2026-10-12,baseline
+CS23020,DSA,All,internal,19.0,30,2026-09-15,baseline
+CS23020,DSA,All,internal,22.0,30,2026-10-20,baseline
+CS23020,DSA,All,internal,,30,2026-11-24,baseline
+CS23020,DSA,Arrays,quiz,6.5,10,2026-11-26,review
+CS23020,DSA,Linked Lists,quiz,6.5,10,2026-11-27,review
+CS23020,DSA,Stacks & Queues,quiz,7.5,10,2026-11-28,review
+CS23020,DSA,Trees,quiz,8.0,10,2026-11-26,review
+CS23020,DSA,Graphs,quiz,7.5,10,2026-11-27,review
+CS23020,DSA,All,internal,23.5,30,2026-11-28,review
+CS23020,DBMS,ER Model,quiz,8.5,10,2026-08-10,baseline
+CS23020,DBMS,ER Model,quiz,7.5,10,2026-08-17,baseline
+CS23020,DBMS,SQL,quiz,8.0,10,2026-08-24,baseline
+CS23020,DBMS,SQL,quiz,8.5,10,2026-08-31,baseline
+CS23020,DBMS,Normalization,quiz,8.5,10,2026-09-07,baseline
+CS23020,DBMS,Normalization,quiz,9.0,10,2026-09-14,baseline
+CS23020,DBMS,Transactions,quiz,7.0,10,2026-09-21,baseline
+CS23020,DBMS,Indexing,quiz,8.0,10,2026-09-28,baseline
+CS23020,DBMS,Transactions,quiz,7.5,10,2026-10-05,baseline
+CS23020,DBMS,Indexing,quiz,7.5,10,2026-10-12,baseline
+CS23020,DBMS,All,internal,26.5,30,2026-09-15,baseline
+CS23020,DBMS,All,internal,25.0,30,2026-10-20,baseline
+CS23020,DBMS,All,internal,,30,2026-11-24,baseline
+CS23020,DBMS,ER Model,quiz,9.5,10,2026-11-26,review
+CS23020,DBMS,SQL,quiz,8.5,10,2026-11-27,review
+CS23020,DBMS,Normalization,quiz,8.0,10,2026-11-28,review
+CS23020,DBMS,Transactions,quiz,9.0,10,2026-11-26,review
+CS23020,DBMS,Indexing,quiz,8.0,10,2026-11-27,review
+CS23020,DBMS,All,internal,23.5,30,2026-11-28,review
+CS23020,OS,Processes,quiz,7.0,10,2026-08-10,baseline
+CS23020,OS,Processes,quiz,8.0,10,2026-08-17,baseline
+CS23020,OS,Scheduling,quiz,7.0,10,2026-08-24,baseline
+CS23020,OS,Scheduling,quiz,8.0,10,2026-08-31,baseline
+CS23020,OS,Synchronization,quiz,7.0,10,2026-09-07,baseline
+CS23020,OS,Synchronization,quiz,7.0,10,2026-09-14,baseline
+CS23020,OS,Memory,quiz,8.5,10,2026-09-21,baseline
+CS23020,OS,File Systems,quiz,8.0,10,2026-09-28,baseline
+CS23020,OS,Memory,quiz,7.0,10,2026-10-05,baseline
+CS23020,OS,File Systems,quiz,6.5,10,2026-10-12,baseline
+CS23020,OS,All,internal,18.5,30,2026-09-15,baseline
+CS23020,OS,All,internal,22.0,30,2026-10-20,baseline
+CS23020,OS,All,internal,,30,2026-11-24,baseline
+CS23020,OS,Processes,quiz,7.5,10,2026-11-26,review
+CS23020,OS,Scheduling,quiz,7.5,10,2026-11-27,review
+CS23020,OS,Synchronization,quiz,7.5,10,2026-11-28,review
+CS23020,OS,Memory,quiz,8.0,10,2026-11-26,review
+CS23020,OS,File Systems,quiz,7.5,10,2026-11-27,review
+CS23020,OS,All,internal,21.0,30,2026-11-28,review
+CS23020,CN,OSI & TCP/IP,quiz,8.0,10,2026-08-10,baseline
+CS23020,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-17,baseline
+CS23020,CN,Data Link,quiz,8.0,10,2026-08-24,baseline
+CS23020,CN,Data Link,quiz,8.0,10,2026-08-31,baseline
+CS23020,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23020,CN,Routing,quiz,7.0,10,2026-09-14,baseline
+CS23020,CN,Transport,quiz,6.5,10,2026-09-21,baseline
+CS23020,CN,Application Layer,quiz,7.0,10,2026-09-28,baseline
+CS23020,CN,Transport,quiz,6.5,10,2026-10-05,baseline
+CS23020,CN,Application Layer,quiz,7.5,10,2026-10-12,baseline
+CS23020,CN,All,internal,22.5,30,2026-09-15,baseline
+CS23020,CN,All,internal,21.5,30,2026-10-20,baseline
+CS23020,CN,All,internal,,30,2026-11-24,baseline
+CS23020,CN,OSI & TCP/IP,quiz,8.0,10,2026-11-26,review
+CS23020,CN,Data Link,quiz,8.0,10,2026-11-27,review
+CS23020,CN,Routing,quiz,8.5,10,2026-11-28,review
+CS23020,CN,Transport,quiz,8.5,10,2026-11-26,review
+CS23020,CN,Application Layer,quiz,7.0,10,2026-11-27,review
+CS23020,CN,All,internal,25.5,30,2026-11-28,review
+CS23020,DM,Logic,quiz,5.5,10,2026-08-10,baseline
+CS23020,DM,Logic,quiz,7.0,10,2026-08-17,baseline
+CS23020,DM,Sets & Relations,quiz,6.5,10,2026-08-24,baseline
+CS23020,DM,Sets & Relations,quiz,6.5,10,2026-08-31,baseline
+CS23020,DM,Combinatorics,quiz,6.5,10,2026-09-07,baseline
+CS23020,DM,Combinatorics,quiz,7.0,10,2026-09-14,baseline
+CS23020,DM,Graph Theory,quiz,5.0,10,2026-09-21,baseline
+CS23020,DM,Recurrences,quiz,6.0,10,2026-09-28,baseline
+CS23020,DM,Graph Theory,quiz,6.0,10,2026-10-05,baseline
+CS23020,DM,Recurrences,quiz,7.5,10,2026-10-12,baseline
+CS23020,DM,All,internal,20.5,30,2026-09-15,baseline
+CS23020,DM,All,internal,20.5,30,2026-10-20,baseline
+CS23020,DM,All,internal,,30,2026-11-24,baseline
+CS23020,DM,Logic,quiz,8.0,10,2026-11-26,review
+CS23020,DM,Sets & Relations,quiz,6.5,10,2026-11-27,review
+CS23020,DM,Combinatorics,quiz,6.0,10,2026-11-28,review
+CS23020,DM,Graph Theory,quiz,8.0,10,2026-11-26,review
+CS23020,DM,Recurrences,quiz,5.5,10,2026-11-27,review
+CS23020,DM,All,internal,18.0,30,2026-11-28,review
+CS23021,DSA,Arrays,quiz,6.5,10,2026-08-10,baseline
+CS23021,DSA,Arrays,quiz,7.5,10,2026-08-17,baseline
+CS23021,DSA,Linked Lists,quiz,7.5,10,2026-08-24,baseline
+CS23021,DSA,Linked Lists,quiz,7.0,10,2026-08-31,baseline
+CS23021,DSA,Stacks & Queues,quiz,8.5,10,2026-09-07,baseline
+CS23021,DSA,Stacks & Queues,quiz,6.0,10,2026-09-14,baseline
+CS23021,DSA,Trees,quiz,8.0,10,2026-09-21,baseline
+CS23021,DSA,Graphs,quiz,6.5,10,2026-09-28,baseline
+CS23021,DSA,Trees,quiz,8.0,10,2026-10-05,baseline
+CS23021,DSA,Graphs,quiz,8.5,10,2026-10-12,baseline
+CS23021,DSA,All,internal,25.5,30,2026-09-15,baseline
+CS23021,DSA,All,internal,21.0,30,2026-10-20,baseline
+CS23021,DSA,All,internal,,30,2026-11-24,baseline
+CS23021,DSA,Arrays,quiz,7.5,10,2026-11-26,review
+CS23021,DSA,Linked Lists,quiz,7.5,10,2026-11-27,review
+CS23021,DSA,Stacks & Queues,quiz,6.5,10,2026-11-28,review
+CS23021,DSA,Trees,quiz,8.0,10,2026-11-26,review
+CS23021,DSA,Graphs,quiz,7.0,10,2026-11-27,review
+CS23021,DSA,All,internal,25.0,30,2026-11-28,review
+CS23021,DBMS,ER Model,quiz,7.5,10,2026-08-10,baseline
+CS23021,DBMS,ER Model,quiz,8.0,10,2026-08-17,baseline
+CS23021,DBMS,SQL,quiz,7.5,10,2026-08-24,baseline
+CS23021,DBMS,SQL,quiz,7.5,10,2026-08-31,baseline
+CS23021,DBMS,Normalization,quiz,9.5,10,2026-09-07,baseline
+CS23021,DBMS,Normalization,quiz,7.0,10,2026-09-14,baseline
+CS23021,DBMS,Transactions,quiz,8.0,10,2026-09-21,baseline
+CS23021,DBMS,Indexing,quiz,8.5,10,2026-09-28,baseline
+CS23021,DBMS,Transactions,quiz,7.5,10,2026-10-05,baseline
+CS23021,DBMS,Indexing,quiz,7.5,10,2026-10-12,baseline
+CS23021,DBMS,All,internal,21.0,30,2026-09-15,baseline
+CS23021,DBMS,All,internal,25.5,30,2026-10-20,baseline
+CS23021,DBMS,All,internal,,30,2026-11-24,baseline
+CS23021,DBMS,ER Model,quiz,8.5,10,2026-11-26,review
+CS23021,DBMS,SQL,quiz,7.0,10,2026-11-27,review
+CS23021,DBMS,Normalization,quiz,8.5,10,2026-11-28,review
+CS23021,DBMS,Transactions,quiz,8.5,10,2026-11-26,review
+CS23021,DBMS,Indexing,quiz,8.0,10,2026-11-27,review
+CS23021,DBMS,All,internal,22.0,30,2026-11-28,review
+CS23021,OS,Processes,quiz,8.0,10,2026-08-10,baseline
+CS23021,OS,Processes,quiz,8.5,10,2026-08-17,baseline
+CS23021,OS,Scheduling,quiz,8.5,10,2026-08-24,baseline
+CS23021,OS,Scheduling,quiz,8.0,10,2026-08-31,baseline
+CS23021,OS,Synchronization,quiz,9.0,10,2026-09-07,baseline
+CS23021,OS,Synchronization,quiz,8.5,10,2026-09-14,baseline
+CS23021,OS,Memory,quiz,8.5,10,2026-09-21,baseline
+CS23021,OS,File Systems,quiz,8.5,10,2026-09-28,baseline
+CS23021,OS,Memory,quiz,9.0,10,2026-10-05,baseline
+CS23021,OS,File Systems,quiz,7.5,10,2026-10-12,baseline
+CS23021,OS,All,internal,24.5,30,2026-09-15,baseline
+CS23021,OS,All,internal,26.5,30,2026-10-20,baseline
+CS23021,OS,All,internal,,30,2026-11-24,baseline
+CS23021,OS,Processes,quiz,9.5,10,2026-11-26,review
+CS23021,OS,Scheduling,quiz,9.0,10,2026-11-27,review
+CS23021,OS,Synchronization,quiz,8.5,10,2026-11-28,review
+CS23021,OS,Memory,quiz,9.0,10,2026-11-26,review
+CS23021,OS,File Systems,quiz,8.5,10,2026-11-27,review
+CS23021,OS,All,internal,27.5,30,2026-11-28,review
+CS23021,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-10,baseline
+CS23021,CN,OSI & TCP/IP,quiz,8.0,10,2026-08-17,baseline
+CS23021,CN,Data Link,quiz,6.0,10,2026-08-24,baseline
+CS23021,CN,Data Link,quiz,6.5,10,2026-08-31,baseline
+CS23021,CN,Routing,quiz,6.5,10,2026-09-07,baseline
+CS23021,CN,Routing,quiz,6.5,10,2026-09-14,baseline
+CS23021,CN,Transport,quiz,7.0,10,2026-09-21,baseline
+CS23021,CN,Application Layer,quiz,6.5,10,2026-09-28,baseline
+CS23021,CN,Transport,quiz,7.5,10,2026-10-05,baseline
+CS23021,CN,Application Layer,quiz,7.5,10,2026-10-12,baseline
+CS23021,CN,All,internal,21.0,30,2026-09-15,baseline
+CS23021,CN,All,internal,18.0,30,2026-10-20,baseline
+CS23021,CN,All,internal,,30,2026-11-24,baseline
+CS23021,CN,OSI & TCP/IP,quiz,7.5,10,2026-11-26,review
+CS23021,CN,Data Link,quiz,7.0,10,2026-11-27,review
+CS23021,CN,Routing,quiz,7.0,10,2026-11-28,review
+CS23021,CN,Transport,quiz,8.0,10,2026-11-26,review
+CS23021,CN,Application Layer,quiz,6.5,10,2026-11-27,review
+CS23021,CN,All,internal,20.5,30,2026-11-28,review
+CS23021,DM,Logic,quiz,8.0,10,2026-08-10,baseline
+CS23021,DM,Logic,quiz,8.5,10,2026-08-17,baseline
+CS23021,DM,Sets & Relations,quiz,7.5,10,2026-08-24,baseline
+CS23021,DM,Sets & Relations,quiz,7.0,10,2026-08-31,baseline
+CS23021,DM,Combinatorics,quiz,7.0,10,2026-09-07,baseline
+CS23021,DM,Combinatorics,quiz,7.5,10,2026-09-14,baseline
+CS23021,DM,Graph Theory,quiz,8.5,10,2026-09-21,baseline
+CS23021,DM,Recurrences,quiz,8.5,10,2026-09-28,baseline
+CS23021,DM,Graph Theory,quiz,6.5,10,2026-10-05,baseline
+CS23021,DM,Recurrences,quiz,8.0,10,2026-10-12,baseline
+CS23021,DM,All,internal,23.5,30,2026-09-15,baseline
+CS23021,DM,All,internal,21.5,30,2026-10-20,baseline
+CS23021,DM,All,internal,,30,2026-11-24,baseline
+CS23021,DM,Logic,quiz,8.5,10,2026-11-26,review
+CS23021,DM,Sets & Relations,quiz,8.5,10,2026-11-27,review
+CS23021,DM,Combinatorics,quiz,9.5,10,2026-11-28,review
+CS23021,DM,Graph Theory,quiz,8.0,10,2026-11-26,review
+CS23021,DM,Recurrences,quiz,8.0,10,2026-11-27,review
+CS23021,DM,All,internal,27.0,30,2026-11-28,review
+CS23022,DSA,Arrays,quiz,6.0,10,2026-08-10,baseline
+CS23022,DSA,Arrays,quiz,6.0,10,2026-08-17,baseline
+CS23022,DSA,Linked Lists,quiz,6.5,10,2026-08-24,baseline
+CS23022,DSA,Linked Lists,quiz,6.0,10,2026-08-31,baseline
+CS23022,DSA,Stacks & Queues,quiz,5.5,10,2026-09-07,baseline
+CS23022,DSA,Stacks & Queues,quiz,6.5,10,2026-09-14,baseline
+CS23022,DSA,Trees,quiz,6.5,10,2026-09-21,baseline
+CS23022,DSA,Graphs,quiz,5.5,10,2026-09-28,baseline
+CS23022,DSA,Trees,quiz,5.5,10,2026-10-05,baseline
+CS23022,DSA,Graphs,quiz,5.5,10,2026-10-12,baseline
+CS23022,DSA,All,internal,15.5,30,2026-09-15,baseline
+CS23022,DSA,All,internal,19.5,30,2026-10-20,baseline
+CS23022,DSA,All,internal,,30,2026-11-24,baseline
+CS23022,DSA,Arrays,quiz,6.0,10,2026-11-26,review
+CS23022,DSA,Linked Lists,quiz,5.5,10,2026-11-27,review
+CS23022,DSA,Stacks & Queues,quiz,6.0,10,2026-11-28,review
+CS23022,DSA,Trees,quiz,7.0,10,2026-11-26,review
+CS23022,DSA,Graphs,quiz,6.5,10,2026-11-27,review
+CS23022,DSA,All,internal,16.0,30,2026-11-28,review
+CS23022,DBMS,ER Model,quiz,7.0,10,2026-08-10,baseline
+CS23022,DBMS,ER Model,quiz,6.5,10,2026-08-17,baseline
+CS23022,DBMS,SQL,quiz,6.5,10,2026-08-24,baseline
+CS23022,DBMS,SQL,quiz,6.5,10,2026-08-31,baseline
+CS23022,DBMS,Normalization,quiz,6.0,10,2026-09-07,baseline
+CS23022,DBMS,Normalization,quiz,7.0,10,2026-09-14,baseline
+CS23022,DBMS,Transactions,quiz,6.5,10,2026-09-21,baseline
+CS23022,DBMS,Indexing,quiz,7.5,10,2026-09-28,baseline
+CS23022,DBMS,Transactions,quiz,7.0,10,2026-10-05,baseline
+CS23022,DBMS,Indexing,quiz,6.0,10,2026-10-12,baseline
+CS23022,DBMS,All,internal,21.5,30,2026-09-15,baseline
+CS23022,DBMS,All,internal,23.0,30,2026-10-20,baseline
+CS23022,DBMS,All,internal,,30,2026-11-24,baseline
+CS23022,DBMS,ER Model,quiz,6.0,10,2026-11-26,review
+CS23022,DBMS,SQL,quiz,7.0,10,2026-11-27,review
+CS23022,DBMS,Normalization,quiz,6.5,10,2026-11-28,review
+CS23022,DBMS,Transactions,quiz,8.0,10,2026-11-26,review
+CS23022,DBMS,Indexing,quiz,6.5,10,2026-11-27,review
+CS23022,DBMS,All,internal,20.5,30,2026-11-28,review
+CS23022,OS,Processes,quiz,6.5,10,2026-08-10,baseline
+CS23022,OS,Processes,quiz,6.0,10,2026-08-17,baseline
+CS23022,OS,Scheduling,quiz,5.5,10,2026-08-24,baseline
+CS23022,OS,Scheduling,quiz,6.0,10,2026-08-31,baseline
+CS23022,OS,Synchronization,quiz,6.0,10,2026-09-07,baseline
+CS23022,OS,Synchronization,quiz,7.0,10,2026-09-14,baseline
+CS23022,OS,Memory,quiz,6.0,10,2026-09-21,baseline
+CS23022,OS,File Systems,quiz,5.5,10,2026-09-28,baseline
+CS23022,OS,Memory,quiz,7.0,10,2026-10-05,baseline
+CS23022,OS,File Systems,quiz,7.0,10,2026-10-12,baseline
+CS23022,OS,All,internal,18.0,30,2026-09-15,baseline
+CS23022,OS,All,internal,20.0,30,2026-10-20,baseline
+CS23022,OS,All,internal,,30,2026-11-24,baseline
+CS23022,OS,Processes,quiz,6.0,10,2026-11-26,review
+CS23022,OS,Scheduling,quiz,6.5,10,2026-11-27,review
+CS23022,OS,Synchronization,quiz,6.0,10,2026-11-28,review
+CS23022,OS,Memory,quiz,6.0,10,2026-11-26,review
+CS23022,OS,File Systems,quiz,6.0,10,2026-11-27,review
+CS23022,OS,All,internal,20.0,30,2026-11-28,review
+CS23022,CN,OSI & TCP/IP,quiz,5.0,10,2026-08-10,baseline
+CS23022,CN,OSI & TCP/IP,quiz,5.5,10,2026-08-17,baseline
+CS23022,CN,Data Link,quiz,6.0,10,2026-08-24,baseline
+CS23022,CN,Data Link,quiz,6.0,10,2026-08-31,baseline
+CS23022,CN,Routing,quiz,6.0,10,2026-09-07,baseline
+CS23022,CN,Routing,quiz,4.5,10,2026-09-14,baseline
+CS23022,CN,Transport,quiz,6.5,10,2026-09-21,baseline
+CS23022,CN,Application Layer,quiz,7.0,10,2026-09-28,baseline
+CS23022,CN,Transport,quiz,7.0,10,2026-10-05,baseline
+CS23022,CN,Application Layer,quiz,6.5,10,2026-10-12,baseline
+CS23022,CN,All,internal,19.0,30,2026-09-15,baseline
+CS23022,CN,All,internal,16.5,30,2026-10-20,baseline
+CS23022,CN,All,internal,,30,2026-11-24,baseline
+CS23022,CN,OSI & TCP/IP,quiz,5.5,10,2026-11-26,review
+CS23022,CN,Data Link,quiz,6.5,10,2026-11-27,review
+CS23022,CN,Routing,quiz,5.5,10,2026-11-28,review
+CS23022,CN,Transport,quiz,6.5,10,2026-11-26,review
+CS23022,CN,Application Layer,quiz,6.0,10,2026-11-27,review
+CS23022,CN,All,internal,20.0,30,2026-11-28,review
+CS23022,DM,Logic,quiz,5.0,10,2026-08-10,baseline
+CS23022,DM,Logic,quiz,6.0,10,2026-08-17,baseline
+CS23022,DM,Sets & Relations,quiz,5.0,10,2026-08-24,baseline
+CS23022,DM,Sets & Relations,quiz,5.5,10,2026-08-31,baseline
+CS23022,DM,Combinatorics,quiz,5.0,10,2026-09-07,baseline
+CS23022,DM,Combinatorics,quiz,6.0,10,2026-09-14,baseline
+CS23022,DM,Graph Theory,quiz,5.5,10,2026-09-21,baseline
+CS23022,DM,Recurrences,quiz,5.5,10,2026-09-28,baseline
+CS23022,DM,Graph Theory,quiz,6.0,10,2026-10-05,baseline
+CS23022,DM,Recurrences,quiz,4.0,10,2026-10-12,baseline
+CS23022,DM,All,internal,15.0,30,2026-09-15,baseline
+CS23022,DM,All,internal,16.5,30,2026-10-20,baseline
+CS23022,DM,All,internal,,30,2026-11-24,baseline
+CS23022,DM,Logic,quiz,6.0,10,2026-11-26,review
+CS23022,DM,Sets & Relations,quiz,6.5,10,2026-11-27,review
+CS23022,DM,Combinatorics,quiz,5.5,10,2026-11-28,review
+CS23022,DM,Graph Theory,quiz,6.0,10,2026-11-26,review
+CS23022,DM,Recurrences,quiz,5.5,10,2026-11-27,review
+CS23022,DM,All,internal,16.5,30,2026-11-28,review
+CS23023,DSA,Arrays,quiz,5.5,10,2026-08-10,baseline
+CS23023,DSA,Arrays,quiz,6.0,10,2026-08-17,baseline
+CS23023,DSA,Linked Lists,quiz,5.5,10,2026-08-24,baseline
+CS23023,DSA,Linked Lists,quiz,6.0,10,2026-08-31,baseline
+CS23023,DSA,Stacks & Queues,quiz,5.0,10,2026-09-07,baseline
+CS23023,DSA,Stacks & Queues,quiz,6.0,10,2026-09-14,baseline
+CS23023,DSA,Trees,quiz,6.0,10,2026-09-21,baseline
+CS23023,DSA,Graphs,quiz,6.0,10,2026-09-28,baseline
+CS23023,DSA,Trees,quiz,5.5,10,2026-10-05,baseline
+CS23023,DSA,Graphs,quiz,5.5,10,2026-10-12,baseline
+CS23023,DSA,All,internal,19.5,30,2026-09-15,baseline
+CS23023,DSA,All,internal,17.5,30,2026-10-20,baseline
+CS23023,DSA,All,internal,,30,2026-11-24,baseline
+CS23023,DSA,Arrays,quiz,5.5,10,2026-11-26,review
+CS23023,DSA,Linked Lists,quiz,6.0,10,2026-11-27,review
+CS23023,DSA,Stacks & Queues,quiz,5.5,10,2026-11-28,review
+CS23023,DSA,Trees,quiz,6.0,10,2026-11-26,review
+CS23023,DSA,Graphs,quiz,6.0,10,2026-11-27,review
+CS23023,DSA,All,internal,18.0,30,2026-11-28,review
+CS23023,DBMS,ER Model,quiz,6.5,10,2026-08-10,baseline
+CS23023,DBMS,ER Model,quiz,7.5,10,2026-08-17,baseline
+CS23023,DBMS,SQL,quiz,6.0,10,2026-08-24,baseline
+CS23023,DBMS,SQL,quiz,7.0,10,2026-08-31,baseline
+CS23023,DBMS,Normalization,quiz,8.0,10,2026-09-07,baseline
+CS23023,DBMS,Normalization,quiz,7.5,10,2026-09-14,baseline
+CS23023,DBMS,Transactions,quiz,7.0,10,2026-09-21,baseline
+CS23023,DBMS,Indexing,quiz,7.5,10,2026-09-28,baseline
+CS23023,DBMS,Transactions,quiz,7.5,10,2026-10-05,baseline
+CS23023,DBMS,Indexing,quiz,7.5,10,2026-10-12,baseline
+CS23023,DBMS,All,internal,23.5,30,2026-09-15,baseline
+CS23023,DBMS,All,internal,19.5,30,2026-10-20,baseline
+CS23023,DBMS,All,internal,,30,2026-11-24,baseline
+CS23023,DBMS,ER Model,quiz,7.5,10,2026-11-26,review
+CS23023,DBMS,SQL,quiz,8.0,10,2026-11-27,review
+CS23023,DBMS,Normalization,quiz,7.5,10,2026-11-28,review
+CS23023,DBMS,Transactions,quiz,8.0,10,2026-11-26,review
+CS23023,DBMS,Indexing,quiz,7.0,10,2026-11-27,review
+CS23023,DBMS,All,internal,19.5,30,2026-11-28,review
+CS23023,OS,Processes,quiz,6.5,10,2026-08-10,baseline
+CS23023,OS,Processes,quiz,6.5,10,2026-08-17,baseline
+CS23023,OS,Scheduling,quiz,6.5,10,2026-08-24,baseline
+CS23023,OS,Scheduling,quiz,6.5,10,2026-08-31,baseline
+CS23023,OS,Synchronization,quiz,7.5,10,2026-09-07,baseline
+CS23023,OS,Synchronization,quiz,7.0,10,2026-09-14,baseline
+CS23023,OS,Memory,quiz,7.0,10,2026-09-21,baseline
+CS23023,OS,File Systems,quiz,7.0,10,2026-09-28,baseline
+CS23023,OS,Memory,quiz,6.5,10,2026-10-05,baseline
+CS23023,OS,File Systems,quiz,7.5,10,2026-10-12,baseline
+CS23023,OS,All,internal,15.5,30,2026-09-15,baseline
+CS23023,OS,All,internal,18.0,30,2026-10-20,baseline
+CS23023,OS,All,internal,,30,2026-11-24,baseline
+CS23023,OS,Processes,quiz,6.5,10,2026-11-26,review
+CS23023,OS,Scheduling,quiz,6.5,10,2026-11-27,review
+CS23023,OS,Synchronization,quiz,7.5,10,2026-11-28,review
+CS23023,OS,Memory,quiz,6.5,10,2026-11-26,review
+CS23023,OS,File Systems,quiz,7.0,10,2026-11-27,review
+CS23023,OS,All,internal,21.0,30,2026-11-28,review
+CS23023,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-10,baseline
+CS23023,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-17,baseline
+CS23023,CN,Data Link,quiz,8.5,10,2026-08-24,baseline
+CS23023,CN,Data Link,quiz,8.0,10,2026-08-31,baseline
+CS23023,CN,Routing,quiz,8.5,10,2026-09-07,baseline
+CS23023,CN,Routing,quiz,8.0,10,2026-09-14,baseline
+CS23023,CN,Transport,quiz,7.0,10,2026-09-21,baseline
+CS23023,CN,Application Layer,quiz,7.5,10,2026-09-28,baseline
+CS23023,CN,Transport,quiz,8.0,10,2026-10-05,baseline
+CS23023,CN,Application Layer,quiz,8.5,10,2026-10-12,baseline
+CS23023,CN,All,internal,25.5,30,2026-09-15,baseline
+CS23023,CN,All,internal,24.5,30,2026-10-20,baseline
+CS23023,CN,All,internal,,30,2026-11-24,baseline
+CS23023,CN,OSI & TCP/IP,quiz,8.0,10,2026-11-26,review
+CS23023,CN,Data Link,quiz,8.0,10,2026-11-27,review
+CS23023,CN,Routing,quiz,8.0,10,2026-11-28,review
+CS23023,CN,Transport,quiz,7.5,10,2026-11-26,review
+CS23023,CN,Application Layer,quiz,8.5,10,2026-11-27,review
+CS23023,CN,All,internal,24.5,30,2026-11-28,review
+CS23023,DM,Logic,quiz,5.5,10,2026-08-10,baseline
+CS23023,DM,Logic,quiz,5.5,10,2026-08-17,baseline
+CS23023,DM,Sets & Relations,quiz,8.5,10,2026-08-24,baseline
+CS23023,DM,Sets & Relations,quiz,6.0,10,2026-08-31,baseline
+CS23023,DM,Combinatorics,quiz,6.5,10,2026-09-07,baseline
+CS23023,DM,Combinatorics,quiz,6.5,10,2026-09-14,baseline
+CS23023,DM,Graph Theory,quiz,6.0,10,2026-09-21,baseline
+CS23023,DM,Recurrences,quiz,7.5,10,2026-09-28,baseline
+CS23023,DM,Graph Theory,quiz,6.5,10,2026-10-05,baseline
+CS23023,DM,Recurrences,quiz,6.5,10,2026-10-12,baseline
+CS23023,DM,All,internal,22.5,30,2026-09-15,baseline
+CS23023,DM,All,internal,17.5,30,2026-10-20,baseline
+CS23023,DM,All,internal,,30,2026-11-24,baseline
+CS23023,DM,Logic,quiz,6.5,10,2026-11-26,review
+CS23023,DM,Sets & Relations,quiz,6.0,10,2026-11-27,review
+CS23023,DM,Combinatorics,quiz,7.0,10,2026-11-28,review
+CS23023,DM,Graph Theory,quiz,7.0,10,2026-11-26,review
+CS23023,DM,Recurrences,quiz,7.0,10,2026-11-27,review
+CS23023,DM,All,internal,21.0,30,2026-11-28,review
+CS23024,DSA,Arrays,quiz,7.5,10,2026-08-10,baseline
+CS23024,DSA,Arrays,quiz,7.0,10,2026-08-17,baseline
+CS23024,DSA,Linked Lists,quiz,8.0,10,2026-08-24,baseline
+CS23024,DSA,Linked Lists,quiz,7.0,10,2026-08-31,baseline
+CS23024,DSA,Stacks & Queues,quiz,8.0,10,2026-09-07,baseline
+CS23024,DSA,Stacks & Queues,quiz,7.0,10,2026-09-14,baseline
+CS23024,DSA,Trees,quiz,8.0,10,2026-09-21,baseline
+CS23024,DSA,Graphs,quiz,8.5,10,2026-09-28,baseline
+CS23024,DSA,Trees,quiz,6.0,10,2026-10-05,baseline
+CS23024,DSA,Graphs,quiz,7.0,10,2026-10-12,baseline
+CS23024,DSA,All,internal,21.5,30,2026-09-15,baseline
+CS23024,DSA,All,internal,25.0,30,2026-10-20,baseline
+CS23024,DSA,All,internal,,30,2026-11-24,baseline
+CS23024,DSA,Arrays,quiz,9.5,10,2026-11-26,review
+CS23024,DSA,Linked Lists,quiz,6.5,10,2026-11-27,review
+CS23024,DSA,Stacks & Queues,quiz,8.0,10,2026-11-28,review
+CS23024,DSA,Trees,quiz,7.5,10,2026-11-26,review
+CS23024,DSA,Graphs,quiz,8.0,10,2026-11-27,review
+CS23024,DSA,All,internal,22.0,30,2026-11-28,review
+CS23024,DBMS,ER Model,quiz,5.5,10,2026-08-10,baseline
+CS23024,DBMS,ER Model,quiz,7.0,10,2026-08-17,baseline
+CS23024,DBMS,SQL,quiz,6.0,10,2026-08-24,baseline
+CS23024,DBMS,SQL,quiz,6.0,10,2026-08-31,baseline
+CS23024,DBMS,Normalization,quiz,7.0,10,2026-09-07,baseline
+CS23024,DBMS,Normalization,quiz,6.5,10,2026-09-14,baseline
+CS23024,DBMS,Transactions,quiz,7.5,10,2026-09-21,baseline
+CS23024,DBMS,Indexing,quiz,6.0,10,2026-09-28,baseline
+CS23024,DBMS,Transactions,quiz,7.0,10,2026-10-05,baseline
+CS23024,DBMS,Indexing,quiz,7.0,10,2026-10-12,baseline
+CS23024,DBMS,All,internal,20.0,30,2026-09-15,baseline
+CS23024,DBMS,All,internal,19.0,30,2026-10-20,baseline
+CS23024,DBMS,All,internal,,30,2026-11-24,baseline
+CS23024,DBMS,ER Model,quiz,7.5,10,2026-11-26,review
+CS23024,DBMS,SQL,quiz,7.0,10,2026-11-27,review
+CS23024,DBMS,Normalization,quiz,7.5,10,2026-11-28,review
+CS23024,DBMS,Transactions,quiz,7.0,10,2026-11-26,review
+CS23024,DBMS,Indexing,quiz,8.0,10,2026-11-27,review
+CS23024,DBMS,All,internal,21.5,30,2026-11-28,review
+CS23024,OS,Processes,quiz,6.0,10,2026-08-10,baseline
+CS23024,OS,Processes,quiz,6.5,10,2026-08-17,baseline
+CS23024,OS,Scheduling,quiz,7.5,10,2026-08-24,baseline
+CS23024,OS,Scheduling,quiz,7.0,10,2026-08-31,baseline
+CS23024,OS,Synchronization,quiz,7.5,10,2026-09-07,baseline
+CS23024,OS,Synchronization,quiz,7.0,10,2026-09-14,baseline
+CS23024,OS,Memory,quiz,7.0,10,2026-09-21,baseline
+CS23024,OS,File Systems,quiz,7.0,10,2026-09-28,baseline
+CS23024,OS,Memory,quiz,7.5,10,2026-10-05,baseline
+CS23024,OS,File Systems,quiz,7.0,10,2026-10-12,baseline
+CS23024,OS,All,internal,25.0,30,2026-09-15,baseline
+CS23024,OS,All,internal,20.5,30,2026-10-20,baseline
+CS23024,OS,All,internal,,30,2026-11-24,baseline
+CS23024,OS,Processes,quiz,7.0,10,2026-11-26,review
+CS23024,OS,Scheduling,quiz,7.0,10,2026-11-27,review
+CS23024,OS,Synchronization,quiz,7.0,10,2026-11-28,review
+CS23024,OS,Memory,quiz,8.5,10,2026-11-26,review
+CS23024,OS,File Systems,quiz,8.0,10,2026-11-27,review
+CS23024,OS,All,internal,22.5,30,2026-11-28,review
+CS23024,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-10,baseline
+CS23024,CN,OSI & TCP/IP,quiz,8.5,10,2026-08-17,baseline
+CS23024,CN,Data Link,quiz,8.5,10,2026-08-24,baseline
+CS23024,CN,Data Link,quiz,7.5,10,2026-08-31,baseline
+CS23024,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23024,CN,Routing,quiz,8.0,10,2026-09-14,baseline
+CS23024,CN,Transport,quiz,7.5,10,2026-09-21,baseline
+CS23024,CN,Application Layer,quiz,7.5,10,2026-09-28,baseline
+CS23024,CN,Transport,quiz,7.5,10,2026-10-05,baseline
+CS23024,CN,Application Layer,quiz,7.5,10,2026-10-12,baseline
+CS23024,CN,All,internal,22.0,30,2026-09-15,baseline
+CS23024,CN,All,internal,24.0,30,2026-10-20,baseline
+CS23024,CN,All,internal,,30,2026-11-24,baseline
+CS23024,CN,OSI & TCP/IP,quiz,7.5,10,2026-11-26,review
+CS23024,CN,Data Link,quiz,7.5,10,2026-11-27,review
+CS23024,CN,Routing,quiz,7.0,10,2026-11-28,review
+CS23024,CN,Transport,quiz,9.0,10,2026-11-26,review
+CS23024,CN,Application Layer,quiz,8.0,10,2026-11-27,review
+CS23024,CN,All,internal,25.5,30,2026-11-28,review
+CS23024,DM,Logic,quiz,8.5,10,2026-08-10,baseline
+CS23024,DM,Logic,quiz,8.0,10,2026-08-17,baseline
+CS23024,DM,Sets & Relations,quiz,8.5,10,2026-08-24,baseline
+CS23024,DM,Sets & Relations,quiz,7.5,10,2026-08-31,baseline
+CS23024,DM,Combinatorics,quiz,7.5,10,2026-09-07,baseline
+CS23024,DM,Combinatorics,quiz,7.5,10,2026-09-14,baseline
+CS23024,DM,Graph Theory,quiz,8.0,10,2026-09-21,baseline
+CS23024,DM,Recurrences,quiz,8.0,10,2026-09-28,baseline
+CS23024,DM,Graph Theory,quiz,8.5,10,2026-10-05,baseline
+CS23024,DM,Recurrences,quiz,8.5,10,2026-10-12,baseline
+CS23024,DM,All,internal,23.5,30,2026-09-15,baseline
+CS23024,DM,All,internal,25.5,30,2026-10-20,baseline
+CS23024,DM,All,internal,,30,2026-11-24,baseline
+CS23024,DM,Logic,quiz,7.5,10,2026-11-26,review
+CS23024,DM,Sets & Relations,quiz,8.0,10,2026-11-27,review
+CS23024,DM,Combinatorics,quiz,8.5,10,2026-11-28,review
+CS23024,DM,Graph Theory,quiz,8.5,10,2026-11-26,review
+CS23024,DM,Recurrences,quiz,8.0,10,2026-11-27,review
+CS23024,DM,All,internal,23.0,30,2026-11-28,review
+CS23025,DSA,Arrays,quiz,9.5,10,2026-08-10,baseline
+CS23025,DSA,Arrays,quiz,9.0,10,2026-08-17,baseline
+CS23025,DSA,Linked Lists,quiz,9.0,10,2026-08-24,baseline
+CS23025,DSA,Linked Lists,quiz,8.0,10,2026-08-31,baseline
+CS23025,DSA,Stacks & Queues,quiz,8.0,10,2026-09-07,baseline
+CS23025,DSA,Stacks & Queues,quiz,8.5,10,2026-09-14,baseline
+CS23025,DSA,Trees,quiz,8.0,10,2026-09-21,baseline
+CS23025,DSA,Graphs,quiz,8.0,10,2026-09-28,baseline
+CS23025,DSA,Trees,quiz,8.0,10,2026-10-05,baseline
+CS23025,DSA,Graphs,quiz,8.0,10,2026-10-12,baseline
+CS23025,DSA,All,internal,23.0,30,2026-09-15,baseline
+CS23025,DSA,All,internal,24.0,30,2026-10-20,baseline
+CS23025,DSA,All,internal,,30,2026-11-24,baseline
+CS23025,DSA,Arrays,quiz,9.0,10,2026-11-26,review
+CS23025,DSA,Linked Lists,quiz,9.0,10,2026-11-27,review
+CS23025,DSA,Stacks & Queues,quiz,8.0,10,2026-11-28,review
+CS23025,DSA,Trees,quiz,7.5,10,2026-11-26,review
+CS23025,DSA,Graphs,quiz,9.0,10,2026-11-27,review
+CS23025,DSA,All,internal,26.0,30,2026-11-28,review
+CS23025,DBMS,ER Model,quiz,7.0,10,2026-08-10,baseline
+CS23025,DBMS,ER Model,quiz,6.5,10,2026-08-17,baseline
+CS23025,DBMS,SQL,quiz,9.0,10,2026-08-24,baseline
+CS23025,DBMS,SQL,quiz,7.5,10,2026-08-31,baseline
+CS23025,DBMS,Normalization,quiz,8.0,10,2026-09-07,baseline
+CS23025,DBMS,Normalization,quiz,8.0,10,2026-09-14,baseline
+CS23025,DBMS,Transactions,quiz,8.0,10,2026-09-21,baseline
+CS23025,DBMS,Indexing,quiz,7.0,10,2026-09-28,baseline
+CS23025,DBMS,Transactions,quiz,7.5,10,2026-10-05,baseline
+CS23025,DBMS,Indexing,quiz,7.0,10,2026-10-12,baseline
+CS23025,DBMS,All,internal,21.5,30,2026-09-15,baseline
+CS23025,DBMS,All,internal,22.5,30,2026-10-20,baseline
+CS23025,DBMS,All,internal,,30,2026-11-24,baseline
+CS23025,DBMS,ER Model,quiz,8.0,10,2026-11-26,review
+CS23025,DBMS,SQL,quiz,8.0,10,2026-11-27,review
+CS23025,DBMS,Normalization,quiz,7.5,10,2026-11-28,review
+CS23025,DBMS,Transactions,quiz,8.0,10,2026-11-26,review
+CS23025,DBMS,Indexing,quiz,8.0,10,2026-11-27,review
+CS23025,DBMS,All,internal,23.0,30,2026-11-28,review
+CS23025,OS,Processes,quiz,7.5,10,2026-08-10,baseline
+CS23025,OS,Processes,quiz,8.0,10,2026-08-17,baseline
+CS23025,OS,Scheduling,quiz,7.0,10,2026-08-24,baseline
+CS23025,OS,Scheduling,quiz,7.5,10,2026-08-31,baseline
+CS23025,OS,Synchronization,quiz,7.5,10,2026-09-07,baseline
+CS23025,OS,Synchronization,quiz,6.5,10,2026-09-14,baseline
+CS23025,OS,Memory,quiz,6.5,10,2026-09-21,baseline
+CS23025,OS,File Systems,quiz,9.0,10,2026-09-28,baseline
+CS23025,OS,Memory,quiz,7.0,10,2026-10-05,baseline
+CS23025,OS,File Systems,quiz,7.5,10,2026-10-12,baseline
+CS23025,OS,All,internal,21.0,30,2026-09-15,baseline
+CS23025,OS,All,internal,23.0,30,2026-10-20,baseline
+CS23025,OS,All,internal,,30,2026-11-24,baseline
+CS23025,OS,Processes,quiz,7.0,10,2026-11-26,review
+CS23025,OS,Scheduling,quiz,8.0,10,2026-11-27,review
+CS23025,OS,Synchronization,quiz,7.5,10,2026-11-28,review
+CS23025,OS,Memory,quiz,6.0,10,2026-11-26,review
+CS23025,OS,File Systems,quiz,7.5,10,2026-11-27,review
+CS23025,OS,All,internal,22.0,30,2026-11-28,review
+CS23025,CN,OSI & TCP/IP,quiz,8.0,10,2026-08-10,baseline
+CS23025,CN,OSI & TCP/IP,quiz,8.0,10,2026-08-17,baseline
+CS23025,CN,Data Link,quiz,8.0,10,2026-08-24,baseline
+CS23025,CN,Data Link,quiz,8.0,10,2026-08-31,baseline
+CS23025,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23025,CN,Routing,quiz,7.5,10,2026-09-14,baseline
+CS23025,CN,Transport,quiz,7.5,10,2026-09-21,baseline
+CS23025,CN,Application Layer,quiz,7.0,10,2026-09-28,baseline
+CS23025,CN,Transport,quiz,8.5,10,2026-10-05,baseline
+CS23025,CN,Application Layer,quiz,8.5,10,2026-10-12,baseline
+CS23025,CN,All,internal,25.0,30,2026-09-15,baseline
+CS23025,CN,All,internal,23.0,30,2026-10-20,baseline
+CS23025,CN,All,internal,,30,2026-11-24,baseline
+CS23025,CN,OSI & TCP/IP,quiz,8.0,10,2026-11-26,review
+CS23025,CN,Data Link,quiz,9.0,10,2026-11-27,review
+CS23025,CN,Routing,quiz,8.5,10,2026-11-28,review
+CS23025,CN,Transport,quiz,9.5,10,2026-11-26,review
+CS23025,CN,Application Layer,quiz,7.5,10,2026-11-27,review
+CS23025,CN,All,internal,24.5,30,2026-11-28,review
+CS23025,DM,Logic,quiz,7.0,10,2026-08-10,baseline
+CS23025,DM,Logic,quiz,8.0,10,2026-08-17,baseline
+CS23025,DM,Sets & Relations,quiz,7.5,10,2026-08-24,baseline
+CS23025,DM,Sets & Relations,quiz,7.5,10,2026-08-31,baseline
+CS23025,DM,Combinatorics,quiz,7.0,10,2026-09-07,baseline
+CS23025,DM,Combinatorics,quiz,8.0,10,2026-09-14,baseline
+CS23025,DM,Graph Theory,quiz,7.5,10,2026-09-21,baseline
+CS23025,DM,Recurrences,quiz,8.5,10,2026-09-28,baseline
+CS23025,DM,Graph Theory,quiz,8.0,10,2026-10-05,baseline
+CS23025,DM,Recurrences,quiz,7.0,10,2026-10-12,baseline
+CS23025,DM,All,internal,24.5,30,2026-09-15,baseline
+CS23025,DM,All,internal,22.5,30,2026-10-20,baseline
+CS23025,DM,All,internal,,30,2026-11-24,baseline
+CS23025,DM,Logic,quiz,8.0,10,2026-11-26,review
+CS23025,DM,Sets & Relations,quiz,8.0,10,2026-11-27,review
+CS23025,DM,Combinatorics,quiz,8.0,10,2026-11-28,review
+CS23025,DM,Graph Theory,quiz,7.5,10,2026-11-26,review
+CS23025,DM,Recurrences,quiz,9.0,10,2026-11-27,review
+CS23025,DM,All,internal,28.5,30,2026-11-28,review
+CS23026,DSA,Arrays,quiz,6.5,10,2026-08-10,baseline
+CS23026,DSA,Arrays,quiz,7.0,10,2026-08-17,baseline
+CS23026,DSA,Linked Lists,quiz,6.5,10,2026-08-24,baseline
+CS23026,DSA,Linked Lists,quiz,7.5,10,2026-08-31,baseline
+CS23026,DSA,Stacks & Queues,quiz,7.5,10,2026-09-07,baseline
+CS23026,DSA,Stacks & Queues,quiz,6.5,10,2026-09-14,baseline
+CS23026,DSA,Trees,quiz,8.0,10,2026-09-21,baseline
+CS23026,DSA,Graphs,quiz,7.0,10,2026-09-28,baseline
+CS23026,DSA,Trees,quiz,6.5,10,2026-10-05,baseline
+CS23026,DSA,Graphs,quiz,7.0,10,2026-10-12,baseline
+CS23026,DSA,All,internal,19.0,30,2026-09-15,baseline
+CS23026,DSA,All,internal,23.0,30,2026-10-20,baseline
+CS23026,DSA,All,internal,,30,2026-11-24,baseline
+CS23026,DSA,Arrays,quiz,7.0,10,2026-11-26,review
+CS23026,DSA,Linked Lists,quiz,7.0,10,2026-11-27,review
+CS23026,DSA,Stacks & Queues,quiz,6.5,10,2026-11-28,review
+CS23026,DSA,Trees,quiz,7.5,10,2026-11-26,review
+CS23026,DSA,Graphs,quiz,6.5,10,2026-11-27,review
+CS23026,DSA,All,internal,21.5,30,2026-11-28,review
+CS23026,DBMS,ER Model,quiz,7.0,10,2026-08-10,baseline
+CS23026,DBMS,ER Model,quiz,7.5,10,2026-08-17,baseline
+CS23026,DBMS,SQL,quiz,7.0,10,2026-08-24,baseline
+CS23026,DBMS,SQL,quiz,6.5,10,2026-08-31,baseline
+CS23026,DBMS,Normalization,quiz,6.0,10,2026-09-07,baseline
+CS23026,DBMS,Normalization,quiz,6.5,10,2026-09-14,baseline
+CS23026,DBMS,Transactions,quiz,6.5,10,2026-09-21,baseline
+CS23026,DBMS,Indexing,quiz,7.0,10,2026-09-28,baseline
+CS23026,DBMS,Transactions,quiz,6.5,10,2026-10-05,baseline
+CS23026,DBMS,Indexing,quiz,6.0,10,2026-10-12,baseline
+CS23026,DBMS,All,internal,20.5,30,2026-09-15,baseline
+CS23026,DBMS,All,internal,22.5,30,2026-10-20,baseline
+CS23026,DBMS,All,internal,,30,2026-11-24,baseline
+CS23026,DBMS,ER Model,quiz,7.5,10,2026-11-26,review
+CS23026,DBMS,SQL,quiz,6.5,10,2026-11-27,review
+CS23026,DBMS,Normalization,quiz,8.0,10,2026-11-28,review
+CS23026,DBMS,Transactions,quiz,6.5,10,2026-11-26,review
+CS23026,DBMS,Indexing,quiz,6.5,10,2026-11-27,review
+CS23026,DBMS,All,internal,21.5,30,2026-11-28,review
+CS23026,OS,Processes,quiz,8.0,10,2026-08-10,baseline
+CS23026,OS,Processes,quiz,7.5,10,2026-08-17,baseline
+CS23026,OS,Scheduling,quiz,7.5,10,2026-08-24,baseline
+CS23026,OS,Scheduling,quiz,7.0,10,2026-08-31,baseline
+CS23026,OS,Synchronization,quiz,8.0,10,2026-09-07,baseline
+CS23026,OS,Synchronization,quiz,7.5,10,2026-09-14,baseline
+CS23026,OS,Memory,quiz,7.0,10,2026-09-21,baseline
+CS23026,OS,File Systems,quiz,8.0,10,2026-09-28,baseline
+CS23026,OS,Memory,quiz,6.0,10,2026-10-05,baseline
+CS23026,OS,File Systems,quiz,7.5,10,2026-10-12,baseline
+CS23026,OS,All,internal,22.0,30,2026-09-15,baseline
+CS23026,OS,All,internal,20.5,30,2026-10-20,baseline
+CS23026,OS,All,internal,,30,2026-11-24,baseline
+CS23026,OS,Processes,quiz,8.0,10,2026-11-26,review
+CS23026,OS,Scheduling,quiz,7.0,10,2026-11-27,review
+CS23026,OS,Synchronization,quiz,7.5,10,2026-11-28,review
+CS23026,OS,Memory,quiz,7.5,10,2026-11-26,review
+CS23026,OS,File Systems,quiz,8.0,10,2026-11-27,review
+CS23026,OS,All,internal,25.0,30,2026-11-28,review
+CS23026,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-10,baseline
+CS23026,CN,OSI & TCP/IP,quiz,6.0,10,2026-08-17,baseline
+CS23026,CN,Data Link,quiz,7.0,10,2026-08-24,baseline
+CS23026,CN,Data Link,quiz,6.0,10,2026-08-31,baseline
+CS23026,CN,Routing,quiz,7.0,10,2026-09-07,baseline
+CS23026,CN,Routing,quiz,7.5,10,2026-09-14,baseline
+CS23026,CN,Transport,quiz,8.0,10,2026-09-21,baseline
+CS23026,CN,Application Layer,quiz,7.0,10,2026-09-28,baseline
+CS23026,CN,Transport,quiz,6.5,10,2026-10-05,baseline
+CS23026,CN,Application Layer,quiz,7.5,10,2026-10-12,baseline
+CS23026,CN,All,internal,21.0,30,2026-09-15,baseline
+CS23026,CN,All,internal,21.0,30,2026-10-20,baseline
+CS23026,CN,All,internal,,30,2026-11-24,baseline
+CS23026,CN,OSI & TCP/IP,quiz,8.0,10,2026-11-26,review
+CS23026,CN,Data Link,quiz,6.0,10,2026-11-27,review
+CS23026,CN,Routing,quiz,7.5,10,2026-11-28,review
+CS23026,CN,Transport,quiz,7.0,10,2026-11-26,review
+CS23026,CN,Application Layer,quiz,6.5,10,2026-11-27,review
+CS23026,CN,All,internal,19.0,30,2026-11-28,review
+CS23026,DM,Logic,quiz,7.0,10,2026-08-10,baseline
+CS23026,DM,Logic,quiz,6.5,10,2026-08-17,baseline
+CS23026,DM,Sets & Relations,quiz,7.0,10,2026-08-24,baseline
+CS23026,DM,Sets & Relations,quiz,7.0,10,2026-08-31,baseline
+CS23026,DM,Combinatorics,quiz,7.0,10,2026-09-07,baseline
+CS23026,DM,Combinatorics,quiz,8.0,10,2026-09-14,baseline
+CS23026,DM,Graph Theory,quiz,7.0,10,2026-09-21,baseline
+CS23026,DM,Recurrences,quiz,8.0,10,2026-09-28,baseline
+CS23026,DM,Graph Theory,quiz,8.0,10,2026-10-05,baseline
+CS23026,DM,Recurrences,quiz,7.5,10,2026-10-12,baseline
+CS23026,DM,All,internal,20.0,30,2026-09-15,baseline
+CS23026,DM,All,internal,20.5,30,2026-10-20,baseline
+CS23026,DM,All,internal,,30,2026-11-24,baseline
+CS23026,DM,Logic,quiz,7.5,10,2026-11-26,review
+CS23026,DM,Sets & Relations,quiz,7.5,10,2026-11-27,review
+CS23026,DM,Combinatorics,quiz,7.5,10,2026-11-28,review
+CS23026,DM,Graph Theory,quiz,7.5,10,2026-11-26,review
+CS23026,DM,Recurrences,quiz,7.5,10,2026-11-27,review
+CS23026,DM,All,internal,21.5,30,2026-11-28,review
+CS23027,DSA,Arrays,quiz,7.5,10,2026-08-10,baseline
+CS23027,DSA,Arrays,quiz,8.0,10,2026-08-17,baseline
+CS23027,DSA,Linked Lists,quiz,7.5,10,2026-08-24,baseline
+CS23027,DSA,Linked Lists,quiz,7.5,10,2026-08-31,baseline
+CS23027,DSA,Stacks & Queues,quiz,8.5,10,2026-09-07,baseline
+CS23027,DSA,Stacks & Queues,quiz,8.0,10,2026-09-14,baseline
+CS23027,DSA,Trees,quiz,7.0,10,2026-09-21,baseline
+CS23027,DSA,Graphs,quiz,7.5,10,2026-09-28,baseline
+CS23027,DSA,Trees,quiz,7.0,10,2026-10-05,baseline
+CS23027,DSA,Graphs,quiz,7.5,10,2026-10-12,baseline
+CS23027,DSA,All,internal,24.0,30,2026-09-15,baseline
+CS23027,DSA,All,internal,24.0,30,2026-10-20,baseline
+CS23027,DSA,All,internal,,30,2026-11-24,baseline
+CS23027,DSA,Arrays,quiz,7.5,10,2026-11-26,review
+CS23027,DSA,Linked Lists,quiz,8.0,10,2026-11-27,review
+CS23027,DSA,Stacks & Queues,quiz,8.5,10,2026-11-28,review
+CS23027,DSA,Trees,quiz,8.5,10,2026-11-26,review
+CS23027,DSA,Graphs,quiz,7.5,10,2026-11-27,review
+CS23027,DSA,All,internal,25.5,30,2026-11-28,review
+CS23027,DBMS,ER Model,quiz,7.5,10,2026-08-10,baseline
+CS23027,DBMS,ER Model,quiz,7.5,10,2026-08-17,baseline
+CS23027,DBMS,SQL,quiz,8.0,10,2026-08-24,baseline
+CS23027,DBMS,SQL,quiz,8.0,10,2026-08-31,baseline
+CS23027,DBMS,Normalization,quiz,8.0,10,2026-09-07,baseline
+CS23027,DBMS,Normalization,quiz,7.5,10,2026-09-14,baseline
+CS23027,DBMS,Transactions,quiz,7.0,10,2026-09-21,baseline
+CS23027,DBMS,Indexing,quiz,7.5,10,2026-09-28,baseline
+CS23027,DBMS,Transactions,quiz,7.5,10,2026-10-05,baseline
+CS23027,DBMS,Indexing,quiz,8.0,10,2026-10-12,baseline
+CS23027,DBMS,All,internal,22.0,30,2026-09-15,baseline
+CS23027,DBMS,All,internal,24.5,30,2026-10-20,baseline
+CS23027,DBMS,All,internal,,30,2026-11-24,baseline
+CS23027,DBMS,ER Model,quiz,7.5,10,2026-11-26,review
+CS23027,DBMS,SQL,quiz,8.5,10,2026-11-27,review
+CS23027,DBMS,Normalization,quiz,8.0,10,2026-11-28,review
+CS23027,DBMS,Transactions,quiz,7.5,10,2026-11-26,review
+CS23027,DBMS,Indexing,quiz,8.5,10,2026-11-27,review
+CS23027,DBMS,All,internal,24.5,30,2026-11-28,review
+CS23027,OS,Processes,quiz,8.0,10,2026-08-10,baseline
+CS23027,OS,Processes,quiz,7.5,10,2026-08-17,baseline
+CS23027,OS,Scheduling,quiz,7.0,10,2026-08-24,baseline
+CS23027,OS,Scheduling,quiz,6.5,10,2026-08-31,baseline
+CS23027,OS,Synchronization,quiz,7.5,10,2026-09-07,baseline
+CS23027,OS,Synchronization,quiz,7.5,10,2026-09-14,baseline
+CS23027,OS,Memory,quiz,7.5,10,2026-09-21,baseline
+CS23027,OS,File Systems,quiz,8.5,10,2026-09-28,baseline
+CS23027,OS,Memory,quiz,6.0,10,2026-10-05,baseline
+CS23027,OS,File Systems,quiz,8.0,10,2026-10-12,baseline
+CS23027,OS,All,internal,25.0,30,2026-09-15,baseline
+CS23027,OS,All,internal,20.5,30,2026-10-20,baseline
+CS23027,OS,All,internal,,30,2026-11-24,baseline
+CS23027,OS,Processes,quiz,7.5,10,2026-11-26,review
+CS23027,OS,Scheduling,quiz,7.0,10,2026-11-27,review
+CS23027,OS,Synchronization,quiz,7.5,10,2026-11-28,review
+CS23027,OS,Memory,quiz,9.0,10,2026-11-26,review
+CS23027,OS,File Systems,quiz,8.0,10,2026-11-27,review
+CS23027,OS,All,internal,23.5,30,2026-11-28,review
+CS23027,CN,OSI & TCP/IP,quiz,8.0,10,2026-08-10,baseline
+CS23027,CN,OSI & TCP/IP,quiz,9.5,10,2026-08-17,baseline
+CS23027,CN,Data Link,quiz,9.5,10,2026-08-24,baseline
+CS23027,CN,Data Link,quiz,8.5,10,2026-08-31,baseline
+CS23027,CN,Routing,quiz,8.0,10,2026-09-07,baseline
+CS23027,CN,Routing,quiz,9.0,10,2026-09-14,baseline
+CS23027,CN,Transport,quiz,8.5,10,2026-09-21,baseline
+CS23027,CN,Application Layer,quiz,9.0,10,2026-09-28,baseline
+CS23027,CN,Transport,quiz,9.0,10,2026-10-05,baseline
+CS23027,CN,Application Layer,quiz,8.5,10,2026-10-12,baseline
+CS23027,CN,All,internal,24.0,30,2026-09-15,baseline
+CS23027,CN,All,internal,28.0,30,2026-10-20,baseline
+CS23027,CN,All,internal,,30,2026-11-24,baseline
+CS23027,CN,OSI & TCP/IP,quiz,9.0,10,2026-11-26,review
+CS23027,CN,Data Link,quiz,9.0,10,2026-11-27,review
+CS23027,CN,Routing,quiz,9.0,10,2026-11-28,review
+CS23027,CN,Transport,quiz,9.0,10,2026-11-26,review
+CS23027,CN,Application Layer,quiz,9.0,10,2026-11-27,review
+CS23027,CN,All,internal,26.0,30,2026-11-28,review
+CS23027,DM,Logic,quiz,7.0,10,2026-08-10,baseline
+CS23027,DM,Logic,quiz,7.0,10,2026-08-17,baseline
+CS23027,DM,Sets & Relations,quiz,8.0,10,2026-08-24,baseline
+CS23027,DM,Sets & Relations,quiz,7.0,10,2026-08-31,baseline
+CS23027,DM,Combinatorics,quiz,7.5,10,2026-09-07,baseline
+CS23027,DM,Combinatorics,quiz,7.5,10,2026-09-14,baseline
+CS23027,DM,Graph Theory,quiz,7.5,10,2026-09-21,baseline
+CS23027,DM,Recurrences,quiz,7.5,10,2026-09-28,baseline
+CS23027,DM,Graph Theory,quiz,8.5,10,2026-10-05,baseline
+CS23027,DM,Recurrences,quiz,6.5,10,2026-10-12,baseline
+CS23027,DM,All,internal,21.5,30,2026-09-15,baseline
+CS23027,DM,All,internal,23.0,30,2026-10-20,baseline
+CS23027,DM,All,internal,,30,2026-11-24,baseline
+CS23027,DM,Logic,quiz,8.5,10,2026-11-26,review
+CS23027,DM,Sets & Relations,quiz,7.5,10,2026-11-27,review
+CS23027,DM,Combinatorics,quiz,7.0,10,2026-11-28,review
+CS23027,DM,Graph Theory,quiz,8.0,10,2026-11-26,review
+CS23027,DM,Recurrences,quiz,6.5,10,2026-11-27,review
+CS23027,DM,All,internal,23.5,30,2026-11-28,review
+CS23028,DSA,Arrays,quiz,7.0,10,2026-08-10,baseline
+CS23028,DSA,Arrays,quiz,7.0,10,2026-08-17,baseline
+CS23028,DSA,Linked Lists,quiz,7.5,10,2026-08-24,baseline
+CS23028,DSA,Linked Lists,quiz,7.0,10,2026-08-31,baseline
+CS23028,DSA,Stacks & Queues,quiz,8.0,10,2026-09-07,baseline
+CS23028,DSA,Stacks & Queues,quiz,7.0,10,2026-09-14,baseline
+CS23028,DSA,Trees,quiz,6.5,10,2026-09-21,baseline
+CS23028,DSA,Graphs,quiz,7.5,10,2026-09-28,baseline
+CS23028,DSA,Trees,quiz,7.0,10,2026-10-05,baseline
+CS23028,DSA,Graphs,quiz,7.0,10,2026-10-12,baseline
+CS23028,DSA,All,internal,13.5,30,2026-09-15,baseline
+CS23028,DSA,All,internal,21.5,30,2026-10-20,baseline
+CS23028,DSA,All,internal,,30,2026-11-24,baseline
+CS23028,DSA,Arrays,quiz,7.0,10,2026-11-26,review
+CS23028,DSA,Linked Lists,quiz,7.0,10,2026-11-27,review
+CS23028,DSA,Stacks & Queues,quiz,7.5,10,2026-11-28,review
+CS23028,DSA,Trees,quiz,6.0,10,2026-11-26,review
+CS23028,DSA,Graphs,quiz,9.0,10,2026-11-27,review
+CS23028,DSA,All,internal,23.5,30,2026-11-28,review
+CS23028,DBMS,ER Model,quiz,8.5,10,2026-08-10,baseline
+CS23028,DBMS,ER Model,quiz,7.5,10,2026-08-17,baseline
+CS23028,DBMS,SQL,quiz,7.0,10,2026-08-24,baseline
+CS23028,DBMS,SQL,quiz,8.0,10,2026-08-31,baseline
+CS23028,DBMS,Normalization,quiz,6.5,10,2026-09-07,baseline
+CS23028,DBMS,Normalization,quiz,8.0,10,2026-09-14,baseline
+CS23028,DBMS,Transactions,quiz,8.0,10,2026-09-21,baseline
+CS23028,DBMS,Indexing,quiz,8.0,10,2026-09-28,baseline
+CS23028,DBMS,Transactions,quiz,6.5,10,2026-10-05,baseline
+CS23028,DBMS,Indexing,quiz,7.5,10,2026-10-12,baseline
+CS23028,DBMS,All,internal,22.0,30,2026-09-15,baseline
+CS23028,DBMS,All,internal,21.0,30,2026-10-20,baseline
+CS23028,DBMS,All,internal,,30,2026-11-24,baseline
+CS23028,DBMS,ER Model,quiz,7.0,10,2026-11-26,review
+CS23028,DBMS,SQL,quiz,7.5,10,2026-11-27,review
+CS23028,DBMS,Normalization,quiz,8.5,10,2026-11-28,review
+CS23028,DBMS,Transactions,quiz,9.5,10,2026-11-26,review
+CS23028,DBMS,Indexing,quiz,8.5,10,2026-11-27,review
+CS23028,DBMS,All,internal,22.0,30,2026-11-28,review
+CS23028,OS,Processes,quiz,8.5,10,2026-08-10,baseline
+CS23028,OS,Processes,quiz,8.5,10,2026-08-17,baseline
+CS23028,OS,Scheduling,quiz,8.0,10,2026-08-24,baseline
+CS23028,OS,Scheduling,quiz,8.0,10,2026-08-31,baseline
+CS23028,OS,Synchronization,quiz,8.5,10,2026-09-07,baseline
+CS23028,OS,Synchronization,quiz,9.5,10,2026-09-14,baseline
+CS23028,OS,Memory,quiz,8.0,10,2026-09-21,baseline
+CS23028,OS,File Systems,quiz,8.0,10,2026-09-28,baseline
+CS23028,OS,Memory,quiz,8.0,10,2026-10-05,baseline
+CS23028,OS,File Systems,quiz,7.5,10,2026-10-12,baseline
+CS23028,OS,All,internal,20.0,30,2026-09-15,baseline
+CS23028,OS,All,internal,24.5,30,2026-10-20,baseline
+CS23028,OS,All,internal,,30,2026-11-24,baseline
+CS23028,OS,Processes,quiz,9.0,10,2026-11-26,review
+CS23028,OS,Scheduling,quiz,8.5,10,2026-11-27,review
+CS23028,OS,Synchronization,quiz,9.0,10,2026-11-28,review
+CS23028,OS,Memory,quiz,7.5,10,2026-11-26,review
+CS23028,OS,File Systems,quiz,9.0,10,2026-11-27,review
+CS23028,OS,All,internal,22.0,30,2026-11-28,review
+CS23028,CN,OSI & TCP/IP,quiz,7.0,10,2026-08-10,baseline
+CS23028,CN,OSI & TCP/IP,quiz,8.0,10,2026-08-17,baseline
+CS23028,CN,Data Link,quiz,7.0,10,2026-08-24,baseline
+CS23028,CN,Data Link,quiz,8.0,10,2026-08-31,baseline
+CS23028,CN,Routing,quiz,7.5,10,2026-09-07,baseline
+CS23028,CN,Routing,quiz,7.5,10,2026-09-14,baseline
+CS23028,CN,Transport,quiz,7.5,10,2026-09-21,baseline
+CS23028,CN,Application Layer,quiz,8.5,10,2026-09-28,baseline
+CS23028,CN,Transport,quiz,7.0,10,2026-10-05,baseline
+CS23028,CN,Application Layer,quiz,8.0,10,2026-10-12,baseline
+CS23028,CN,All,internal,21.5,30,2026-09-15,baseline
+CS23028,CN,All,internal,24.0,30,2026-10-20,baseline
+CS23028,CN,All,internal,,30,2026-11-24,baseline
+CS23028,CN,OSI & TCP/IP,quiz,7.0,10,2026-11-26,review
+CS23028,CN,Data Link,quiz,6.5,10,2026-11-27,review
+CS23028,CN,Routing,quiz,8.0,10,2026-11-28,review
+CS23028,CN,Transport,quiz,7.0,10,2026-11-26,review
+CS23028,CN,Application Layer,quiz,7.5,10,2026-11-27,review
+CS23028,CN,All,internal,22.5,30,2026-11-28,review
+CS23028,DM,Logic,quiz,8.0,10,2026-08-10,baseline
+CS23028,DM,Logic,quiz,8.0,10,2026-08-17,baseline
+CS23028,DM,Sets & Relations,quiz,8.0,10,2026-08-24,baseline
+CS23028,DM,Sets & Relations,quiz,8.5,10,2026-08-31,baseline
+CS23028,DM,Combinatorics,quiz,7.0,10,2026-09-07,baseline
+CS23028,DM,Combinatorics,quiz,6.0,10,2026-09-14,baseline
+CS23028,DM,Graph Theory,quiz,8.5,10,2026-09-21,baseline
+CS23028,DM,Recurrences,quiz,7.5,10,2026-09-28,baseline
+CS23028,DM,Graph Theory,quiz,7.5,10,2026-10-05,baseline
+CS23028,DM,Recurrences,quiz,6.5,10,2026-10-12,baseline
+CS23028,DM,All,internal,19.5,30,2026-09-15,baseline
+CS23028,DM,All,internal,23.5,30,2026-10-20,baseline
+CS23028,DM,All,internal,,30,2026-11-24,baseline
+CS23028,DM,Logic,quiz,6.5,10,2026-11-26,review
+CS23028,DM,Sets & Relations,quiz,7.0,10,2026-11-27,review
+CS23028,DM,Combinatorics,quiz,8.5,10,2026-11-28,review
+CS23028,DM,Graph Theory,quiz,8.5,10,2026-11-26,review
+CS23028,DM,Recurrences,quiz,8.0,10,2026-11-27,review
+CS23028,DM,All,internal,28.0,30,2026-11-28,review
+CS23029,DSA,Arrays,quiz,9.0,10,2026-08-10,baseline
+CS23029,DSA,Arrays,quiz,9.0,10,2026-08-17,baseline
+CS23029,DSA,Linked Lists,quiz,8.5,10,2026-08-24,baseline
+CS23029,DSA,Linked Lists,quiz,7.0,10,2026-08-31,baseline
+CS23029,DSA,Stacks & Queues,quiz,7.0,10,2026-09-07,baseline
+CS23029,DSA,Stacks & Queues,quiz,7.5,10,2026-09-14,baseline
+CS23029,DSA,Trees,quiz,8.0,10,2026-09-21,baseline
+CS23029,DSA,Graphs,quiz,8.0,10,2026-09-28,baseline
+CS23029,DSA,Trees,quiz,8.0,10,2026-10-05,baseline
+CS23029,DSA,Graphs,quiz,8.0,10,2026-10-12,baseline
+CS23029,DSA,All,internal,25.0,30,2026-09-15,baseline
+CS23029,DSA,All,internal,26.0,30,2026-10-20,baseline
+CS23029,DSA,All,internal,,30,2026-11-24,baseline
+CS23029,DSA,Arrays,quiz,8.0,10,2026-11-26,review
+CS23029,DSA,Linked Lists,quiz,7.0,10,2026-11-27,review
+CS23029,DSA,Stacks & Queues,quiz,9.0,10,2026-11-28,review
+CS23029,DSA,Trees,quiz,8.0,10,2026-11-26,review
+CS23029,DSA,Graphs,quiz,8.0,10,2026-11-27,review
+CS23029,DSA,All,internal,26.5,30,2026-11-28,review
+CS23029,DBMS,ER Model,quiz,8.0,10,2026-08-10,baseline
+CS23029,DBMS,ER Model,quiz,8.0,10,2026-08-17,baseline
+CS23029,DBMS,SQL,quiz,7.0,10,2026-08-24,baseline
+CS23029,DBMS,SQL,quiz,7.5,10,2026-08-31,baseline
+CS23029,DBMS,Normalization,quiz,7.0,10,2026-09-07,baseline
+CS23029,DBMS,Normalization,quiz,8.5,10,2026-09-14,baseline
+CS23029,DBMS,Transactions,quiz,8.0,10,2026-09-21,baseline
+CS23029,DBMS,Indexing,quiz,7.5,10,2026-09-28,baseline
+CS23029,DBMS,Transactions,quiz,8.0,10,2026-10-05,baseline
+CS23029,DBMS,Indexing,quiz,8.0,10,2026-10-12,baseline
+CS23029,DBMS,All,internal,22.5,30,2026-09-15,baseline
+CS23029,DBMS,All,internal,23.5,30,2026-10-20,baseline
+CS23029,DBMS,All,internal,,30,2026-11-24,baseline
+CS23029,DBMS,ER Model,quiz,8.0,10,2026-11-26,review
+CS23029,DBMS,SQL,quiz,7.0,10,2026-11-27,review
+CS23029,DBMS,Normalization,quiz,8.0,10,2026-11-28,review
+CS23029,DBMS,Transactions,quiz,7.5,10,2026-11-26,review
+CS23029,DBMS,Indexing,quiz,7.0,10,2026-11-27,review
+CS23029,DBMS,All,internal,22.0,30,2026-11-28,review
+CS23029,OS,Processes,quiz,7.0,10,2026-08-10,baseline
+CS23029,OS,Processes,quiz,7.0,10,2026-08-17,baseline
+CS23029,OS,Scheduling,quiz,6.5,10,2026-08-24,baseline
+CS23029,OS,Scheduling,quiz,7.0,10,2026-08-31,baseline
+CS23029,OS,Synchronization,quiz,6.5,10,2026-09-07,baseline
+CS23029,OS,Synchronization,quiz,7.0,10,2026-09-14,baseline
+CS23029,OS,Memory,quiz,7.0,10,2026-09-21,baseline
+CS23029,OS,File Systems,quiz,7.0,10,2026-09-28,baseline
+CS23029,OS,Memory,quiz,7.5,10,2026-10-05,baseline
+CS23029,OS,File Systems,quiz,6.5,10,2026-10-12,baseline
+CS23029,OS,All,internal,17.5,30,2026-09-15,baseline
+CS23029,OS,All,internal,20.0,30,2026-10-20,baseline
+CS23029,OS,All,internal,,30,2026-11-24,baseline
+CS23029,OS,Processes,quiz,7.0,10,2026-11-26,review
+CS23029,OS,Scheduling,quiz,7.5,10,2026-11-27,review
+CS23029,OS,Synchronization,quiz,6.0,10,2026-11-28,review
+CS23029,OS,Memory,quiz,6.5,10,2026-11-26,review
+CS23029,OS,File Systems,quiz,7.5,10,2026-11-27,review
+CS23029,OS,All,internal,22.5,30,2026-11-28,review
+CS23029,CN,OSI & TCP/IP,quiz,8.0,10,2026-08-10,baseline
+CS23029,CN,OSI & TCP/IP,quiz,7.5,10,2026-08-17,baseline
+CS23029,CN,Data Link,quiz,7.0,10,2026-08-24,baseline
+CS23029,CN,Data Link,quiz,8.0,10,2026-08-31,baseline
+CS23029,CN,Routing,quiz,8.0,10,2026-09-07,baseline
+CS23029,CN,Routing,quiz,8.0,10,2026-09-14,baseline
+CS23029,CN,Transport,quiz,8.5,10,2026-09-21,baseline
+CS23029,CN,Application Layer,quiz,9.0,10,2026-09-28,baseline
+CS23029,CN,Transport,quiz,8.5,10,2026-10-05,baseline
+CS23029,CN,Application Layer,quiz,7.5,10,2026-10-12,baseline
+CS23029,CN,All,internal,25.5,30,2026-09-15,baseline
+CS23029,CN,All,internal,21.0,30,2026-10-20,baseline
+CS23029,CN,All,internal,,30,2026-11-24,baseline
+CS23029,CN,OSI & TCP/IP,quiz,9.0,10,2026-11-26,review
+CS23029,CN,Data Link,quiz,8.5,10,2026-11-27,review
+CS23029,CN,Routing,quiz,8.5,10,2026-11-28,review
+CS23029,CN,Transport,quiz,9.5,10,2026-11-26,review
+CS23029,CN,Application Layer,quiz,7.5,10,2026-11-27,review
+CS23029,CN,All,internal,26.0,30,2026-11-28,review
+CS23029,DM,Logic,quiz,8.5,10,2026-08-10,baseline
+CS23029,DM,Logic,quiz,7.5,10,2026-08-17,baseline
+CS23029,DM,Sets & Relations,quiz,8.0,10,2026-08-24,baseline
+CS23029,DM,Sets & Relations,quiz,8.5,10,2026-08-31,baseline
+CS23029,DM,Combinatorics,quiz,8.0,10,2026-09-07,baseline
+CS23029,DM,Combinatorics,quiz,7.5,10,2026-09-14,baseline
+CS23029,DM,Graph Theory,quiz,7.5,10,2026-09-21,baseline
+CS23029,DM,Recurrences,quiz,7.0,10,2026-09-28,baseline
+CS23029,DM,Graph Theory,quiz,8.5,10,2026-10-05,baseline
+CS23029,DM,Recurrences,quiz,8.5,10,2026-10-12,baseline
+CS23029,DM,All,internal,22.5,30,2026-09-15,baseline
+CS23029,DM,All,internal,19.5,30,2026-10-20,baseline
+CS23029,DM,All,internal,,30,2026-11-24,baseline
+CS23029,DM,Logic,quiz,8.0,10,2026-11-26,review
+CS23029,DM,Sets & Relations,quiz,7.5,10,2026-11-27,review
+CS23029,DM,Combinatorics,quiz,7.0,10,2026-11-28,review
+CS23029,DM,Graph Theory,quiz,7.5,10,2026-11-26,review
+CS23029,DM,Recurrences,quiz,6.5,10,2026-11-27,review
+CS23029,DM,All,internal,24.5,30,2026-11-28,review
+CS23030,DSA,Arrays,quiz,5.5,10,2026-08-10,baseline
+CS23030,DSA,Arrays,quiz,6.5,10,2026-08-17,baseline
+CS23030,DSA,Linked Lists,quiz,5.0,10,2026-08-24,baseline
+CS23030,DSA,Linked Lists,quiz,4.5,10,2026-08-31,baseline
+CS23030,DSA,Stacks & Queues,quiz,5.5,10,2026-09-07,baseline
+CS23030,DSA,Stacks & Queues,quiz,6.0,10,2026-09-14,baseline
+CS23030,DSA,Trees,quiz,4.5,10,2026-09-21,baseline
+CS23030,DSA,Graphs,quiz,5.5,10,2026-09-28,baseline
+CS23030,DSA,Trees,quiz,5.5,10,2026-10-05,baseline
+CS23030,DSA,Graphs,quiz,5.5,10,2026-10-12,baseline
+CS23030,DSA,All,internal,15.5,30,2026-09-15,baseline
+CS23030,DSA,All,internal,21.5,30,2026-10-20,baseline
+CS23030,DSA,All,internal,,30,2026-11-24,baseline
+CS23030,DSA,Arrays,quiz,6.0,10,2026-11-26,review
+CS23030,DSA,Linked Lists,quiz,5.5,10,2026-11-27,review
+CS23030,DSA,Stacks & Queues,quiz,4.5,10,2026-11-28,review
+CS23030,DSA,Trees,quiz,6.5,10,2026-11-26,review
+CS23030,DSA,Graphs,quiz,4.0,10,2026-11-27,review
+CS23030,DSA,All,internal,20.0,30,2026-11-28,review
+CS23030,DBMS,ER Model,quiz,6.0,10,2026-08-10,baseline
+CS23030,DBMS,ER Model,quiz,6.5,10,2026-08-17,baseline
+CS23030,DBMS,SQL,quiz,8.0,10,2026-08-24,baseline
+CS23030,DBMS,SQL,quiz,7.0,10,2026-08-31,baseline
+CS23030,DBMS,Normalization,quiz,6.5,10,2026-09-07,baseline
+CS23030,DBMS,Normalization,quiz,6.5,10,2026-09-14,baseline
+CS23030,DBMS,Transactions,quiz,7.0,10,2026-09-21,baseline
+CS23030,DBMS,Indexing,quiz,6.5,10,2026-09-28,baseline
+CS23030,DBMS,Transactions,quiz,7.0,10,2026-10-05,baseline
+CS23030,DBMS,Indexing,quiz,5.5,10,2026-10-12,baseline
+CS23030,DBMS,All,internal,21.0,30,2026-09-15,baseline
+CS23030,DBMS,All,internal,21.0,30,2026-10-20,baseline
+CS23030,DBMS,All,internal,,30,2026-11-24,baseline
+CS23030,DBMS,ER Model,quiz,6.5,10,2026-11-26,review
+CS23030,DBMS,SQL,quiz,7.0,10,2026-11-27,review
+CS23030,DBMS,Normalization,quiz,7.0,10,2026-11-28,review
+CS23030,DBMS,Transactions,quiz,7.0,10,2026-11-26,review
+CS23030,DBMS,Indexing,quiz,6.0,10,2026-11-27,review
+CS23030,DBMS,All,internal,19.5,30,2026-11-28,review
+CS23030,OS,Processes,quiz,6.0,10,2026-08-10,baseline
+CS23030,OS,Processes,quiz,6.0,10,2026-08-17,baseline
+CS23030,OS,Scheduling,quiz,6.5,10,2026-08-24,baseline
+CS23030,OS,Scheduling,quiz,6.0,10,2026-08-31,baseline
+CS23030,OS,Synchronization,quiz,7.0,10,2026-09-07,baseline
+CS23030,OS,Synchronization,quiz,6.0,10,2026-09-14,baseline
+CS23030,OS,Memory,quiz,7.0,10,2026-09-21,baseline
+CS23030,OS,File Systems,quiz,6.0,10,2026-09-28,baseline
+CS23030,OS,Memory,quiz,7.0,10,2026-10-05,baseline
+CS23030,OS,File Systems,quiz,6.5,10,2026-10-12,baseline
+CS23030,OS,All,internal,19.0,30,2026-09-15,baseline
+CS23030,OS,All,internal,19.0,30,2026-10-20,baseline
+CS23030,OS,All,internal,,30,2026-11-24,baseline
+CS23030,OS,Processes,quiz,6.0,10,2026-11-26,review
+CS23030,OS,Scheduling,quiz,6.0,10,2026-11-27,review
+CS23030,OS,Synchronization,quiz,8.0,10,2026-11-28,review
+CS23030,OS,Memory,quiz,7.0,10,2026-11-26,review
+CS23030,OS,File Systems,quiz,6.5,10,2026-11-27,review
+CS23030,OS,All,internal,21.5,30,2026-11-28,review
+CS23030,CN,OSI & TCP/IP,quiz,4.5,10,2026-08-10,baseline
+CS23030,CN,OSI & TCP/IP,quiz,6.0,10,2026-08-17,baseline
+CS23030,CN,Data Link,quiz,5.5,10,2026-08-24,baseline
+CS23030,CN,Data Link,quiz,6.0,10,2026-08-31,baseline
+CS23030,CN,Routing,quiz,5.0,10,2026-09-07,baseline
+CS23030,CN,Routing,quiz,5.5,10,2026-09-14,baseline
+CS23030,CN,Transport,quiz,6.5,10,2026-09-21,baseline
+CS23030,CN,Application Layer,quiz,5.5,10,2026-09-28,baseline
+CS23030,CN,Transport,quiz,5.5,10,2026-10-05,baseline
+CS23030,CN,Application Layer,quiz,6.0,10,2026-10-12,baseline
+CS23030,CN,All,internal,16.5,30,2026-09-15,baseline
+CS23030,CN,All,internal,19.0,30,2026-10-20,baseline
+CS23030,CN,All,internal,,30,2026-11-24,baseline
+CS23030,CN,OSI & TCP/IP,quiz,6.0,10,2026-11-26,review
+CS23030,CN,Data Link,quiz,5.5,10,2026-11-27,review
+CS23030,CN,Routing,quiz,5.5,10,2026-11-28,review
+CS23030,CN,Transport,quiz,6.5,10,2026-11-26,review
+CS23030,CN,Application Layer,quiz,6.0,10,2026-11-27,review
+CS23030,CN,All,internal,19.0,30,2026-11-28,review
+CS23030,DM,Logic,quiz,5.5,10,2026-08-10,baseline
+CS23030,DM,Logic,quiz,6.5,10,2026-08-17,baseline
+CS23030,DM,Sets & Relations,quiz,5.0,10,2026-08-24,baseline
+CS23030,DM,Sets & Relations,quiz,6.5,10,2026-08-31,baseline
+CS23030,DM,Combinatorics,quiz,5.5,10,2026-09-07,baseline
+CS23030,DM,Combinatorics,quiz,6.5,10,2026-09-14,baseline
+CS23030,DM,Graph Theory,quiz,6.5,10,2026-09-21,baseline
+CS23030,DM,Recurrences,quiz,6.0,10,2026-09-28,baseline
+CS23030,DM,Graph Theory,quiz,6.5,10,2026-10-05,baseline
+CS23030,DM,Recurrences,quiz,7.0,10,2026-10-12,baseline
+CS23030,DM,All,internal,16.0,30,2026-09-15,baseline
+CS23030,DM,All,internal,20.0,30,2026-10-20,baseline
+CS23030,DM,All,internal,,30,2026-11-24,baseline
+CS23030,DM,Logic,quiz,7.0,10,2026-11-26,review
+CS23030,DM,Sets & Relations,quiz,5.5,10,2026-11-27,review
+CS23030,DM,Combinatorics,quiz,6.5,10,2026-11-28,review
+CS23030,DM,Graph Theory,quiz,7.0,10,2026-11-26,review
+CS23030,DM,Recurrences,quiz,7.5,10,2026-11-27,review
+CS23030,DM,All,internal,18.5,30,2026-11-28,review

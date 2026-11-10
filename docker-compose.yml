@@ -1,3 +1,4 @@
+name: ai-smart-student-mentor
 services:
   postgres:
     image: postgres:16
