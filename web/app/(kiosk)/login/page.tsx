@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useUi } from "@/app/providers";
 import { api, ApiError } from "@/lib/api";
 import type { StudentInfo } from "@/lib/types";
@@ -12,6 +12,7 @@ export default function Login() {
   const [pin, setPin] = useState("");
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
+  const pinRef = useRef<HTMLInputElement>(null);
 
   const add = (d: string) => setPin((p) => (p.length < 6 ? p + d : p));
   async function submit() {
@@ -33,11 +34,12 @@ export default function Login() {
     <section className="mx-auto w-full max-w-md flex-1 py-6">
       <h1 className="text-3xl font-bold text-[#14284b]">{t("login_title")}</h1>
       <label className="mt-6 block text-sm font-medium">{t("roll_no")}
-        <input value={roll} onChange={(e) => setRoll(e.target.value)} autoFocus autoCapitalize="characters" autoComplete="off" placeholder="CS23001"
+        <input value={roll} onChange={(e) => setRoll(e.target.value)} autoFocus autoCapitalize="characters" enterKeyHint="next"
+          onKeyDown={(e) => { if (e.key === "Enter" && roll.trim()) { e.preventDefault(); pinRef.current?.focus(); } }} autoComplete="off" placeholder="CS23001"
           className="mt-1 min-h-14 w-full rounded-xl border border-slate-300 bg-white px-4 text-xl" />
       </label>
       <label className="mt-4 block text-sm font-medium">{t("pin")}
-        <input value={pin} onChange={(e) => setPin(e.target.value.replace(/\D/g, "").slice(0, 6))} type="password" inputMode="numeric" autoComplete="off" maxLength={6}
+        <input ref={pinRef} value={pin} onChange={(e) => setPin(e.target.value.replace(/\D/g, "").slice(0, 6))} type="password" inputMode="numeric" autoComplete="off" maxLength={6}
           onKeyDown={(e) => e.key === "Enter" && roll && pin.length >= 4 && submit()}
           className="mt-1 min-h-14 w-full rounded-xl border border-slate-300 bg-white px-4 text-center text-2xl tracking-[0.5em]" />
       </label>
