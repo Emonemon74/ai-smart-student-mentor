@@ -19,3 +19,10 @@ export function kioskError(e: unknown, push: (path: string) => void): string {
   }
   return "error";
 }
+
+/** The API accepts at most 40 messages per request and only reads the last 16 (LLD C6.4), so send just those.
+ *  Sending the whole history makes long conversations fail with a validation error after about 20 exchanges. */
+export const CHAT_WINDOW = 16;
+export function recentMessages<T>(messages: T[]): T[] {
+  return messages.slice(-CHAT_WINDOW);
+}

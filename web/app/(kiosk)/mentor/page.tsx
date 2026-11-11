@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useUi } from "@/app/providers";
 import { api } from "@/lib/api";
-import { kioskError } from "@/lib/kiosk";
+import { kioskError, recentMessages } from "@/lib/kiosk";
 import type { ChatMessage, ChatReply } from "@/lib/types";
 import { speak, stopSpeaking, useRecorder } from "@/lib/voice";
 
@@ -24,7 +24,7 @@ export default function Mentor() {
   const ask = useCallback(async (history: ChatMessage[]) => {
     setBusy(true); setErr("");
     try {
-      const r = await api<ChatReply>("/mentor/chat", { method: "POST", json: { messages: history, lang } });
+      const r = await api<ChatReply>("/mentor/chat", { method: "POST", json: { messages: recentMessages(history), lang } });
       setMsgs([...history, { role: "assistant", content: r.reply }]);
       if (!mutedRef.current) speak(r.reply, lang);
     } catch (e) {

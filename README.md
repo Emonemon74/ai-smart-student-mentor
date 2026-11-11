@@ -12,6 +12,8 @@ docker compose up -d         # Postgres on host port 5433
 cd api && uv sync && uv run python -m app.connector import seed --batch baseline && cd ..
 cd web && npm install && cd ..
 ```
+The bundled synthetic data is dated around 10 November 2026. When you import it, every date is moved forward by the days that have passed since then, so the upcoming internal is always still in the future and nobody is flagged with a "missing mark" because the data went stale. Add `--exact-dates` to the import command to keep the CSV dates as they are. Real data (any folder other than the bundled `api/seed`) is never shifted.
+
 If something already uses port 8000 on your machine, add `API_PORT=8010` to `api/.env`. Pick non-reasoning chat models, because reasoning models can spend their token budget thinking and return an empty reply.
 
 ## Run the demo
@@ -39,7 +41,7 @@ Hindi: switch with the language button (UI strings and mentor replies).  Wellbei
 Postgres is mapped to host port **5433** and the API defaults to port 8000 (set `API_PORT=8010` in `api/.env` if 8000 is busy).
 
 ## Tests
-`cd api && uv run pytest`   (90 tests; uses database `emon_test`; the LLM is never called; includes the full demo journey run twice)
+`cd api && uv run pytest`   (99 tests; uses database `emon_test`; the LLM is never called; includes the full demo journey run twice)
 
 ## Reset
 Clear sessions, plans, requests, feedback and the audit log, and remove the imported review marks so the "review day" step works live again. The 30 students, baseline marks and resources are kept:

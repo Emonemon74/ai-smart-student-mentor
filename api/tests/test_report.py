@@ -12,7 +12,7 @@ def save(client):
 
 def import_review():
     with db.pool.connection() as c:
-        connector.import_csv(c, SEED, "review")
+        connector.import_csv(c, SEED, "review", shift_days=connector.seed_shift_days())
 
 
 def test_no_review_batch_means_no_verified_data(client):

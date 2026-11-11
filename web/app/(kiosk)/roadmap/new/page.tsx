@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useUi } from "@/app/providers";
 import { api } from "@/lib/api";
 import { addDays, todayIso } from "@/lib/dates";
-import { kioskError } from "@/lib/kiosk";
+import { kioskError, recentMessages } from "@/lib/kiosk";
 import type { ChatMessage, DraftView, Profile, RoadmapIn, RoadmapView } from "@/lib/types";
 
 export default function NewRoadmap() {
@@ -41,7 +41,7 @@ export default function NewRoadmap() {
   async function generate() {
     setBusy(true); setErr(""); setDraft(null);
     try {
-      setDraft(await api<DraftView>("/roadmaps/draft", { method: "POST", json: { subject_code: subject, days, daily_minutes: minutes, review_on: review, lang, messages: mentorMessages() } }));
+      setDraft(await api<DraftView>("/roadmaps/draft", { method: "POST", json: { subject_code: subject, days, daily_minutes: minutes, review_on: review, lang, messages: recentMessages(mentorMessages()) } }));
     } catch (e) {
       const code = kioskError(e, router.push);
       setErr(code === "ai_unavailable" ? t("ai_busy") : t("error_generic"));

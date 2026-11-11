@@ -57,7 +57,7 @@ def test_full_demo_journey(client, fake_ai, run):
 
     # 5. review date: new assessment evidence arrives
     with db.pool.connection() as c:
-        assert connector.import_csv(c, SEED, "review")["errors"] == []
+        assert connector.import_csv(c, SEED, "review", shift_days=connector.seed_shift_days())["errors"] == []
     after = client.get(f"/api/roadmaps/{saved['id']}/report").json()
     graphs = next(v for v in after["verified"] if v["topic"] == "Graphs")
     assert graphs["baseline_pct"] == 40.0 and graphs["delta"] == 20.0

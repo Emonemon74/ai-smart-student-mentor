@@ -2,7 +2,7 @@ from datetime import date, timedelta
 
 import pytest
 
-from app import db, llm, roadmap
+from app import connector, db, llm, roadmap
 from app.schemas import TaskIn
 from tests.conftest import login
 
@@ -90,7 +90,10 @@ def test_draft_builds_a_grounded_prompt_and_returns_resources(client, monkeypatc
     assert body["roadmap"]["days"] == 14 and len(body["roadmap"]["tasks"]) == 3
     assert str(resource_ids()[0]) in body["resources"]
     user = seen["messages"][1]["content"]
-    assert "Graphs" in user and "BFS is hard" in user and "internal on 2026-11-24" in user
+    # The seed's upcoming internal moves with the clock; it must be listed as upcoming, never as a missing mark.
+    upcoming = (connector.SEED_UPCOMING + timedelta(days=connector.seed_shift_days())).isoformat()
+    assert "Graphs" in user and "BFS is hard" in user and f"internal on {upcoming}" in user
+    assert "no recorded score" not in user
     assert "CS23001" not in user and "Aarav" not in user
     with db.pool.connection() as c:
         assert c.execute("SELECT count(*) AS n FROM roadmaps").fetchone()["n"] == 0  # a draft is never saved

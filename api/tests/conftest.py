@@ -29,7 +29,7 @@ def client():
         if (SEED / "students.csv").exists():  # baseline imported once: PIN hashing is deliberately slow
             from app import connector
             with db.pool.connection() as conn:
-                connector.import_csv(conn, SEED, "baseline")
+                connector.import_csv(conn, SEED, "baseline", shift_days=connector.seed_shift_days())
         yield c
 
 

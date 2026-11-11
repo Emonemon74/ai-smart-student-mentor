@@ -7,7 +7,7 @@ import csv
 import os
 import sys
 from dataclasses import dataclass, field
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Literal
 
@@ -19,6 +19,19 @@ PERMITTED = ("programme", "semester", "subjects", "assessments", "attendance")  
 KINDS = {"quiz", "internal", "assignment"}
 RES_KINDS = {"video", "article", "practice", "course"}
 BATCHES = {"baseline", "review"}
+
+# The bundled synthetic data was authored "as of" this date: its latest marks are about three weeks older and the
+# upcoming internal (SEED_UPCOMING) is 14 days after it. Dates are fixed in the CSVs, so left alone they go stale:
+# once the clock passes SEED_UPCOMING every student would get a "missing mark" flag in every subject. Importing the
+# bundled seed therefore moves every date forward by the days elapsed since SEED_ANCHOR (never backwards).
+SEED_DIR = Path(__file__).resolve().parent.parent / "seed"
+SEED_ANCHOR = date(2026, 11, 10)
+SEED_UPCOMING = date(2026, 11, 24)
+
+
+def seed_shift_days(today: date | None = None) -> int:
+    """Days to move the bundled seed dates forward so that its upcoming internal is still in the future."""
+    return max(0, ((today or date.today()) - SEED_ANCHOR).days)
 
 
 @dataclass
@@ -58,8 +71,9 @@ def _num(v: str, what: str) -> float:
         raise ValueError(f"{what} is not a number: {v!r}")
 
 
-def import_csv(conn, folder: Path, batch: Literal["baseline", "review"]) -> dict:
-    """Validate every row first, skip invalid ones, write the rest in one transaction."""
+def import_csv(conn, folder: Path, batch: Literal["baseline", "review"], shift_days: int = 0) -> dict:
+    """Validate every row first, skip invalid ones, write the rest in one transaction.
+    `shift_days` moves every assessment date forward; it is only ever non-zero for the bundled synthetic seed."""
     from app import auth  # PIN hashing lives with auth; called through the module so tests can patch it
 
     folder = Path(folder)
@@ -154,7 +168,7 @@ def import_csv(conn, folder: Path, batch: Literal["baseline", "review"]) -> dict
             score = None if (r["score"] or "").strip() == "" else _num(r["score"], "score")
             if score is not None and not (0 <= score <= mx):
                 raise ValueError(f"score {score:g} is outside 0..{mx:g}")
-            on = date.fromisoformat(r["taken_on"].strip())
+            on = date.fromisoformat(r["taken_on"].strip()) + timedelta(days=shift_days)
             key = (roll, code, r["topic"].strip(), r["kind"], on, batch)
             if key in seen:
                 raise ValueError("duplicate row")
@@ -283,6 +297,8 @@ def main(argv: list[str] | None = None) -> int:
     imp = sub.add_parser("import")
     imp.add_argument("folder")
     imp.add_argument("--batch", choices=sorted(BATCHES), required=True)
+    imp.add_argument("--exact-dates", action="store_true",
+                     help="keep the CSV dates as they are (by default the bundled seed is moved forward to today)")
     sub.add_parser("end-semester", help="HLD 9: clear all saved plans, tasks, share links and phone sessions")
     args = ap.parse_args(argv)
 
@@ -298,12 +314,17 @@ def main(argv: list[str] | None = None) -> int:
             db.close()
         print(f"end of semester: removed {n} plans (tasks and share links cascade), phone sessions cleared")
         return 0
+    folder = Path(args.folder)
+    is_bundled_seed = folder.resolve() == SEED_DIR.resolve()
+    shift = 0 if args.exact_dates or not is_bundled_seed else seed_shift_days()
     try:
         with db.pool.connection() as conn:
-            result = import_csv(conn, Path(args.folder), args.batch)
+            result = import_csv(conn, folder, args.batch, shift_days=shift)
     finally:
         db.close()
     print(f"imported batch={result['batch']} counts={result['counts']}")
+    if shift:
+        print(f"  synthetic dates moved forward {shift} day(s) so the data is current (use --exact-dates to keep the CSV dates)")
     for e in result["errors"]:
         print(f"  REJECTED {e['file']} line {e['line']}: {e['error']}")
     return 1 if result["errors"] else 0
