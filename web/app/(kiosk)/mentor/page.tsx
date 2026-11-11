@@ -12,6 +12,7 @@ export default function Mentor() {
   const router = useRouter();
   const [msgs, setMsgs] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const [muted, setMuted] = useState(false);
@@ -43,6 +44,8 @@ export default function Mentor() {
   }, [ask]);
 
   useEffect(() => { bottom.current?.scrollIntoView({ block: "end" }); }, [msgs, busy]);
+  // Keyboard users: the message box has focus on arrival and again after each reply.
+  useEffect(() => { if (!busy) inputRef.current?.focus(); }, [busy]);
 
   const onText = useCallback((text: string) => setInput((cur) => (cur ? cur + " " : "") + text), []);
   const rec = useRecorder(onText, lang);
@@ -78,7 +81,7 @@ export default function Mentor() {
       </div>
       {(err || micMsg) && <p role="alert" className="mt-3 rounded-lg bg-amber-50 px-4 py-3 text-amber-900">{err || micMsg}</p>}
       <div className="mt-3 flex gap-2">
-        <input value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === "Enter" && send()} placeholder={rec.busy ? t("transcribing") : rec.recording ? t("recording") : t("type_message")}
+        <input ref={inputRef} autoFocus value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === "Enter" && send()} placeholder={rec.busy ? t("transcribing") : rec.recording ? t("recording") : t("type_message")}
           aria-label={t("type_message")} className="min-h-14 flex-1 rounded-xl border border-slate-300 bg-white px-4 text-lg" />
         <button
           onPointerDown={(e) => { e.preventDefault(); void rec.start(); }} onPointerUp={rec.stop} onPointerLeave={() => rec.recording && rec.stop()}
