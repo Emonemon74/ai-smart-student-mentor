@@ -266,18 +266,38 @@ def _load_env_file() -> None:
                 os.environ.setdefault(k.strip(), v.split("#")[0].strip() if k.strip() == "PUBLIC_BASE_URL" else v.strip())
 
 
+def end_semester(conn) -> int:
+    """Retention (HLD 9): plans are cleared at semester end. Deleting roadmaps cascades to tasks and share tokens."""
+    from app import db
+
+    conn.execute("DELETE FROM sessions WHERE kind='phone'")
+    n = conn.execute("DELETE FROM roadmaps").rowcount
+    db.audit(conn, "staff", "plans_delete", f"semester_end:{n}")
+    conn.commit()
+    return n
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="app.connector")
     sub = ap.add_subparsers(dest="cmd", required=True)
     imp = sub.add_parser("import")
     imp.add_argument("folder")
     imp.add_argument("--batch", choices=sorted(BATCHES), required=True)
+    sub.add_parser("end-semester", help="HLD 9: clear all saved plans, tasks, share links and phone sessions")
     args = ap.parse_args(argv)
 
     _load_env_file()
     from app import db
 
     db.init()
+    if args.cmd == "end-semester":
+        try:
+            with db.pool.connection() as conn:
+                n = end_semester(conn)
+        finally:
+            db.close()
+        print(f"end of semester: removed {n} plans (tasks and share links cascade), phone sessions cleared")
+        return 0
     try:
         with db.pool.connection() as conn:
             result = import_csv(conn, Path(args.folder), args.batch)

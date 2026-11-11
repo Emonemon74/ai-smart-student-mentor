@@ -85,3 +85,17 @@ def test_second_share_revokes_the_first_phone_session(client):
 
 def test_phone_without_session_is_401(client):
     assert new_phone(client).get("/api/phone/roadmap").status_code == 401
+
+
+def test_end_semester_clears_plans_tasks_tokens_and_phone_sessions(client):
+    from app import connector
+
+    rid = make_plan(client)["id"]
+    tok = share(client, rid)
+    assert new_phone(client).get(f"/api/r/{tok}").status_code == 200  # creates a phone session
+    tok2 = share(client, rid)  # an unredeemed share token as well
+    with db.pool.connection() as c:
+        n = connector.end_semester(c)
+        left = [c.execute(f"SELECT count(*) AS n FROM {t}").fetchone()["n"] for t in ("roadmaps", "tasks", "share_tokens")]
+        phone = c.execute("SELECT count(*) AS n FROM sessions WHERE kind='phone'").fetchone()["n"]
+    assert n >= 1 and left == [0, 0, 0] and phone == 0

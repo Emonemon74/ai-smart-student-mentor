@@ -37,3 +37,11 @@ Postgres is mapped to host port **5433** and the API defaults to port 8000 (set 
 
 ## Reset
 `docker compose exec postgres psql -U emon -c "TRUNCATE sessions, roadmaps, tasks, share_tokens, requests, feedback, audit_log RESTART IDENTITY CASCADE"` then re-import.
+
+## End of semester
+
+Saved plans are cleared at semester end (HLD §9). This deletes all plans, tasks, share links and phone sessions, and keeps student records:
+
+```bash
+cd api && uv run python -m app.connector end-semester
+```

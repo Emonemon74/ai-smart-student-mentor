@@ -59,7 +59,7 @@ export default function Admin() {
     <main className="mx-auto max-w-5xl space-y-6 p-4 md:p-6">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h1 className="text-2xl font-bold text-[#14284b]">Staff dashboard</h1>
-        <button onClick={load} className="min-h-11 rounded-lg border border-slate-300 bg-white px-4">Refresh</button>
+        <button onClick={load} className="min-h-12 rounded-lg border border-slate-300 bg-white px-4">Refresh</button>
       </div>
       {err && <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-red-800">{err}</p>}
 
@@ -84,7 +84,7 @@ export default function Admin() {
             {data.requests.map((r) => (
               <li key={r.id} className="flex flex-wrap items-center justify-between gap-2 py-2">
                 <span><b>{r.roll_no}</b> · {r.kind}{r.subject_code && ` · ${r.subject_code}`}{r.note && <span className="text-slate-600"> · “{r.note}”</span>} <span className="text-slate-400">{when(r.created_at)}</span></span>
-                <button onClick={() => close(r.id)} className="min-h-10 rounded-lg border border-slate-300 px-3">Close</button>
+                <button onClick={() => close(r.id)} className="min-h-12 rounded-lg border border-slate-300 px-3">Close</button>
               </li>
             ))}
           </ul>

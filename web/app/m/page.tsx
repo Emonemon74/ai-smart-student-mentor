@@ -37,15 +37,15 @@ export default function Phone() {
           <h1 className="text-xl font-bold text-[#14284b]">{rm.subject_name}</h1>
           <p className="text-sm text-slate-600">{t("review_date")}: {shortDate(rm.review_on, lang)} · {left} {t("days_left")}</p>
         </div>
-        <button onClick={() => setLang(lang === "en" ? "hi" : "en")} className="min-h-10 rounded-lg border border-slate-300 bg-white px-3 text-sm print:hidden">{lang === "en" ? "हिन्दी" : "English"}</button>
+        <button onClick={() => setLang(lang === "en" ? "hi" : "en")} className="min-h-12 rounded-lg border border-slate-300 bg-white px-3 text-sm print:hidden">{lang === "en" ? "हिन्दी" : "English"}</button>
       </div>
       <p className="mt-2 text-sm text-slate-700">{rm.summary}</p>
 
       <div className="mt-4 flex gap-2 print:hidden" role="tablist">
         {(["plan", "progress"] as const).map((k) => (
-          <button key={k} role="tab" aria-selected={tab === k} onClick={() => setTab(k)} className={`min-h-11 rounded-full px-5 text-sm ${tab === k ? "bg-[#14284b] text-white" : "border border-slate-300 bg-white"}`}>{k === "plan" ? t("phone_plan") : t("phone_progress")}</button>
+          <button key={k} role="tab" aria-selected={tab === k} onClick={() => setTab(k)} className={`min-h-12 rounded-full px-5 text-sm ${tab === k ? "bg-[#14284b] text-white" : "border border-slate-300 bg-white"}`}>{k === "plan" ? t("phone_plan") : t("phone_progress")}</button>
         ))}
-        <button onClick={() => window.print()} className="ml-auto min-h-11 rounded-full border border-slate-300 bg-white px-4 text-sm">PDF</button>
+        <button onClick={() => window.print()} className="ml-auto min-h-12 rounded-full border border-slate-300 bg-white px-4 text-sm">PDF</button>
       </div>
 
       {tab === "plan" && (
@@ -67,7 +67,7 @@ export default function Phone() {
                 <div className="mt-3 flex gap-2 print:hidden" role="group" aria-label={task.topic}>
                   {states.map((s) => (
                     <button key={s} onClick={() => setStatus(task.id, s)} aria-pressed={task.status === s}
-                      className={`min-h-11 flex-1 rounded-lg border text-sm ${task.status === s ? "border-[#14284b] bg-[#14284b] text-white" : "border-slate-300"}`}>{t(s)}</button>
+                      className={`min-h-12 flex-1 rounded-lg border text-sm ${task.status === s ? "border-[#14284b] bg-[#14284b] text-white" : "border-slate-300"}`}>{t(s)}</button>
                   ))}
                 </div>
               </article>
