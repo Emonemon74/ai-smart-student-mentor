@@ -9,7 +9,7 @@ export function ReportView({ r }: { r: Report }) {
   const sr = r.self_reported;
   return (
     <div className="space-y-4">
-      <p className="text-sm text-slate-600">{r.subject_name} · v{r.version} · {longDate(r.start_on, lang)} – {longDate(r.review_on, lang)} · {r.programme}</p>
+      <p className="text-sm text-slate-600">{r.roll_no} · {r.subject_name} · v{r.version} · {longDate(r.start_on, lang)} – {longDate(r.review_on, lang)} · {r.programme}</p>
 
       <section className="rounded-2xl border-2 border-blue-200 bg-white p-4 shadow-sm">
         <h2 className="font-semibold text-blue-900">{t("verified")}</h2>
