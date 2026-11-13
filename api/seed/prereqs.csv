@@ -1,0 +1,19 @@
+subject_code,topic,prereq_subject_code,prereq_topic
+DSA,Linked Lists,DSA,Arrays
+DSA,Stacks & Queues,DSA,Arrays
+DSA,Trees,DSA,Linked Lists
+DSA,Graphs,DSA,Trees
+DSA,Graphs,DM,Graph Theory
+DBMS,SQL,DBMS,ER Model
+DBMS,Normalization,DBMS,ER Model
+DBMS,Indexing,DBMS,SQL
+DBMS,Transactions,DBMS,SQL
+OS,Scheduling,OS,Processes
+OS,Synchronization,OS,Processes
+OS,Memory,OS,Processes
+CN,Routing,CN,Data Link
+CN,Transport,CN,Routing
+DM,Graph Theory,DM,Sets & Relations
+DM,Graph Theory,DM,Logic
+DM,Combinatorics,DM,Sets & Relations
+DM,Recurrences,DM,Combinatorics

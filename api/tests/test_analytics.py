@@ -54,13 +54,13 @@ def test_declining_needs_four_quizzes_and_a_ten_point_fall():
 
 
 def test_low_attendance_threshold():
-    assert "LOW_ATTENDANCE" not in codes(analytics.analyse(rec(sub("A", rows_for([70]), att=(45, 60))), {}, TODAY)[0])  # exactly 75
-    f = analytics.analyse(rec(sub("A", rows_for([70]), att=(41, 60))), {}, TODAY)[0].flags
+    assert "LOW_ATTENDANCE" not in codes(analytics.analyse(rec(sub("A", rows_for([70] * 3), att=(45, 60))), {}, TODAY)[0])  # exactly 75
+    f = analytics.analyse(rec(sub("A", rows_for([70] * 3), att=(41, 60))), {}, TODAY)[0].flags
     assert [x.code for x in f] == ["LOW_ATTENDANCE"] and f[0].values["n"] == 60 and "41 of 60" in f[0].reason
 
 
 def test_missing_vs_upcoming():
-    rows = rows_for([70]) + [Row("All", "internal", None, 30, date(2026, 10, 10)), Row("All", "internal", None, 30, date(2026, 11, 24))]
+    rows = rows_for([70] * 3) + [Row("All", "internal", None, 30, date(2026, 10, 10)), Row("All", "internal", None, 30, date(2026, 11, 24))]
     s = analytics.analyse(rec(sub("A", rows)), {}, TODAY)[0]
     assert codes(s) == ["MISSING"] and "2026-10-10" in s.flags[0].reason
     up = analytics.upcoming(rec(sub("A", rows)), TODAY)
@@ -96,3 +96,68 @@ def test_readiness_is_mean_of_role_subjects():
 def test_topic_pcts_excludes_all_and_unscored():
     rows = [Row("Trees", "quiz", 5, 10, TODAY), Row("Trees", "quiz", 7, 10, TODAY), Row("All", "internal", 20, 30, TODAY), Row("Graphs", "quiz", None, 10, TODAY)]
     assert analytics.topic_pcts(rows) == {("Trees", "quiz"): (60.0, 2)}
+
+
+# ---- v2 flags (LLD_next C4.1) -------------------------------------------------------------------
+def lab_rows(pcts):
+    return [Row("Arrays", "lab", p / 5, 20.0, date(2026, 9, 1 + i)) for i, p in enumerate(pcts)]
+
+
+def test_every_flag_code_has_a_recommended_response():
+    from app.schemas import Flag
+    codes_ = set(Flag.model_fields["code"].annotation.__args__)
+    assert codes_ == set(analytics.RESPONSES)
+
+
+def test_backlog_flag_only_when_pending():
+    for status, want in (("pending", True), ("cleared", False)):
+        s = sub("A", rows_for([70] * 3))
+        s.backlog = __import__("app.connector", fromlist=["BacklogRow"]).BacklogRow(2, status)
+        assert ("BACKLOG" in codes(analytics.analyse(rec(s), {}, TODAY)[0])) is want
+
+
+def test_theory_practice_gap_threshold_and_min_labs():
+    theory = rows_for([75] * 4)
+    fires = analytics.analyse(rec(sub("A", theory + lab_rows([60, 60]))), {}, TODAY)[0]          # 75 vs 60: exactly 15
+    assert "THEORY_PRACTICE_GAP" in codes(fires)
+    near = analytics.analyse(rec(sub("A", theory + lab_rows([61, 61]))), {}, TODAY)[0]           # 14 apart
+    assert "THEORY_PRACTICE_GAP" not in codes(near)
+    one = analytics.analyse(rec(sub("A", theory + lab_rows([40]))), {}, TODAY)[0]                # only 1 lab
+    assert "THEORY_PRACTICE_GAP" not in codes(one)
+
+
+PRE = {("A", "Graphs"): [("A", "Trees")]}
+
+
+def two_topics(trees, graphs):
+    return rows_for([trees, trees, graphs, graphs], topics=["Trees", "Trees", "Graphs", "Graphs"])
+
+
+def test_prereq_gap_vs_targeted_gap_are_exclusive():
+    gap = analytics.analyse(rec(sub("A", two_topics(55, 40))), {}, TODAY, prereqs=PRE)[0]
+    assert [f.code for f in gap.flags if f.topic == "Graphs" and f.code in ("PREREQ_GAP", "TARGETED_GAP")] == ["PREREQ_GAP"]
+    tgt = analytics.analyse(rec(sub("A", two_topics(78, 45))), {}, TODAY, prereqs=PRE)[0]
+    assert [f.code for f in tgt.flags if f.topic == "Graphs" and f.code in ("PREREQ_GAP", "TARGETED_GAP")] == ["TARGETED_GAP"]
+    middle = analytics.analyse(rec(sub("A", two_topics(65, 45))), {}, TODAY, prereqs=PRE)[0]      # prereq 65: neither weak nor strong
+    assert not {f.code for f in middle.flags} & {"PREREQ_GAP", "TARGETED_GAP"}
+
+
+def test_prereq_gap_threshold_is_just_under_sixty_and_a_missing_prereq_is_not_targeted():
+    at = analytics.analyse(rec(sub("A", two_topics(60, 40))), {}, TODAY, prereqs=PRE)[0]
+    assert "PREREQ_GAP" not in codes(at)
+    alone = analytics.analyse(rec(sub("A", rows_for([40, 40], topics=["Graphs", "Graphs"]))), {}, TODAY, prereqs=PRE)[0]
+    assert not {"PREREQ_GAP", "TARGETED_GAP"} & set(codes(alone))        # no data for the prerequisite: say nothing
+
+
+def test_cross_subject_prerequisite():
+    pre = {("DSA", "Graphs"): [("DM", "Graph Theory")]}
+    dsa = sub("DSA", rows_for([40, 40], topics=["Graphs", "Graphs"]) + rows_for([80] * 3, topics=["Arrays"] * 3))
+    dm = sub("DM", rows_for([50, 50], topics=["Graph Theory", "Graph Theory"]) + rows_for([80] * 3, topics=["Logic"] * 3))
+    s = next(x for x in analytics.analyse(rec(dsa, dm), {}, TODAY, prereqs=pre) if x.code == "DSA")
+    flag = next(f for f in s.flags if f.code == "PREREQ_GAP")
+    assert flag.topic == "Graphs" and flag.values["prereq"] == "Graph Theory"
+
+
+def test_low_evidence_at_two_but_not_three():
+    assert "LOW_EVIDENCE" in codes(analytics.analyse(rec(sub("A", rows_for([70, 70]))), {}, TODAY)[0])
+    assert "LOW_EVIDENCE" not in codes(analytics.analyse(rec(sub("A", rows_for([70, 70, 70]))), {}, TODAY)[0])

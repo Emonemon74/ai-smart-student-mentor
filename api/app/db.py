@@ -45,3 +45,6 @@ def cleanup(conn) -> None:
     conn.execute("DELETE FROM sessions WHERE expires_at < now()")
     conn.execute("DELETE FROM share_tokens WHERE expires_at < now()")
     conn.execute("DELETE FROM audit_log WHERE at < now() - interval '180 days'")
+    conn.execute("DELETE FROM diagnostics WHERE submitted_at IS NULL AND started_at < now() - interval '1 day'")
+    conn.execute("DELETE FROM requests WHERE status='closed' AND category='wellbeing' AND closed_at < now() - interval '90 days'")
+    conn.execute("DELETE FROM requests WHERE status='closed' AND closed_at < now() - interval '180 days'")

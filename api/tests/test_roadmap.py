@@ -171,3 +171,131 @@ def test_owner_scoping(client, monkeypatch):
     assert client.post(f"/api/roadmaps/{rid}/share").status_code == 404
     assert client.get(f"/api/roadmaps/{rid}/report").status_code == 404
     assert client.get("/api/roadmaps").json() == []
+
+
+# ---- v2: goals, levels, capacity, review date on save, track plans (LLD_next C7.7) ------------------------
+from tests.conftest import take_check  # noqa: E402
+
+
+def gplan(goal="semester", subject="DSA", **kw):
+    p = plan(**kw)
+    p["goal"], p["subject_code"] = goal, subject
+    return p
+
+
+def tasks_for(subject, n=3):
+    """A valid three-task plan using real resources of the subject (checkpoint first so a 7-day rule is met)."""
+    with db.pool.connection() as c:
+        ids = [r["id"] for r in c.execute("SELECT r.id FROM resources r JOIN subjects s ON s.id=r.subject_id WHERE s.code=%s AND r.link_ok ORDER BY r.id", (subject,)).fetchall()]
+    return [task(1, 7, "checkpoint", rid=ids[0]), task(8, 10, "practice", rid=ids[1]), task(11, 14, "checkpoint", rid=ids[0])]
+
+
+def test_ineligible_subject_for_a_goal_is_404_and_backlog_goal_works_for_the_right_student(client):
+    login(client, "CS23001")
+    assert client.post("/api/roadmaps", json=gplan("backlog", "DM", tasks=tasks_for("DM"))).status_code == 404
+    assert client.post("/api/roadmaps", json=gplan("upsc", "DSA")).status_code == 404
+    client.cookies.clear()
+    login(client, "CS23005")
+    r = client.post("/api/roadmaps", json=gplan("backlog", "DM", tasks=tasks_for("DM")))
+    assert r.status_code == 200 and r.json()["goal"] == "backlog" and r.json()["goal_name"] == "Backlog recovery"
+
+
+def test_a_track_plan_drafts_and_saves_with_a_track_safe_snapshot(client, monkeypatch):
+    login(client)
+    t = tasks_for("APT")
+    r = client.post("/api/roadmaps", json=gplan("placement", "APT", tasks=t))
+    assert r.status_code == 200
+    with db.pool.connection() as c:
+        ev = c.execute("SELECT evidence FROM roadmaps WHERE id=%s", (r.json()["id"],)).fetchone()["evidence"]
+    assert ev == {"flags": [], "subject_pct": None, "topics": [], "as_of": None}
+    seen = fake_plan_llm(monkeypatch, tasks_for("APT"))
+    d = client.post("/api/roadmaps/draft", json={**draft_body(subject_code="APT"), "goal": "placement"})
+    assert d.status_code == 200
+    user = seen["messages"][1]["content"]
+    assert "a track without institutional marks" in user and "no institutional records" in user and "GOAL: Placement / coding" in user
+
+
+def test_over_daily_capacity_at_241_not_at_240_and_finished_plans_do_not_count(client):
+    login(client)
+
+    def heavy(goal, minutes):
+        p = gplan(goal, "DSA", tasks=[task(1, 7, "checkpoint", minutes=minutes), task(8, 10, "practice", minutes=minutes), task(11, 14, "checkpoint", minutes=minutes)])
+        p["daily_minutes"] = minutes
+        return p
+
+    assert client.post("/api/roadmaps", json=heavy("semester", 120)).status_code == 200
+    assert client.post("/api/roadmaps", json=heavy("gate", 121)).json() == {"detail": "over_daily_capacity"}      # 120 + 121 = 241
+    assert client.post("/api/roadmaps", json=heavy("gate", 120)).status_code == 200                                 # 240 exactly
+    assert client.post("/api/roadmaps", json=heavy("higher_studies", 60)).status_code == 422                        # both plans still run
+    with db.pool.connection() as c:                                                                                 # both ended long ago
+        c.execute("UPDATE roadmaps SET start_on = current_date - 40")
+        c.commit()
+    assert client.post("/api/roadmaps", json=heavy("higher_studies", 120)).status_code == 200
+
+
+def test_same_subject_under_two_goals_keeps_two_active_plans_and_resave_supersedes_only_its_goal(client):
+    login(client)
+    t = tasks_for("DSA")
+    a = client.post("/api/roadmaps", json=gplan("semester", tasks=t)).json()
+    b = client.post("/api/roadmaps", json=gplan("gate", tasks=t)).json()
+    c2 = client.post("/api/roadmaps", json=gplan("semester", tasks=t)).json()
+    st = {x["id"]: x["status"] for x in client.get("/api/roadmaps").json()}
+    assert st == {a["id"]: "superseded", b["id"]: "active", c2["id"]: "active"} and c2["version"] == 2 and b["version"] == 1
+
+
+def test_save_with_a_past_review_date_is_rejected(client):
+    login(client)
+    p = plan()
+    p["review_on"] = (date.today() + timedelta(days=3)).isoformat()
+    assert client.post("/api/roadmaps", json=p).json() == {"detail": "review_too_soon"}
+    p = plan()
+    p["target_date"] = (date.today() - timedelta(days=1)).isoformat()
+    assert client.post("/api/roadmaps", json=p).status_code == 422
+
+
+def test_overrides_are_stored_with_source_student_audited_and_validated(client):
+    login(client)
+    p = plan()
+    p["level_overrides"] = {"Graphs": "advanced"}
+    r = client.post("/api/roadmaps", json=p).json()
+    assert r["levels"]["Graphs"]["level"] == "advanced" and r["levels"]["Graphs"]["source"] == "student"
+    with db.pool.connection() as c:
+        assert c.execute("SELECT target FROM audit_log WHERE action='level_override'").fetchone()["target"] == "Graphs"
+    p["level_overrides"] = {"Quantum": "advanced"}                                                 # not a topic of the subject
+    assert client.post("/api/roadmaps", json=p).json() == {"detail": "invalid_plan"}
+
+
+def test_draft_prompt_carries_goal_levels_responses_and_only_level_matched_resources(client, monkeypatch):
+    seen = fake_plan_llm(monkeypatch, good())
+    login(client)
+    r = client.post("/api/roadmaps/draft", json={**draft_body(), "goal": "gate", "target_date": (date.today() + timedelta(days=90)).isoformat()})
+    assert r.status_code == 200
+    user = seen["messages"][1]["content"]
+    assert "GOAL: GATE preparation" in user and "TARGET DATE:" in user and "PREREQ_GAP Graphs" in user
+    assert "Graphs foundation (records)" in user and "RECOMMENDED RESPONSES:" in user
+    graphs = [l for l in user.split("[") if "] Graphs" in l or l.split("]")[-1].strip().startswith("Graphs")]
+    assert graphs and not any(", advanced," in l for l in graphs)                                   # Dijkstra (advanced) is out of the window
+
+
+def test_free_text_task_topic_never_decides_the_catalogue_topic(client):
+    """A task titled 'Binary trees' that points at a Trees resource counts as Trees in the report."""
+    login(client)
+    with db.pool.connection() as c:
+        rid = c.execute("SELECT r.id FROM resources r JOIN subjects s ON s.id=r.subject_id WHERE s.code='DSA' AND r.topic='Trees' ORDER BY r.id LIMIT 1").fetchone()["id"]
+    p = plan(tasks=[task(1, 7, "checkpoint", rid=rid, topic="Binary trees"), task(8, 14, "checkpoint", rid=rid, topic="Binary trees")])
+    saved = client.post("/api/roadmaps", json=p).json()
+    take_check(client, "DSA", "Trees", correct=5, purpose="review", roadmap_id=saved["id"])
+    rep = client.get(f"/api/roadmaps/{saved['id']}/report").json()
+    assert [c["topic"] for c in rep["checks"]] == ["Trees"]
+    assert client.post("/api/diagnostics", json={"subject_code": "DSA", "topic": "Binary trees", "purpose": "review", "roadmap_id": saved["id"]}).status_code == 404
+
+
+def test_review_checkin_is_owner_only_and_validated(client):
+    login(client, "CS23001")
+    rid = client.post("/api/roadmaps", json=plan()).json()["id"]
+    assert client.post(f"/api/roadmaps/{rid}/review", json={"confidence": 2, "plan_fit": 4}).status_code == 204
+    assert client.post(f"/api/roadmaps/{rid}/review", json={"confidence": 9}).status_code == 422
+    client.post("/api/auth/logout")
+    client.cookies.clear()
+    login(client, "CS23002")
+    assert client.post(f"/api/roadmaps/{rid}/review", json={}).status_code == 404

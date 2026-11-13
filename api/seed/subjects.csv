@@ -1,6 +1,8 @@
-code,name
-DSA,Data Structures
-DBMS,Database Systems
-OS,Operating Systems
-CN,Computer Networks
-DM,Discrete Mathematics
+code,name,kind
+DSA,Data Structures,course
+DBMS,Database Systems,course
+OS,Operating Systems,course
+CN,Computer Networks,course
+DM,Discrete Mathematics,course
+APT,Aptitude & Interview,track
+UPSC,UPSC Foundation,track

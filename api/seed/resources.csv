@@ -1,51 +1,96 @@
-subject_code,topic,title,url,kind
-DSA,Arrays,Array data structure guide,https://www.geeksforgeeks.org/array-data-structure/,article
-DSA,Arrays,Sorting visualised,https://visualgo.net/en/sorting,practice
-DSA,Linked Lists,Linked list data structure,https://www.geeksforgeeks.org/linked-list-data-structure/,article
-DSA,Linked Lists,Linked list and array visualiser,https://visualgo.net/en/list,practice
-DSA,Stacks & Queues,Stack data structure,https://www.geeksforgeeks.org/stack-data-structure/,article
-DSA,Stacks & Queues,Queue data structure,https://www.geeksforgeeks.org/queue-data-structure/,article
-DSA,Trees,Binary search tree visualiser,https://visualgo.net/en/bst,practice
-DSA,Trees,Binary tree data structure,https://www.geeksforgeeks.org/binary-tree-data-structure/,article
-DSA,Graphs,BFS and DFS visualiser,https://visualgo.net/en/dfsbfs,practice
-DSA,Graphs,Breadth first search,https://cp-algorithms.com/graph/breadth-first-search.html,article
-DBMS,ER Model,Introduction to the ER model,https://www.geeksforgeeks.org/introduction-of-er-model/,article
-DBMS,ER Model,Database management system (NPTEL),https://nptel.ac.in/courses/106105175,course
-DBMS,SQL,SQL tutorial,https://www.geeksforgeeks.org/sql-tutorial/,article
-DBMS,SQL,Intro to SQL (Khan Academy),https://www.khanacademy.org/computing/computer-programming/sql,course
-DBMS,Normalization,Normal forms in DBMS,https://www.geeksforgeeks.org/normal-forms-in-dbms/,article
-DBMS,Normalization,Database normalization introduction,https://www.geeksforgeeks.org/introduction-of-database-normalization/,article
-DBMS,Transactions,Transactions in DBMS,https://www.geeksforgeeks.org/transaction-in-dbms/,article
-DBMS,Transactions,ACID properties in DBMS,https://www.geeksforgeeks.org/acid-properties-in-dbms/,article
-DBMS,Indexing,Indexing in databases,https://www.geeksforgeeks.org/indexing-in-databases-set-1/,article
-DBMS,Indexing,B-tree introduction,https://www.geeksforgeeks.org/introduction-of-b-tree-2/,article
-OS,Processes,Process management,https://www.geeksforgeeks.org/introduction-of-process-management/,article
-OS,Processes,Process schedulers,https://www.geeksforgeeks.org/process-schedulers-in-operating-system/,article
-OS,Scheduling,CPU scheduling,https://www.geeksforgeeks.org/cpu-scheduling-in-operating-systems/,article
-OS,Scheduling,Round robin scheduling,https://www.geeksforgeeks.org/round-robin-scheduling-in-operating-system/,article
-OS,Synchronization,Process synchronization,https://www.geeksforgeeks.org/introduction-of-process-synchronization/,article
-OS,Synchronization,Semaphores,https://www.geeksforgeeks.org/semaphores-in-process-synchronization/,article
-OS,Memory,Memory management,https://www.geeksforgeeks.org/memory-management-in-operating-system/,article
-OS,Memory,Paging,https://www.geeksforgeeks.org/paging-in-operating-system/,article
-OS,File Systems,File systems,https://www.geeksforgeeks.org/file-systems-in-operating-system/,article
-OS,File Systems,File allocation methods,https://www.geeksforgeeks.org/file-allocation-methods/,article
-CN,OSI & TCP/IP,OSI model,https://www.geeksforgeeks.org/open-systems-interconnection-model-osi/,article
-CN,OSI & TCP/IP,TCP/IP model,https://www.geeksforgeeks.org/tcp-ip-model/,article
-CN,Data Link,Data link layer,https://www.geeksforgeeks.org/data-link-layer/,article
-CN,Data Link,Framing,https://www.geeksforgeeks.org/framing-in-data-link-layer/,article
-CN,Routing,Routing protocols,https://www.geeksforgeeks.org/open-shortest-path-first-ospf-protocol-fundamentals/,article
-CN,Routing,Distance vector routing,https://www.geeksforgeeks.org/distance-vector-routing-dvr-protocol/,article
-CN,Transport,Transport layer,https://www.geeksforgeeks.org/transport-layer-responsibilities/,article
-CN,Transport,TCP three-way handshake,https://www.geeksforgeeks.org/tcp-3-way-handshake-process/,article
-CN,Application Layer,Application layer in OSI,https://www.geeksforgeeks.org/application-layer-in-osi-model/,article
-CN,Application Layer,HTTP overview,https://www.geeksforgeeks.org/http-full-form/,article
-DM,Logic,Propositional logic,https://www.geeksforgeeks.org/mathematical-logic/,article
-DM,Logic,Mathematics for CS (MIT OCW),https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/,course
-DM,Sets & Relations,Set theory,https://www.geeksforgeeks.org/set-theory/,article
-DM,Sets & Relations,Relations in discrete mathematics,https://www.geeksforgeeks.org/types-of-relations/,article
-DM,Combinatorics,Combinatorics,https://www.geeksforgeeks.org/permutation-and-combination/,article
-DM,Combinatorics,Binomial coefficients,https://cp-algorithms.com/combinatorics/binomial-coefficients.html,article
-DM,Graph Theory,Graph theory tutorial,https://www.geeksforgeeks.org/graph-theory-tutorial/,article
-DM,Graph Theory,Depth first search,https://cp-algorithms.com/graph/depth-first-search.html,article
-DM,Recurrences,Recurrence relations,https://www.geeksforgeeks.org/recurrence-relations/,article
-DM,Recurrences,Fibonacci numbers,https://cp-algorithms.com/algebra/fibonacci-numbers.html,article
+subject_code,topic,title,url,kind,level,lang,minutes,goals
+DSA,Arrays,Array data structure guide,https://www.geeksforgeeks.org/array-data-structure/,article,beginner,en,25,
+DSA,Arrays,Sorting visualised,https://visualgo.net/en/sorting,practice,beginner,en,30,
+DSA,Linked Lists,Linked list data structure,https://www.geeksforgeeks.org/linked-list-data-structure/,article,beginner,en,25,
+DSA,Linked Lists,Linked list and array visualiser,https://visualgo.net/en/list,practice,beginner,en,30,
+DSA,Stacks & Queues,Stack data structure,https://www.geeksforgeeks.org/stack-data-structure/,article,beginner,en,25,
+DSA,Stacks & Queues,Queue data structure,https://www.geeksforgeeks.org/queue-data-structure/,article,beginner,en,25,
+DSA,Trees,Binary search tree visualiser,https://visualgo.net/en/bst,practice,beginner,en,30,
+DSA,Trees,Binary tree data structure,https://www.geeksforgeeks.org/binary-tree-data-structure/,article,intermediate,en,30,
+DSA,Graphs,BFS and DFS visualiser,https://visualgo.net/en/dfsbfs,practice,beginner,en,30,
+DSA,Graphs,Breadth first search,https://cp-algorithms.com/graph/breadth-first-search.html,article,advanced,en,45,
+DBMS,ER Model,Introduction to the ER model,https://www.geeksforgeeks.org/introduction-of-er-model/,article,beginner,en,25,
+DBMS,ER Model,Database management system (NPTEL),https://nptel.ac.in/courses/106105175,course,intermediate,en,300,
+DBMS,SQL,SQL tutorial,https://www.geeksforgeeks.org/sql-tutorial/,article,beginner,en,25,
+DBMS,SQL,Intro to SQL (Khan Academy),https://www.khanacademy.org/computing/computer-programming/sql,course,beginner,en,120,
+DBMS,Normalization,Normal forms in DBMS,https://www.geeksforgeeks.org/normal-forms-in-dbms/,article,intermediate,en,30,
+DBMS,Normalization,Database normalization introduction,https://www.geeksforgeeks.org/introduction-of-database-normalization/,article,beginner,en,25,
+DBMS,Transactions,Transactions in DBMS,https://www.geeksforgeeks.org/transaction-in-dbms/,article,intermediate,en,30,
+DBMS,Transactions,ACID properties in DBMS,https://www.geeksforgeeks.org/acid-properties-in-dbms/,article,intermediate,en,30,
+DBMS,Indexing,Indexing in databases,https://www.geeksforgeeks.org/indexing-in-databases-set-1/,article,intermediate,en,30,
+DBMS,Indexing,B-tree introduction,https://www.geeksforgeeks.org/introduction-of-b-tree-2/,article,intermediate,en,30,
+OS,Processes,Process management,https://www.geeksforgeeks.org/introduction-of-process-management/,article,beginner,en,25,
+OS,Processes,Process schedulers,https://www.geeksforgeeks.org/process-schedulers-in-operating-system/,article,beginner,en,25,
+OS,Scheduling,CPU scheduling,https://www.geeksforgeeks.org/cpu-scheduling-in-operating-systems/,article,beginner,en,25,
+OS,Scheduling,Round robin scheduling,https://www.geeksforgeeks.org/round-robin-scheduling-in-operating-system/,article,intermediate,en,30,
+OS,Synchronization,Process synchronization,https://www.geeksforgeeks.org/introduction-of-process-synchronization/,article,intermediate,en,30,
+OS,Synchronization,Semaphores,https://www.geeksforgeeks.org/semaphores-in-process-synchronization/,article,intermediate,en,30,
+OS,Memory,Memory management,https://www.geeksforgeeks.org/memory-management-in-operating-system/,article,beginner,en,25,
+OS,Memory,Paging,https://www.geeksforgeeks.org/paging-in-operating-system/,article,intermediate,en,30,
+OS,File Systems,File systems,https://www.geeksforgeeks.org/file-systems-in-operating-system/,article,beginner,en,25,
+OS,File Systems,File allocation methods,https://www.geeksforgeeks.org/file-allocation-methods/,article,beginner,en,25,
+CN,OSI & TCP/IP,OSI model,https://www.geeksforgeeks.org/open-systems-interconnection-model-osi/,article,beginner,en,25,
+CN,OSI & TCP/IP,TCP/IP model,https://www.geeksforgeeks.org/tcp-ip-model/,article,beginner,en,25,
+CN,Data Link,Data link layer,https://www.geeksforgeeks.org/data-link-layer/,article,beginner,en,25,
+CN,Data Link,Framing,https://www.geeksforgeeks.org/framing-in-data-link-layer/,article,intermediate,en,30,
+CN,Routing,Routing protocols,https://www.geeksforgeeks.org/open-shortest-path-first-ospf-protocol-fundamentals/,article,intermediate,en,30,
+CN,Routing,Distance vector routing,https://www.geeksforgeeks.org/distance-vector-routing-dvr-protocol/,article,intermediate,en,30,
+CN,Transport,Transport layer,https://www.geeksforgeeks.org/transport-layer-responsibilities/,article,beginner,en,25,
+CN,Transport,TCP three-way handshake,https://www.geeksforgeeks.org/tcp-3-way-handshake-process/,article,intermediate,en,30,
+CN,Application Layer,Application layer in OSI,https://www.geeksforgeeks.org/application-layer-in-osi-model/,article,beginner,en,25,
+CN,Application Layer,HTTP overview,https://www.geeksforgeeks.org/http-full-form/,article,beginner,en,25,
+DM,Logic,Propositional logic,https://www.geeksforgeeks.org/mathematical-logic/,article,beginner,en,25,
+DM,Logic,Mathematics for CS (MIT OCW),https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/,course,advanced,en,600,
+DM,Sets & Relations,Set theory,https://www.geeksforgeeks.org/set-theory/,article,beginner,en,25,
+DM,Sets & Relations,Relations in discrete mathematics,https://www.geeksforgeeks.org/types-of-relations/,article,beginner,en,25,
+DM,Combinatorics,Combinatorics,https://www.geeksforgeeks.org/permutation-and-combination/,article,beginner,en,25,
+DM,Combinatorics,Binomial coefficients,https://cp-algorithms.com/combinatorics/binomial-coefficients.html,article,advanced,en,45,
+DM,Graph Theory,Graph theory tutorial,https://www.geeksforgeeks.org/graph-theory-tutorial/,article,beginner,en,25,
+DM,Graph Theory,Depth first search,https://cp-algorithms.com/graph/depth-first-search.html,article,advanced,en,45,
+DM,Recurrences,Recurrence relations,https://www.geeksforgeeks.org/recurrence-relations/,article,intermediate,en,30,
+DM,Recurrences,Fibonacci numbers,https://cp-algorithms.com/algebra/fibonacci-numbers.html,article,advanced,en,45,
+DSA,Trees,Introduction to trees,https://www.geeksforgeeks.org/introduction-to-tree-data-structure-and-algorithm-tutorials/,article,foundation,en,25,
+DSA,Trees,"Tree traversals: inorder, preorder, postorder",https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/,article,intermediate,en,30,
+DSA,Trees,Segment trees,https://cp-algorithms.com/data_structures/segment_tree.html,article,advanced,en,60,gate
+DSA,Trees,Binary search tree data structure,https://www.geeksforgeeks.org/dsa/binary-search-tree-data-structure/,article,beginner,en,30,
+DSA,Trees,Introduction to Algorithms (MIT OCW 6.006),https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/,course,advanced,en,600,gate;higher_studies
+DSA,Graphs,Graph and its representations,https://www.geeksforgeeks.org/graph-and-its-representations/,article,foundation,en,25,
+DSA,Graphs,Representing graphs (Khan Academy),https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs,article,foundation,en,20,
+DSA,Graphs,Breadth first search for a graph,https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/,article,intermediate,en,30,
+DSA,Graphs,Depth first search for a graph,https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/,article,intermediate,en,30,
+DSA,Graphs,Dijkstra shortest paths,https://cp-algorithms.com/graph/dijkstra.html,article,advanced,en,45,gate
+DSA,Graphs,Minimum spanning tree visualiser,https://visualgo.net/en/mst,practice,intermediate,en,30,
+DSA,Arrays,Algorithms in Hindi (Khan Academy),https://hi.khanacademy.org/computing/computer-science/algorithms,course,beginner,hi,90,
+DSA,Arrays,Binary search in Hindi (Khan Academy),https://hi.khanacademy.org/computing/computer-science/algorithms/binary-search,course,beginner,hi,45,
+DSA,Graphs,Graph representation in Hindi (Khan Academy),https://hi.khanacademy.org/computing/computer-science/algorithms/graph-representation,course,foundation,hi,45,
+DSA,Graphs,Breadth first search in Hindi (Khan Academy),https://hi.khanacademy.org/computing/computer-science/algorithms/breadth-first-search,course,beginner,hi,45,
+DSA,Stacks & Queues,Introduction to stack,https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/,article,foundation,en,25,
+DSA,Linked Lists,Linked list versus array,https://www.geeksforgeeks.org/linked-list-vs-array/,article,foundation,en,20,
+DSA,Arrays,Introduction to arrays,https://www.geeksforgeeks.org/introduction-to-arrays-data-structure-and-algorithm-tutorials/,article,foundation,en,25,
+DSA,Arrays,GATE CS notes (GeeksforGeeks),https://www.geeksforgeeks.org/gate-cs-notes-gq/,article,intermediate,en,45,gate
+DSA,Arrays,Top algorithms asked in interviews,https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/,article,intermediate,en,30,placement
+DM,Graph Theory,Types of graphs and applications,https://www.geeksforgeeks.org/graph-types-and-applications/,article,foundation,en,25,
+DM,Graph Theory,Bridges in a graph,https://cp-algorithms.com/graph/bridge-searching.html,article,advanced,en,45,gate
+DM,Graph Theory,Graph data structure and algorithms,https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/,article,intermediate,en,40,
+DM,Logic,Mathematical logic questions,https://www.geeksforgeeks.org/engineering-mathematics/mathematical-logic/,practice,intermediate,en,30,gate
+DM,Sets & Relations,Discrete mathematics tutorial,https://www.geeksforgeeks.org/discrete-mathematics-tutorial/,article,foundation,en,40,
+APT,Quantitative Aptitude,Aptitude practice (IndiaBIX),https://www.indiabix.com/aptitude/questions-and-answers/,practice,beginner,en,30,placement
+APT,Quantitative Aptitude,Aptitude questions and answers,https://www.geeksforgeeks.org/aptitude-questions-and-answers/,practice,intermediate,en,30,placement
+APT,Logical Reasoning,Logical reasoning practice (IndiaBIX),https://www.indiabix.com/logical-reasoning/questions-and-answers/,practice,beginner,en,30,placement
+APT,Logical Reasoning,Engineering mathematics tutorials,https://www.geeksforgeeks.org/engineering-mathematics-tutorials/,article,intermediate,en,40,
+APT,Verbal Ability,Verbal ability practice (IndiaBIX),https://www.indiabix.com/verbal-ability/questions-and-answers/,practice,beginner,en,30,placement
+APT,Verbal Ability,English grammar,https://www.geeksforgeeks.org/english-grammar/,article,beginner,en,30,placement
+APT,Interview Preparation,Interview preparation (GeeksforGeeks),https://www.geeksforgeeks.org/interview-preparation/,article,beginner,en,30,placement
+APT,Interview Preparation,DSA tutorial for interviews,https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/,course,intermediate,en,120,placement
+APT,Projects & Resume,Placement papers (IndiaBIX),https://www.indiabix.com/placement-papers/,practice,beginner,en,30,placement
+APT,Projects & Resume,Tree data structure project ideas,https://www.geeksforgeeks.org/dsa/tree-data-structure/,article,intermediate,en,30,placement
+UPSC,Polity,NCERT political science,https://ncert.nic.in/textbook.php?leps1=0-10,article,beginner,en,60,upsc
+UPSC,Polity,PRS legislative research,https://prsindia.org/billtrack,article,intermediate,en,30,upsc
+UPSC,History,NCERT history (class XII),https://ncert.nic.in/textbook.php?lehi1=0-12,article,beginner,en,60,upsc
+UPSC,History,NCERT history (class XI),https://ncert.nic.in/textbook.php?kehs1=0-9,article,beginner,en,60,upsc
+UPSC,Geography,NCERT geography (class X),https://ncert.nic.in/textbook.php?jess2=0-14,article,foundation,en,60,upsc
+UPSC,Geography,NCERT geography (class XI),https://ncert.nic.in/,article,beginner,en,60,upsc
+UPSC,Economy,NCERT economics textbooks,https://ncert.nic.in/textbook.php?less1=0-10,article,beginner,en,60,upsc
+UPSC,Economy,UPSC exam information,https://upsc.gov.in/,article,beginner,en,20,upsc
+UPSC,Current Affairs,PIB press releases,https://pib.gov.in/allRel.aspx,article,beginner,en,20,upsc
+UPSC,Current Affairs,PRS policy blog,https://prsindia.org/theprsblog,article,intermediate,en,20,upsc

@@ -10,9 +10,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from psycopg.types.json import Jsonb
 from pydantic import BaseModel, Field
 
-from app import analytics, auth, config, connector, db, llm
+from app import analytics, auth, catalogue, config, connector, db, llm
 from app.schemas import (
-    DraftRequest, DraftView, Resource, RoadmapIn, RoadmapListItem, RoadmapView, ShareOut, TaskIn, TaskView,
+    DraftRequest, DraftView, Resource, ReviewIn, RoadmapIn, RoadmapListItem, RoadmapView, ShareOut, TaskIn, TaskView, TopicLevel,
 )
 
 router = APIRouter(prefix="/api")
@@ -77,7 +77,9 @@ def _has_records(rec, code: str) -> bool:
 
 
 def snapshot(conn, student_id: int, subject_code: str) -> dict:
-    """Baseline evidence for the report (C7.6), recomputed server-side at save time."""
+    """Baseline evidence for the report (C7.6), recomputed server-side at save time. A track has no marks."""
+    if connector.subject_kind(conn, subject_code) == "track":
+        return {"flags": [], "subject_pct": None, "topics": [], "as_of": None}
     p = analytics.build_profile(conn, student_id)
     summ = next(s for s in p.subjects if s.code == subject_code)
     rec = connector.get_records(conn, student_id)
@@ -90,8 +92,9 @@ def snapshot(conn, student_id: int, subject_code: str) -> dict:
 def _resources_by_id(conn, ids: set[int]) -> dict[int, Resource]:
     if not ids:
         return {}
-    rows = conn.execute("SELECT id, topic, title, url, kind FROM resources WHERE id = ANY(%s)", (list(ids),)).fetchall()
-    return {r["id"]: Resource(**r) for r in rows}
+    rows = conn.execute(
+        "SELECT id, topic, title, url, kind, level, lang, minutes, goals, link_ok FROM resources WHERE id = ANY(%s)", (list(ids),)).fetchall()
+    return {r["id"]: connector.ResourceRow(**r).api() for r in rows}
 
 
 def view(conn, roadmap_id: int) -> RoadmapView | None:
@@ -105,7 +108,9 @@ def view(conn, roadmap_id: int) -> RoadmapView | None:
     tasks = [TaskView(id=t["id"], day_from=t["day_from"], day_to=t["day_to"], kind=t["kind"], topic=t["topic"], activity=t["activity"],
                       reason=t["reason"], minutes=t["minutes"], resource_id=t["resource_id"], check=t["check_text"],
                       due_on=t["due_on"], status=t["status"]) for t in rows]
-    return RoadmapView(id=r["id"], version=r["version"], status=r["status"], subject_code=r["code"], subject_name=r["subject_name"],
+    return RoadmapView(id=r["id"], version=r["version"], status=r["status"], goal=r["goal"], goal_name=catalogue.GOALS[r["goal"]].name,
+                       target_date=r["target_date"], levels={k: TopicLevel(**v) for k, v in (r["levels"] or {}).items()},
+                       subject_code=r["code"], subject_name=r["subject_name"],
                        summary=r["summary"], days=r["days"], daily_minutes=r["daily_minutes"], start_on=r["start_on"], review_on=r["review_on"],
                        tasks=tasks, resources=_resources_by_id(conn, {t.resource_id for t in tasks}))
 
@@ -117,8 +122,13 @@ def _owned(conn, roadmap_id: int, student_id: int) -> bool:
 # ---- draft prompt ---------------------------------------------------------------------------------
 PLAN_SYSTEM = "You write personalised study plans for a university student. Output only one JSON object, no other text."
 
-PLAN_USER = """SUBJECT: {name} ({code})
+PLAN_USER = """GOAL: {goal_name}: {goal_components}
+PROGRESS INDICATORS: {goal_indicators}
+TARGET DATE: {target}
+SUBJECT: {name} ({code}){track}
 EVIDENCE: {evidence}
+RECOMMENDED RESPONSES: {responses}
+LEVELS (provisional): {levels}
 WEAK TOPICS: {weak}
 UPCOMING ASSESSMENTS: {upcoming}
 CONSTRAINTS: {days} days starting today, at most {minutes} minutes per day, review on {review_on}.
@@ -129,6 +139,10 @@ Return: {{"summary": "...", "tasks": [{{"day_from": 1, "day_to": 3, "kind": "lea
   "activity": "...", "reason": "...", "minutes": 60, "resource_id": 12, "check": "..."}}]}}
 Rules:
 - Weakest topics first. Revise before any upcoming assessment.
+- Start each topic at its level and move up at most one level per stage; foundation topics begin with explanations and worked examples.
+- Follow RECOMMENDED RESPONSES: repair a prerequisite before its topic; for a theory-practice gap include labs and debugging tasks.
+- Match the goal's components. For goals with a target date, put previous-year questions or timed practice before it.
+- Prefer formats the student asked for in CONVERSATION, and the student's language, when an approved resource exists.
 - Tasks are in order, do not overlap, and cover every day from 1 to {days}.
 - "minutes" is effort per day and must not exceed {minutes}.
 - At least one "checkpoint" task in every 7 days, and the last task is a checkpoint.
@@ -137,36 +151,87 @@ Rules:
 - "kind" is one of: learn, practice, checkpoint. Keep "activity" under 300 characters, "reason" and "check" under 160, "topic" under 80."""
 
 
-def build_draft_prompt(conn, student_id: int, req: DraftRequest, today: date) -> tuple[list[dict], set[int], str]:
-    rec = connector.get_records(conn, student_id)
-    subj = next((s for s in rec.subjects if s.code == req.subject_code), None)
-    if subj is None:
+def _plan_context(conn, student_id: int, goal: str, subject_code: str, overrides: dict, lang: str, daily_minutes: int, today: date):
+    """Levels (computed + the student's overrides) and the resources the plan may use. Shared by draft and save."""
+    kind = connector.subject_kind(conn, subject_code)
+    levels: dict[str, TopicLevel] = {}
+    summ = None
+    if kind == "course":
+        profile = analytics.build_profile(conn, student_id, today=today)
+        summ = next((s for s in profile.subjects if s.code == subject_code), None)
+        levels = {tl.topic: tl for tl in summ.levels} if summ else {}
+    resources = connector.get_resources(conn, subject_code)
+    cat_topics = {r.topic for r in resources} | set(levels)
+    if any(t not in cat_topics for t in overrides):
+        raise HTTPException(422, "invalid_plan")
+    for t, lv in overrides.items():
+        levels[t] = TopicLevel(topic=t, level=lv, source="student", as_of=today, n=0, has_check=levels[t].has_check if t in levels else False)
+    allowed = catalogue.pick_resources(resources, goal=goal, levels={t: tl.level for t, tl in levels.items()}, lang=lang, daily_minutes=daily_minutes)
+    return kind, summ, levels, allowed
+
+
+def _check_request(conn, student_id: int, goal: str, subject_code: str, days: int, daily_minutes: int, review_on: date,
+                   target_date: date | None, today: date) -> None:
+    """C7.2 checks 1-3, repeated on save: the client copy is never trusted."""
+    if goal not in catalogue.GOALS or subject_code not in {x.code for x in catalogue.eligible_subjects(conn, student_id, goal)}:
         raise HTTPException(404, "not_found")
-    profile = analytics.build_profile(conn, student_id, today=today)
-    summ = next(s for s in profile.subjects if s.code == req.subject_code)
-    resources = connector.get_resources(conn, req.subject_code)
-    topics = sorted(analytics.topic_pcts(subj.rows).items(), key=lambda kv: kv[1][0])[:5]
-    upcoming = [f"{u.kind} on {u.on} (day {(u.on - today).days + 1} of the plan)" if (u.on - today).days + 1 <= req.days else f"{u.kind} on {u.on}"
-                for u in profile.upcoming if u.subject_code == req.subject_code]
+    if review_on < today + timedelta(days=days):
+        raise HTTPException(422, "review_too_soon")
+    if target_date is not None and target_date < today:
+        raise HTTPException(422, "invalid_plan")
+    other = conn.execute(
+        """SELECT COALESCE(SUM(r.daily_minutes), 0) AS m FROM roadmaps r JOIN subjects s ON s.id=r.subject_id
+           WHERE r.student_id=%s AND r.status='active' AND NOT (r.goal=%s AND s.code=%s) AND r.start_on + r.days - 1 >= %s""",
+        (student_id, goal, subject_code, today),
+    ).fetchone()["m"]
+    if int(other) + daily_minutes > config.MAX_DAILY_MINUTES:
+        raise HTTPException(422, "over_daily_capacity")
+
+
+def build_draft_prompt(conn, student_id: int, req: DraftRequest, today: date) -> tuple[list[dict], set[int], dict[str, TopicLevel]]:
+    g = catalogue.GOALS[req.goal]
+    kind, summ, levels, allowed = _plan_context(conn, student_id, req.goal, req.subject_code, req.level_overrides, req.lang, req.daily_minutes, today)
+    name = conn.execute("SELECT name FROM subjects WHERE code=%s", (req.subject_code,)).fetchone()["name"]
+    weak, upcoming, evidence, responses = "none", "none", "no institutional records", "none"
+    if kind == "course":
+        rec = connector.get_records(conn, student_id)
+        subj = next(s for s in rec.subjects if s.code == req.subject_code)
+        profile = analytics.build_profile(conn, student_id, today=today)
+        topics = sorted(analytics.topic_pcts(subj.rows).items(), key=lambda kv: kv[1][0])[:5]
+        weak = ", ".join(f"{t} {v[0]:.1f}% ({v[1]} assessments)" for (t, _k), v in topics) or "none"
+        up = [f"{u.kind} on {u.on} (day {(u.on - today).days + 1} of the plan)" if (u.on - today).days + 1 <= req.days else f"{u.kind} on {u.on}"
+              for u in profile.upcoming if u.subject_code == req.subject_code]
+        upcoming = "; ".join(up) or "none"
+        flags = summ.flags if summ else []
+        # de-duplicate by topic: show the most specific flag for a topic
+        spec = {"PREREQ_GAP": 0, "TARGETED_GAP": 0, "WEAK_TOPIC": 1}
+        best: dict[object, object] = {}
+        for f in flags:
+            key = f.topic if f.topic else (f.code, None)
+            if key not in best or spec.get(f.code, 2) < spec.get(best[key].code, 2):
+                best[key] = f
+        shown = list(best.values())
+        evidence = "; ".join(f.reason for f in shown) or "no flags"
+        responses = "; ".join(f"{f.code} {f.topic or req.subject_code} -> {f.response}" for f in shown if f.response) or "none"
+    lv_text = "; ".join(f"{t} {tl.level or 'unknown'} ({tl.source or 'no evidence'})" for t, tl in sorted(levels.items())) or "none"
     convo = "\n".join(f"{'Student' if m.role == 'user' else 'Mentor'}: {m.content}" for m in req.messages[-16:]) or "(none)"
     user = PLAN_USER.format(
-        name=summ.name, code=summ.code,
-        evidence="; ".join(f.reason for f in summ.flags) or "no flags",
-        weak=", ".join(f"{t} {v[0]:.1f}% ({v[1]} assessments)" for (t, _k), v in topics) or "none",
-        upcoming="; ".join(upcoming) or "none", days=req.days, minutes=req.daily_minutes, review_on=req.review_on,
-        resources=" ".join(f'[{r.id}] {r.topic} - "{r.title}" ({r.kind})' for r in resources),
+        goal_name=g.name, goal_components=g.components, goal_indicators=g.indicators, target=req.target_date or "none",
+        name=name, code=req.subject_code, track=" - a track without institutional marks" if kind == "track" else "",
+        evidence=evidence, responses=responses, levels=lv_text, weak=weak, upcoming=upcoming,
+        days=req.days, minutes=req.daily_minutes, review_on=req.review_on,
+        resources=" ".join(f'[{r.id}] {r.topic} - "{r.title}" ({r.kind}, {r.level}, {r.lang}, {r.minutes} min)' for r in allowed),
         conversation=convo, language=LANGUAGE[req.lang],
     )
-    return [{"role": "system", "content": PLAN_SYSTEM}, {"role": "user", "content": user}], {r.id for r in resources}, summ.name
+    return [{"role": "system", "content": PLAN_SYSTEM}, {"role": "user", "content": user}], {r.id for r in allowed}, levels
 
 
 # ---- endpoints ------------------------------------------------------------------------------------
 @router.post("/roadmaps/draft", response_model=DraftView)
 def draft(req: DraftRequest, s: auth.Session = Depends(auth.consented), conn=Depends(db.get_conn)):
     today = date.today()
-    if req.review_on < today + timedelta(days=req.days):
-        raise HTTPException(422, "review_too_soon")
-    messages, allowed, _ = build_draft_prompt(conn, s.student_id, req, today)
+    _check_request(conn, s.student_id, req.goal, req.subject_code, req.days, req.daily_minutes, req.review_on, req.target_date, today)
+    messages, allowed, levels = build_draft_prompt(conn, s.student_id, req, today)
     conn.commit()  # release the read transaction before the slow external call
     try:
         plan = llm.chat_json(messages, LLMPlan, validate=lambda p: validate_plan(p, allowed, req.days, req.daily_minutes))
@@ -176,29 +241,33 @@ def draft(req: DraftRequest, s: auth.Session = Depends(auth.consented), conn=Dep
         raise HTTPException(502, "ai_unavailable")
     db.audit(conn, f"student:{s.student_id}", "draft_ok", req.subject_code)
     conn.commit()
-    rm = RoadmapIn(subject_code=req.subject_code, summary=plan.summary, days=req.days, daily_minutes=req.daily_minutes,
-                   review_on=req.review_on, tasks=plan.tasks)
-    return DraftView(roadmap=rm, resources=_resources_by_id(conn, {t.resource_id for t in plan.tasks}))
+    rm = RoadmapIn(goal=req.goal, subject_code=req.subject_code, target_date=req.target_date, level_overrides=req.level_overrides,
+                   summary=plan.summary, days=req.days, daily_minutes=req.daily_minutes, review_on=req.review_on, tasks=plan.tasks)
+    return DraftView(roadmap=rm, resources=_resources_by_id(conn, {t.resource_id for t in plan.tasks}), levels=levels)
 
 
 @router.post("/roadmaps", response_model=RoadmapView)
 def save(plan: RoadmapIn, s: auth.Session = Depends(auth.consented), conn=Depends(db.get_conn)):
+    today = date.today()
+    _check_request(conn, s.student_id, plan.goal, plan.subject_code, plan.days, plan.daily_minutes, plan.review_on, plan.target_date, today)
     sid = _subject_id(conn, plan.subject_code)
-    if sid is None or not _has_records(connector.get_records(conn, s.student_id), plan.subject_code):
-        raise HTTPException(404, "not_found")
-    allowed = {r.id for r in connector.get_resources(conn, plan.subject_code)}
+    # the plan does not carry the language it was drafted in: "hi" admits Hindi and English rows, a superset of what a
+    # draft in either language could have used
+    kind, _summ, levels, allowed_rows = _plan_context(conn, s.student_id, plan.goal, plan.subject_code, plan.level_overrides, "hi", plan.daily_minutes, today)
+    allowed = {r.id for r in allowed_rows}
     try:
         _check_saved(plan, allowed)
     except ValueError:
         raise HTTPException(422, "invalid_plan")
-    start_on = date.today()
+    start_on = today
     evidence = snapshot(conn, s.student_id, plan.subject_code)  # recomputed server-side: never taken from the client
-    conn.execute("UPDATE roadmaps SET status='superseded' WHERE student_id=%s AND subject_id=%s AND status='active'", (s.student_id, sid))
-    version = conn.execute("SELECT COALESCE(MAX(version), 0) + 1 AS v FROM roadmaps WHERE student_id=%s AND subject_id=%s", (s.student_id, sid)).fetchone()["v"]
+    conn.execute("UPDATE roadmaps SET status='superseded' WHERE student_id=%s AND goal=%s AND subject_id=%s AND status='active'", (s.student_id, plan.goal, sid))
+    version = conn.execute("SELECT COALESCE(MAX(version), 0) + 1 AS v FROM roadmaps WHERE student_id=%s AND goal=%s AND subject_id=%s", (s.student_id, plan.goal, sid)).fetchone()["v"]
     rid = conn.execute(
-        """INSERT INTO roadmaps (student_id, subject_id, version, summary, evidence, days, daily_minutes, start_on, review_on)
-           VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s) RETURNING id""",
-        (s.student_id, sid, version, plan.summary, Jsonb(evidence), plan.days, plan.daily_minutes, start_on, plan.review_on),
+        """INSERT INTO roadmaps (student_id, goal, subject_id, version, summary, evidence, levels, days, daily_minutes, start_on, review_on, target_date)
+           VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) RETURNING id""",
+        (s.student_id, plan.goal, sid, version, plan.summary, Jsonb(evidence), Jsonb({t: tl.model_dump(mode="json") for t, tl in levels.items()}),
+         plan.days, plan.daily_minutes, start_on, plan.review_on, plan.target_date),
     ).fetchone()["id"]
     for i, t in enumerate(plan.tasks):
         conn.execute(
@@ -207,6 +276,8 @@ def save(plan: RoadmapIn, s: auth.Session = Depends(auth.consented), conn=Depend
             (rid, i, t.day_from, t.day_to, start_on + timedelta(days=t.day_to - 1), t.kind, t.topic, t.activity, t.reason, t.minutes, t.resource_id, t.check),
         )
     db.audit(conn, f"student:{s.student_id}", "roadmap_save", str(rid))
+    if plan.level_overrides:
+        db.audit(conn, f"student:{s.student_id}", "level_override", ",".join(sorted(plan.level_overrides)))
     conn.commit()
     return view(conn, rid)
 
@@ -214,13 +285,22 @@ def save(plan: RoadmapIn, s: auth.Session = Depends(auth.consented), conn=Depend
 @router.get("/roadmaps", response_model=list[RoadmapListItem])
 def list_roadmaps(s: auth.Session = Depends(auth.consented), conn=Depends(db.get_conn)):
     rows = conn.execute(
-        """SELECT r.id, s.code AS subject_code, s.name AS subject_name, r.version, r.review_on, r.status,
+        """SELECT r.id, s.code AS subject_code, s.name AS subject_name, r.version, r.goal, r.daily_minutes, r.review_on, r.status,
                   count(*) FILTER (WHERE t.status = 'done') AS done, count(t.id) AS total
            FROM roadmaps r JOIN subjects s ON s.id = r.subject_id LEFT JOIN tasks t ON t.roadmap_id = r.id
            WHERE r.student_id = %s GROUP BY r.id, s.code, s.name ORDER BY r.created_at DESC, r.id DESC""",
         (s.student_id,),
     ).fetchall()
-    return [RoadmapListItem(**r) for r in rows]
+    return [RoadmapListItem(goal_name=catalogue.GOALS[r["goal"]].name, **r) for r in rows]
+
+
+@router.post("/roadmaps/{roadmap_id}/review", status_code=204)
+def review(roadmap_id: int, body: ReviewIn, s: auth.Session = Depends(auth.consented), conn=Depends(db.get_conn)):
+    if not _owned(conn, roadmap_id, s.student_id):
+        raise HTTPException(404, "not_found")
+    conn.execute("INSERT INTO reviews (roadmap_id, confidence, plan_fit) VALUES (%s,%s,%s)", (roadmap_id, body.confidence, body.plan_fit))
+    db.audit(conn, f"student:{s.student_id}", "review_checkin", str(roadmap_id))
+    conn.commit()
 
 
 @router.get("/roadmaps/{roadmap_id}", response_model=RoadmapView)

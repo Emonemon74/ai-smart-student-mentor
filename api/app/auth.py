@@ -11,7 +11,7 @@ from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from pydantic import BaseModel, Field
 
 from app import config, db
-from app.schemas import FeedbackIn, RequestIn, StudentInfo
+from app.schemas import ConsentIn, FeedbackIn, RequestIn, RequestOut, StudentInfo
 
 router = APIRouter(prefix="/api")
 
@@ -41,7 +41,12 @@ class Session:
     kind: str
     student_id: int | None
     roadmap_id: int | None
-    consented: bool
+    mode: str | None = None       # kiosk: None until consent; "personal" or "general"
+    role: str | None = None       # staff: "admin" or "counsellor"
+
+    @property
+    def consented(self) -> bool:
+        return self.mode == "personal"
 
 
 def _set_cookie(response: Response, name: str, token: str, max_age: int | None = None) -> None:
@@ -56,17 +61,25 @@ def kiosk(request: Request, conn=Depends(db.get_conn)) -> Session:
         row = conn.execute(
             """UPDATE sessions SET expires_at = now() + interval '15 minutes'
                WHERE id_hash=%s AND kind='kiosk' AND expires_at > now()
-               RETURNING student_id, consented_at""",
+               RETURNING student_id, mode""",
             (db.h(tok),),
         ).fetchone()
         conn.commit()
         if row:
-            return Session("kiosk", row["student_id"], None, row["consented_at"] is not None)
+            return Session("kiosk", row["student_id"], None, mode=row["mode"])
     raise HTTPException(401, "no_session")
 
 
 def consented(s: Session = Depends(kiosk)) -> Session:
-    if not s.consented:
+    """Records consent: personal mode only."""
+    if s.mode != "personal":
+        raise HTTPException(403, "consent_required")
+    return s
+
+
+def guided(s: Session = Depends(kiosk)) -> Session:
+    """Consent given in either scope (personal records or general guidance)."""
+    if s.mode is None:
         raise HTTPException(403, "consent_required")
     return s
 
@@ -79,27 +92,32 @@ def phone(request: Request, conn=Depends(db.get_conn)) -> Session:
             (db.h(tok),),
         ).fetchone()
         if row:
-            return Session("phone", row["student_id"], row["roadmap_id"], True)
+            return Session("phone", row["student_id"], row["roadmap_id"], mode="personal")
     raise HTTPException(401, "no_session")
 
 
 def staff(request: Request, conn=Depends(db.get_conn)) -> Session:
     tok = request.cookies.get(STAFF_COOKIE)
     if tok:
-        row = conn.execute("SELECT 1 FROM sessions WHERE id_hash=%s AND kind='staff' AND expires_at > now()", (db.h(tok),)).fetchone()
+        row = conn.execute("SELECT role FROM sessions WHERE id_hash=%s AND kind='staff' AND expires_at > now()", (db.h(tok),)).fetchone()
         if row:
-            return Session("staff", None, None, True)
+            return Session("staff", None, None, role=row["role"] or "admin")
     raise HTTPException(401, "no_session")
+
+
+def staff_role(*roles: str):
+    """Dependency factory: the staff session's role must be one of `roles`."""
+    def dep(s: Session = Depends(staff)) -> Session:
+        if s.role not in roles:
+            raise HTTPException(403, "forbidden_role")
+        return s
+    return dep
 
 
 # ---- endpoints -------------------------------------------------------------------------------
 class LoginIn(BaseModel):
     roll_no: str = Field(min_length=1, max_length=20)
     pin: str = Field(pattern=r"^\d{4,6}$")
-
-
-class ConsentIn(BaseModel):
-    notice_version: str = Field(min_length=1, max_length=20)
 
 
 class AdminLoginIn(BaseModel):
@@ -154,50 +172,72 @@ def logout(request: Request, s: Session = Depends(kiosk), conn=Depends(db.get_co
 
 @router.post("/consent", status_code=204)
 def consent(body: ConsentIn, request: Request, s: Session = Depends(kiosk), conn=Depends(db.get_conn)):
-    conn.execute("UPDATE sessions SET consented_at = now() WHERE id_hash=%s", (db.h(request.cookies.get(KIOSK_COOKIE, "")),))
-    db.audit(conn, f"student:{s.student_id}", "consent", body.notice_version)
+    conn.execute("UPDATE sessions SET consented_at = now(), mode=%s WHERE id_hash=%s", (body.scope, db.h(request.cookies.get(KIOSK_COOKIE, ""))))
+    db.audit(conn, f"student:{s.student_id}", "consent", f"{body.notice_version}:{body.scope}")
     conn.commit()
     return Response(status_code=204)
 
 
-@router.post("/requests", status_code=204)
-def create_request(body: RequestIn, s: Session = Depends(consented), conn=Depends(db.get_conn)):
+ROUTING = {"academic": "faculty_mentor", "wellbeing": "counsellor", "correction": "records_office"}
+
+
+@router.post("/requests", response_model=RequestOut)
+def create_request(body: RequestIn, s: Session = Depends(guided), conn=Depends(db.get_conn)):
+    from app import catalogue  # function-local: catalogue imports auth for its dependencies
+
+    if body.category == "correction" and s.mode != "personal":
+        raise HTTPException(403, "consent_required")
+    note = body.note if (body.category != "wellbeing" or body.share_note) else None
     conn.execute(
-        "INSERT INTO requests (student_id, kind, subject_code, note) VALUES (%s, %s, %s, %s)",
-        (s.student_id, body.kind, body.subject_code, body.note),
+        "INSERT INTO requests (student_id, category, subject_code, note) VALUES (%s, %s, %s, %s)",
+        (s.student_id, body.category, body.subject_code, note),
     )
-    db.audit(conn, f"student:{s.student_id}", "request_create", body.kind)
+    if body.category == "wellbeing":   # the request row is the student's consented record; the audit never names them
+        db.audit(conn, "system", "request_create", "wellbeing")
+    else:
+        db.audit(conn, f"student:{s.student_id}", "request_create", body.category)
     conn.commit()
-    return Response(status_code=204)
+    team = ROUTING[body.category]
+    return RequestOut(team=team, contacts=catalogue.contacts({team, "urgent"}))
 
 
 @router.post("/feedback", status_code=204)
 def feedback(body: FeedbackIn, s: Session = Depends(kiosk), conn=Depends(db.get_conn)):
-    conn.execute("INSERT INTO feedback (rating) VALUES (%s)", (body.rating,))  # anonymous: no student id stored
+    comment = (body.comment or "").strip() or None
+    conn.execute("INSERT INTO feedback (rating, comment) VALUES (%s, %s)", (body.rating, comment))  # anonymous: no student id stored
     db.audit(conn, "system", "feedback")
     conn.commit()
     return Response(status_code=204)
 
 
-@router.delete("/me/plans", status_code=204)
-def delete_plans(s: Session = Depends(consented), conn=Depends(db.get_conn)):
+@router.delete("/me/data", status_code=204)
+def delete_data(s: Session = Depends(consented), conn=Depends(db.get_conn)):
+    """RB 15 withdrawal and deletion: plans (tasks, share tokens, reviews cascade), concept checks and closed requests.
+    Open requests stay, so a pending referral is not dropped by accident."""
     conn.execute("DELETE FROM sessions WHERE kind='phone' AND student_id=%s", (s.student_id,))
-    conn.execute("DELETE FROM roadmaps WHERE student_id=%s", (s.student_id,))  # tasks and share tokens cascade
-    db.audit(conn, f"student:{s.student_id}", "plans_delete")
+    conn.execute("DELETE FROM roadmaps WHERE student_id=%s", (s.student_id,))
+    conn.execute("DELETE FROM diagnostics WHERE student_id=%s", (s.student_id,))
+    conn.execute("DELETE FROM requests WHERE student_id=%s AND status='closed'", (s.student_id,))
+    db.audit(conn, f"student:{s.student_id}", "data_delete")
     conn.commit()
     return Response(status_code=204)
 
 
 @router.post("/admin/login", status_code=204)
 def admin_login(body: AdminLoginIn, conn=Depends(db.get_conn)):
-    if not hmac.compare_digest(body.password.encode(), config.ADMIN_PASSWORD.encode()):
+    given = body.password.encode()
+    if hmac.compare_digest(given, config.ADMIN_PASSWORD.encode()):
+        role = "admin"
+    elif config.COUNSELLOR_PASSWORD and hmac.compare_digest(given, config.COUNSELLOR_PASSWORD.encode()):
+        role = "counsellor"
+    else:
         raise HTTPException(401, "bad_credentials")
     tok = secrets.token_urlsafe(32)
     conn.execute(
-        "INSERT INTO sessions (id_hash, kind, expires_at) VALUES (%s, 'staff', now() + make_interval(hours => %s))",
-        (db.h(tok), STAFF_HOURS),
+        "INSERT INTO sessions (id_hash, kind, role, expires_at) VALUES (%s, 'staff', %s, now() + make_interval(hours => %s))",
+        (db.h(tok), role, STAFF_HOURS),
     )
-    db.audit(conn, "staff", "staff_login")
+    db.audit(conn, "staff", "staff_login", role)
     conn.commit()
     resp = Response(status_code=204)
     _set_cookie(resp, STAFF_COOKIE, tok, max_age=STAFF_HOURS * 3600)

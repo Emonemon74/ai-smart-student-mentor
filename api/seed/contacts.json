@@ -1,0 +1,30 @@
+[
+  {
+    "team": "faculty_mentor",
+    "name": "Faculty mentor desk (placeholder)",
+    "name_hi": "संकाय मेंटर डेस्क (नमूना)",
+    "how": "Room 204, Library building, or mentor@campus.example",
+    "hours": "Mon-Fri 10:00-17:00"
+  },
+  {
+    "team": "counsellor",
+    "name": "Student counselling centre (placeholder)",
+    "name_hi": "छात्र परामर्श केंद्र (नमूना)",
+    "how": "Ground floor, Student Services, or counselling@campus.example",
+    "hours": "Mon-Sat 09:30-17:30"
+  },
+  {
+    "team": "records_office",
+    "name": "Exam and records section (placeholder)",
+    "name_hi": "परीक्षा एवं अभिलेख अनुभाग (नमूना)",
+    "how": "Admin block, counter 3, or records@campus.example",
+    "hours": "Mon-Fri 10:00-16:00"
+  },
+  {
+    "team": "urgent",
+    "name": "Tele-MANAS national mental health helpline",
+    "name_hi": "टेली-मानस राष्ट्रीय मानसिक स्वास्थ्य हेल्पलाइन",
+    "how": "Call 14416 (toll free). Verify this number before the demo.",
+    "hours": "24 hours, every day"
+  }
+]

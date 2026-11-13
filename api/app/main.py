@@ -9,7 +9,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
 
-from app import admin, analytics, auth, config, db, llm, mentor, phone, report, roadmap
+from app import admin, analytics, auth, catalogue, config, db, diagnostic, llm, mentor, phone, report, roadmap
 
 
 class JsonFormatter(logging.Formatter):
@@ -39,7 +39,7 @@ async def lifespan(_: FastAPI):
 
 app = FastAPI(title="AI Smart Student Mentor", lifespan=lifespan)
 
-for module in (auth, analytics, mentor, roadmap, phone, report, admin):
+for module in (auth, analytics, mentor, roadmap, phone, report, admin, catalogue, diagnostic):
     app.include_router(module.router)
 
 

@@ -36,3 +36,19 @@ STT: Provider | None = (
 ADMIN_PASSWORD: str = os.environ.get("ADMIN_PASSWORD", "")
 if len(ADMIN_PASSWORD) < 12:
     raise RuntimeError("ADMIN_PASSWORD must be at least 12 characters")
+
+COUNSELLOR_PASSWORD: str = os.environ.get("COUNSELLOR_PASSWORD", "")   # optional; "" disables the counsellor role
+if COUNSELLOR_PASSWORD and (len(COUNSELLOR_PASSWORD) < 12 or COUNSELLOR_PASSWORD == ADMIN_PASSWORD):
+    raise RuntimeError("COUNSELLOR_PASSWORD must be at least 12 characters and differ from ADMIN_PASSWORD")
+
+MAX_DAILY_MINUTES = 240      # combined across a student's active plans (HLD_next N18)
+APPROVED_DOMAINS: tuple[str, ...] = (
+    "geeksforgeeks.org", "visualgo.net", "nptel.ac.in", "ocw.mit.edu", "cp-algorithms.com", "khanacademy.org",
+    "youtube.com", "gateoverflow.in", "ncert.nic.in", "pib.gov.in", "prsindia.org", "upsc.gov.in", "indiabix.com",
+)
+
+
+def approved_host(host: str) -> bool:
+    """A host matches if it equals an approved domain or ends with '.' + domain."""
+    host = host.lower().removeprefix("www.")
+    return any(host == d or host.endswith("." + d) for d in APPROVED_DOMAINS)
