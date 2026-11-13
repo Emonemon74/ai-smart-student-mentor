@@ -108,7 +108,7 @@ def next_steps(c: Ctx) -> list[NextStep]:
         out.append(NextStep(code="revise", text="Fit the plan to the time you have: fewer minutes a day or fewer topics."))
     if gaps:
         out.append(NextStep(code="revise", text=f"Make a revised plan focused on {', '.join(gaps)}."))
-    out.append(NextStep(code="continue", text="Keep going: pick your next topic or goal."))
+    out.append(NextStep(code="continue", text="Pick your next topic or goal."))
     return out[:2]
 
 
