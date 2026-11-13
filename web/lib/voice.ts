@@ -5,17 +5,31 @@ import { useCallback, useRef, useState } from "react";
 type L = "en" | "hi";
 const MAX_MS = 30_000;
 
+// Browsers load their voice list lazily: on the first call getVoices() can be empty until "voiceschanged" fires
+// (LLD_next F6). Wait for it, for at most one second, then pick.
+function voicesReady(synth: SpeechSynthesis): Promise<SpeechSynthesisVoice[]> {
+  const now = synth.getVoices();
+  if (now.length) return Promise.resolve(now);
+  return new Promise((resolve) => {
+    const done = () => { synth.removeEventListener("voiceschanged", done); clearTimeout(timer); resolve(synth.getVoices()); };
+    const timer = setTimeout(done, 1000);
+    synth.addEventListener("voiceschanged", done);
+  });
+}
+
 export function speak(text: string, lang: L): void {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
   const synth = window.speechSynthesis;
   synth.cancel();
   const tag = lang === "hi" ? "hi-IN" : "en-IN";
-  const voice = synth.getVoices().find((v) => v.lang.toLowerCase().startsWith(lang));
-  if (lang === "hi" && !voice) return; // no Hindi voice installed: stay silent, captions remain
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = tag;
-  if (voice) u.voice = voice;
-  synth.speak(u);
+  void voicesReady(synth).then((voices) => {
+    const voice = voices.find((v) => v.lang.toLowerCase().startsWith(lang));
+    if (lang === "hi" && !voice) return; // no Hindi voice installed: stay silent, captions remain
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = tag;
+    if (voice) u.voice = voice;
+    synth.speak(u);
+  });
 }
 
 export function stopSpeaking(): void {

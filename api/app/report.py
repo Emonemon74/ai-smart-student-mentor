@@ -114,9 +114,12 @@ def next_steps(c: Ctx) -> list[NextStep]:
 
 def limitations(c: Ctx) -> list[str]:
     out = []
-    for t in c.evidence.get("topics", []):
-        if t["n"] < 3:
-            out.append(f"{t['topic']} rests on {t['n']} assessments.")
+    per_topic: dict[str, int] = {}
+    for t in c.evidence.get("topics", []):          # the snapshot is per (topic, kind): add the kinds up for each topic
+        per_topic[t["topic"]] = per_topic.get(t["topic"], 0) + t["n"]
+    for topic, n in per_topic.items():
+        if n < 3:
+            out.append(f"{topic} rests on {n} assessments.")
     if not c.has_review:
         out.append("No review assessment has been imported yet.")
     out.append("Concept checks have 5 questions; levels are provisional.")
@@ -124,8 +127,8 @@ def limitations(c: Ctx) -> list[str]:
     if c.subject_kind == "track":
         out.append(f"{c.subject_name} is a track without institutional marks.")
     base = c.baseline_as_of.isoformat() if c.baseline_as_of else "not available"
-    rev = c.review_imported_at.date().isoformat() if c.review_imported_at else "not yet imported"
-    out.append(f"Records as of {base}; review data imported {rev}.")
+    rev = f"review data imported {c.review_imported_at.date().isoformat()}" if c.review_imported_at else "review data not yet imported"
+    out.append(f"Records as of {base}; {rev}.")
     return list(dict.fromkeys(out))
 
 

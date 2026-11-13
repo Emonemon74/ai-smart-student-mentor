@@ -35,6 +35,7 @@ export default function Phone() {
       <div className="flex items-start justify-between gap-2">
         <div>
           <h1 className="text-xl font-bold text-[#14284b]">{rm.subject_name}</h1>
+          <p className="text-sm font-medium text-slate-700">{t("goal_label")}: {rm.goal_name}{rm.target_date && ` · ${t("target_date")} ${shortDate(rm.target_date, lang)}`}</p>
           <p className="text-sm text-slate-600">{t("review_date")}: {shortDate(rm.review_on, lang)} · {left} {t("days_left")}</p>
         </div>
         <button onClick={() => setLang(lang === "en" ? "hi" : "en")} className="min-h-12 rounded-lg border border-slate-300 bg-white px-3 text-sm print:hidden">{lang === "en" ? "हिन्दी" : "English"}</button>

@@ -2,20 +2,24 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useUi } from "@/app/providers";
+import { SupportPanel } from "@/components/SupportPanel";
 import { api } from "@/lib/api";
 import { hardReset } from "@/lib/kiosk";
+import type { Contact, RequestOut } from "@/lib/types";
 
 const WARN_AFTER_MS = 100_000; // warning at 100 s idle
 const WARN_SECONDS = 20;       // then 20 s countdown = 2 min total
 const HEALTH_MS = 30_000;
 
 export function KioskShell({ children }: { children: React.ReactNode }) {
-  const { t, lang, setLang, textSize, setTextSize, studentName } = useUi();
+  const { t, lang, setLang, textSize, setTextSize, studentName, mode } = useUi();
   const router = useRouter();
   const pathname = usePathname();
   const [warn, setWarn] = useState<number | null>(null);
   const [down, setDown] = useState(false);
-  const [humanMsg, setHumanMsg] = useState<"sent" | "desk" | null>(null);
+  const [chooser, setChooser] = useState(false);
+  const [panel, setPanel] = useState<{ contacts: Contact[]; wellbeing: boolean; academic: boolean } | null>(null);
+  const [deskMsg, setDeskMsg] = useState(false);
   const idle = useRef<ReturnType<typeof setTimeout> | null>(null);
   const loggedIn = !!studentName;
 
@@ -65,13 +69,19 @@ export function KioskShell({ children }: { children: React.ReactNode }) {
     return () => { alive = false; clearInterval(id); };
   }, []);
 
-  async function humanMentor() {
+  // "Talk to a human": choose an academic mentor or a private counsellor. Both show the team's contacts straight away.
+  async function academic() {
+    setChooser(false);
     try {
-      await api("/requests", { method: "POST", json: { kind: "referral" } });
-      setHumanMsg("sent");
-    } catch {
-      setHumanMsg("desk"); // e.g. before consent: be honest and point to the desk instead of claiming it was sent
-    }
+      const r = await api<RequestOut>("/requests", { method: "POST", json: { category: "academic" } });
+      setPanel({ contacts: r.contacts, wellbeing: false, academic: true });
+    } catch { setDeskMsg(true); } // e.g. before consent: be honest and point to the desk instead of claiming it was sent
+  }
+  async function counsellor() {
+    setChooser(false);
+    try {
+      setPanel({ contacts: await api<Contact[]>("/support/contacts"), wellbeing: true, academic: false });
+    } catch { setDeskMsg(true); }
   }
 
   const showHeader = loggedIn && pathname !== "/" && pathname !== "/login";
@@ -80,11 +90,11 @@ export function KioskShell({ children }: { children: React.ReactNode }) {
     <div className="mx-auto flex min-h-screen max-w-5xl flex-col p-4 md:p-6">
       {showHeader && (
         <header className="mb-4 flex flex-wrap items-center justify-between gap-2 print:hidden">
-          <div className="font-semibold text-[#14284b]">{studentName}</div>
+          <div className="flex items-center gap-2 font-semibold text-[#14284b]">{studentName}{mode === "general" && <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-900">{t("general_chip")}</span>}</div>
           <div className="flex flex-wrap items-center gap-2 text-sm">
             <button onClick={() => setLang(lang === "en" ? "hi" : "en")} className="min-h-12 rounded-lg border border-slate-300 bg-white px-4">{lang === "en" ? "हिन्दी" : "English"}</button>
             <button onClick={() => setTextSize(textSize === "normal" ? "large" : "normal")} aria-label={t("text_size")} className="min-h-12 rounded-lg border border-slate-300 bg-white px-4">{textSize === "normal" ? t("large") : t("normal")}</button>
-            <button onClick={humanMentor} className="min-h-12 rounded-lg border border-blue-300 bg-blue-50 px-4 text-blue-900">{t("human_mentor")}</button>
+            <button onClick={() => setChooser(true)} className="min-h-12 rounded-lg border border-blue-300 bg-blue-50 px-4 text-blue-900">{t("human_mentor")}</button>
             <button onClick={() => router.push("/end")} className="min-h-12 rounded-lg bg-[#14284b] px-4 text-white">{t("end_session")}</button>
           </div>
         </header>
@@ -98,10 +108,28 @@ export function KioskShell({ children }: { children: React.ReactNode }) {
           <button autoFocus onClick={arm} className="mt-4 min-h-12 rounded-lg bg-[#14284b] px-6 text-white">{t("stay")}</button>
         </Modal>
       )}
-      {humanMsg && (
+      {chooser && (
         <Modal>
-          <p>{humanMsg === "sent" ? t("human_mentor_msg") : t("human_mentor_desk")}</p>
-          <button autoFocus onClick={() => setHumanMsg(null)} className="mt-4 min-h-12 rounded-lg bg-[#14284b] px-6 text-white">{t("close")}</button>
+          <p className="font-semibold">{t("human_choose")}</p>
+          <div className="mt-4 flex flex-col gap-3">
+            <button autoFocus onClick={academic} className="min-h-12 rounded-lg bg-[#14284b] px-6 text-white">{t("academic_mentor")}</button>
+            <button onClick={counsellor} className="min-h-12 rounded-lg border border-blue-300 bg-blue-50 px-6 text-blue-900">{t("counsellor_private")}</button>
+            <button onClick={() => setChooser(false)} className="min-h-12 rounded-lg border border-slate-300 px-6">{t("cancel")}</button>
+          </div>
+        </Modal>
+      )}
+      {panel && (
+        <div role="dialog" aria-modal="true" className="fixed inset-0 z-40 grid place-items-center overflow-y-auto bg-black/40 p-4 print:hidden">
+          <div className="w-full max-w-lg">
+            {panel.academic && <p role="status" className="mb-2 rounded-lg bg-white px-3 py-2 text-emerald-800">{t("academic_sent")}</p>}
+            <SupportPanel contacts={panel.contacts} canRequest={panel.wellbeing} onClose={() => setPanel(null)} />
+          </div>
+        </div>
+      )}
+      {deskMsg && (
+        <Modal>
+          <p>{t("human_mentor_desk")}</p>
+          <button autoFocus onClick={() => setDeskMsg(false)} className="mt-4 min-h-12 rounded-lg bg-[#14284b] px-6 text-white">{t("close")}</button>
         </Modal>
       )}
       {down && (

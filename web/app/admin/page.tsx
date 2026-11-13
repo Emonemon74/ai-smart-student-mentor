@@ -3,13 +3,20 @@ import { useCallback, useState } from "react";
 import { api, ApiError } from "@/lib/api";
 
 interface SubjectRow { code: string; name: string; students: number | null; flagged: number | null; avg_pct: number | null; active_plans: number | null; suppressed: boolean }
+interface Support { open: number; closed_7d: number; median_hours: number | null }
+interface Metrics {
+  login_success_rate_7d: number | null; draft_success_rate_7d: number | null; feedback_avg: number | null; feedback_n: number; plans_with_progress: number | null;
+  consent_personal_7d: number; consent_general_7d: number; diagnostics_7d: number; link_health: number | null; human_support: Record<string, Support>;
+  plan_fit_avg: number | null; plan_fit_n: number; feedback_comments: string[]; plans_improved: number | null;
+}
 interface Summary {
-  subjects: SubjectRow[];
-  metrics: { login_success_rate_7d: number | null; draft_success_rate_7d: number | null; feedback_avg: number | null; feedback_n: number; plans_with_progress: number | null };
-  requests: { id: number; roll_no: string; kind: string; subject_code: string | null; note: string | null; created_at: string }[];
-  last_import: { baseline: string | null; review: string | null };
-  health: { db: boolean; llm: { last_ok: string | null; last_error: string | null } };
-  recent_audit: { at: string; actor: string; action: string }[];
+  role: "admin" | "counsellor"; wellbeing_open: number;
+  requests: { id: number; roll_no: string; category: string; subject_code: string | null; note: string | null; created_at: string }[];
+  subjects?: SubjectRow[]; metrics?: Metrics; links?: { total: number; broken: number };
+  last_import?: { baseline: string | null; review: string | null };
+  health?: { db: boolean; llm: { last_ok: string | null; last_error: string | null } };
+  recent_audit?: { at: string; actor: string; action: string }[];
+  contacts?: { team: string; name: string; how: string; hours: string }[];
 }
 
 const pct = (v: number | null) => (v === null ? "-" : `${Math.round(v * 100)}%`);
@@ -51,22 +58,46 @@ export default function Admin() {
   }
 
   const m = data.metrics;
-  const tiles: [string, string][] = [
+  const isAdmin = data.role === "admin" && !!m;
+  const tiles: [string, string][] = m ? [
     ["Login success (7 days)", pct(m.login_success_rate_7d)], ["Plan generation success (7 days)", pct(m.draft_success_rate_7d)],
     ["Usefulness rating", m.feedback_avg === null ? "-" : `${m.feedback_avg} / 5 (n=${m.feedback_n})`], ["Plans with progress", pct(m.plans_with_progress)],
-  ];
+    ["Records vs general consent (7 days)", `${m.consent_personal_7d} / ${m.consent_general_7d}`], ["Concept checks (7 days)", String(m.diagnostics_7d)],
+    ["Plan fit rating", m.plan_fit_avg === null ? "-" : `${m.plan_fit_avg} / 5 (n=${m.plan_fit_n})`], ["Link health (checked in 30 days)", pct(m.link_health)],
+    ["Plans with better marks", pct(m.plans_improved)],
+  ] : [];
   return (
     <main className="mx-auto max-w-5xl space-y-6 p-4 md:p-6">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h1 className="text-2xl font-bold text-[#14284b]">Staff dashboard</h1>
+        <h1 className="text-2xl font-bold text-[#14284b]">Staff dashboard <span className="text-base font-normal text-slate-500">({data.role === "admin" ? "admin" : "counsellor"})</span></h1>
         <button onClick={load} className="min-h-12 rounded-lg border border-slate-300 bg-white px-4">Refresh</button>
       </div>
       {err && <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-red-800">{err}</p>}
 
-      <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {tiles.map(([label, v]) => <div key={label} className="rounded-xl bg-white p-4 shadow-sm"><div className="text-2xl font-bold">{v}</div><div className="text-xs text-slate-500">{label}</div></div>)}
-      </section>
+      {isAdmin && (
+        <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {tiles.map(([label, v]) => <div key={label} className="rounded-xl bg-white p-4 shadow-sm"><div className="text-2xl font-bold">{v}</div><div className="text-xs text-slate-500">{label}</div></div>)}
+        </section>
+      )}
 
+      {isAdmin && m && (
+        <section className="rounded-xl bg-white p-4 text-sm shadow-sm">
+          <h2 className="font-semibold">Human support</h2>
+          <p className="mt-1 text-slate-600">Wellbeing requests are private to the counsellor role: only the open count is shown here ({data.wellbeing_open} open).</p>
+          <ul className="mt-2 space-y-1">
+            {Object.entries(m.human_support).map(([cat, s]) => <li key={cat}><b className="capitalize">{cat}</b>: {s.open} open · {s.closed_7d} closed in 7 days · median {s.median_hours === null ? "-" : `${s.median_hours} h`} to close</li>)}
+          </ul>
+          {data.links && <p className="mt-2">Resource links: {data.links.total - data.links.broken} working, {data.links.broken} broken (run <code>check-links</code> to refresh).</p>}
+          {m.feedback_comments.length > 0 && (
+            <>
+              <h3 className="mt-3 font-semibold">Anonymous comments</h3>
+              <ul className="mt-1 list-disc pl-5 text-slate-700">{m.feedback_comments.map((c, i) => <li key={i}>{c}</li>)}</ul>
+            </>
+          )}
+        </section>
+      )}
+
+      {isAdmin && data.subjects && (
       <section className="rounded-xl bg-white p-4 shadow-sm">
         <h2 className="font-semibold">Subjects</h2>
         <div className="overflow-x-auto"><table className="mt-2 w-full text-left text-sm">
@@ -76,14 +107,15 @@ export default function Admin() {
             : <tr key={s.code} className="border-t"><td className="py-1.5">{s.name} <span className="text-slate-400">({s.code})</span></td><td>{s.students}</td><td>{s.avg_pct}%</td><td>{s.flagged}</td><td>{s.active_plans}</td></tr>)}
           </tbody></table></div>
       </section>
+      )}
 
       <section className="rounded-xl bg-white p-4 shadow-sm">
-        <h2 className="font-semibold">Intervention queue <span className="font-normal text-slate-500">({data.requests.length} open)</span></h2>
+        <h2 className="font-semibold">{data.role === "admin" ? "Intervention queue" : "Wellbeing requests"} <span className="font-normal text-slate-500">({data.requests.length} open)</span></h2>
         {data.requests.length === 0 ? <p className="mt-1 text-sm text-slate-500">No open requests.</p> : (
           <ul className="mt-2 divide-y text-sm">
             {data.requests.map((r) => (
               <li key={r.id} className="flex flex-wrap items-center justify-between gap-2 py-2">
-                <span><b>{r.roll_no}</b> · {r.kind}{r.subject_code && ` · ${r.subject_code}`}{r.note && <span className="text-slate-600"> · “{r.note}”</span>} <span className="text-slate-400">{when(r.created_at)}</span></span>
+                <span><b>{r.roll_no}</b> · {r.category}{r.subject_code && ` · ${r.subject_code}`}{r.note && <span className="text-slate-600"> · “{r.note}”</span>} <span className="text-slate-400">{when(r.created_at)}</span></span>
                 <button onClick={() => close(r.id)} className="min-h-12 rounded-lg border border-slate-300 px-3">Close</button>
               </li>
             ))}
@@ -91,6 +123,14 @@ export default function Admin() {
         )}
       </section>
 
+      {data.role === "counsellor" && data.contacts && (
+        <section className="rounded-xl bg-white p-4 text-sm shadow-sm">
+          <h2 className="font-semibold">Support contacts shown to students</h2>
+          <ul className="mt-1 space-y-1">{data.contacts.map((c) => <li key={c.name}><b>{c.name}</b> · {c.how} · {c.hours}</li>)}</ul>
+        </section>
+      )}
+
+      {isAdmin && data.health && data.last_import && data.recent_audit && (
       <section className="grid gap-4 md:grid-cols-2">
         <div className="rounded-xl bg-white p-4 text-sm shadow-sm">
           <h2 className="font-semibold">Health</h2>
@@ -106,6 +146,7 @@ export default function Admin() {
           <ul className="mt-1 max-h-64 overflow-y-auto font-mono text-xs">{data.recent_audit.map((a, i) => <li key={i}>{new Date(a.at).toLocaleTimeString("en-IN")} · {a.actor} · {a.action}</li>)}</ul>
         </div>
       </section>
+      )}
     </main>
   );
 }

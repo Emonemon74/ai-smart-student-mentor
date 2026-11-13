@@ -44,8 +44,12 @@ export default function RoadmapPage() {
     <section className="space-y-4 pb-8">
       <div>
         <h1 className="text-3xl font-bold text-[#14284b]">{t("plan_title")}: {rm.subject_name}</h1>
+        <p className="text-sm font-medium text-slate-700">{t("goal_label")}: {rm.goal_name}{rm.target_date && ` · ${t("target_date")} ${longDate(rm.target_date, lang)}`}</p>
         <p className="text-sm text-slate-600">v{rm.version} · {rm.days} · {rm.daily_minutes} min · {t("review_date")} {longDate(rm.review_on, lang)}</p>
         <p className="mt-2 text-slate-700">{rm.summary}</p>
+        {Object.values(rm.levels).filter((l) => l.level).length > 0 && (
+          <p className="mt-2 text-sm text-slate-600"><b>{t("levels_h")}:</b> {Object.values(rm.levels).filter((l) => l.level).map((l) => `${l.topic} ${t(`level_${l.level!}` as const)} (${l.source === "check" ? t("src_check") : l.source === "student" ? t("src_student") : t("src_records")})`).join("; ")} · {t("provisional")}</p>
+        )}
       </div>
       <div className="space-y-3">
         {rm.tasks.map((task) => {
@@ -58,7 +62,7 @@ export default function RoadmapPage() {
               </div>
               <p className="mt-1">{task.activity}</p>
               <p className="mt-1 text-sm text-slate-600"><b>{t("why")}:</b> {task.reason} · <b>{t("effort")}:</b> {task.minutes} min · <b>{t("check")}:</b> {task.check} · <b>due</b> {shortDate(task.due_on, lang)}</p>
-              {res && <p className="text-sm"><b>{t("resource")}:</b> <a href={res.url} target="_blank" rel="noreferrer" className="underline">{res.title}</a></p>}
+              {res && <p className="text-sm"><b>{t("resource")}:</b> <a href={res.url} target="_blank" rel="noreferrer" className="underline">{res.title}</a> <span className="text-slate-500">· {res.source}</span></p>}
             </article>
           );
         })}

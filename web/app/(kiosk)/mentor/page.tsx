@@ -4,12 +4,14 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useUi } from "@/app/providers";
 import { api } from "@/lib/api";
 import { kioskError, recentMessages } from "@/lib/kiosk";
-import type { ChatMessage, ChatReply } from "@/lib/types";
+import { SupportPanel } from "@/components/SupportPanel";
+import type { ChatMessage, ChatReply, Contact } from "@/lib/types";
 import { speak, stopSpeaking, useRecorder } from "@/lib/voice";
 
 export default function Mentor() {
-  const { t, lang } = useUi();
+  const { t, lang, mode } = useUi();
   const router = useRouter();
+  const [support, setSupport] = useState<Contact[] | null>(null);
   const [msgs, setMsgs] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
@@ -27,6 +29,9 @@ export default function Mentor() {
       const r = await api<ChatReply>("/mentor/chat", { method: "POST", json: { messages: recentMessages(history), lang } });
       setMsgs([...history, { role: "assistant", content: r.reply }]);
       if (!mutedRef.current) speak(r.reply, lang);
+      if (r.support) {   // showing contacts writes nothing; a referral is created only if the student asks for one
+        try { setSupport(await api<Contact[]>("/support/contacts")); } catch {}
+      }
     } catch (e) {
       const code = kioskError(e, router.push);
       if (code === "ai_unavailable") setErr(t("ai_busy"));
@@ -79,6 +84,7 @@ export default function Mentor() {
         {busy && <div className="text-slate-400">…</div>}
         <div ref={bottom} />
       </div>
+      {support && <div className="mt-3"><SupportPanel contacts={support} canRequest onClose={() => setSupport(null)} /></div>}
       {(err || micMsg) && <p role="alert" className="mt-3 rounded-lg bg-amber-50 px-4 py-3 text-amber-900">{err || micMsg}</p>}
       <div className="mt-3 flex gap-2">
         <input ref={inputRef} autoFocus value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === "Enter" && send()} placeholder={rec.busy ? t("transcribing") : rec.recording ? t("recording") : t("type_message")}
@@ -89,8 +95,15 @@ export default function Mentor() {
           className={`min-h-14 min-w-14 select-none rounded-xl border px-4 text-2xl touch-none ${rec.recording ? "border-red-500 bg-red-50" : "border-slate-300 bg-white"}`}>🎤</button>
         <button onClick={send} disabled={busy || !input.trim()} className="min-h-14 rounded-xl bg-[#14284b] px-8 text-xl font-semibold text-white disabled:opacity-40">{t("send")}</button>
       </div>
-      <div className="mt-3">
-        <button onClick={createPlan} disabled={!canPlan || busy} className="min-h-14 rounded-xl bg-emerald-700 px-8 text-xl font-semibold text-white disabled:opacity-40">{t("create_plan")}</button>
+      <div className="mt-3 flex flex-wrap gap-3">
+        {mode === "general" ? (
+          <button onClick={() => router.push("/explore")} className="min-h-14 rounded-xl bg-emerald-700 px-8 text-xl font-semibold text-white">{t("explore_resources")}</button>
+        ) : (
+          <>
+            <button onClick={createPlan} disabled={!canPlan || busy} className="min-h-14 rounded-xl bg-emerald-700 px-8 text-xl font-semibold text-white disabled:opacity-40">{t("create_plan")}</button>
+            <button onClick={() => router.push("/check")} className="min-h-14 rounded-xl border border-[#14284b] bg-white px-8 text-xl font-semibold text-[#14284b]">{t("check_my_level")}</button>
+          </>
+        )}
       </div>
     </section>
   );

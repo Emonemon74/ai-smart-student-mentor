@@ -23,7 +23,7 @@ export default function ReportPage() {
   }, [id, router, t]);
 
   async function human() {
-    try { await api("/requests", { method: "POST", json: { kind: "referral", subject_code: r?.subject_code } }); setAsked(true); } catch (e) { kioskError(e, router.push); }
+    try { await api("/requests", { method: "POST", json: { category: "academic", subject_code: r?.subject_code } }); setAsked(true); } catch (e) { kioskError(e, router.push); }
   }
 
   if (err) return <p role="alert" className="rounded-lg bg-red-50 px-4 py-3 text-red-800">{err}</p>;
@@ -33,8 +33,8 @@ export default function ReportPage() {
       <h1 className="text-3xl font-bold text-[#14284b]">{t("report_title")}</h1>
       <ReportView r={r} />
       <div className="flex flex-wrap gap-3 print:hidden">
-        <Link href={`/roadmap/new?subject=${r.subject_code}`} className="min-h-12 rounded-lg bg-[#14284b] px-5 py-3 text-white">{t("new_plan")}</Link>
-        {r.remaining_flags.length > 0 && <button onClick={human} disabled={asked} className="min-h-12 rounded-lg border border-blue-300 bg-blue-50 px-5 text-blue-900 disabled:opacity-60">{asked ? t("human_mentor_msg") : t("human_mentor")}</button>}
+        <Link href={`/roadmap/new?goal=${r.goal}&subject=${r.subject_code}`} className="min-h-12 rounded-lg bg-[#14284b] px-5 py-3 text-white">{t("new_plan")}</Link>
+        {(r.remaining_flags.length > 0 || r.next_steps.some((s) => s.code === "mentor")) && <button onClick={human} disabled={asked} className="min-h-12 rounded-lg border border-blue-300 bg-blue-50 px-5 text-blue-900 disabled:opacity-60">{asked ? t("human_mentor_msg") : t("human_mentor")}</button>}
         <button onClick={() => window.print()} className="min-h-12 rounded-lg border border-slate-300 bg-white px-5">{t("print")}</button>
         <Link href="/profile" className="min-h-12 rounded-lg border border-slate-300 bg-white px-5 py-3">{t("back")}</Link>
       </div>

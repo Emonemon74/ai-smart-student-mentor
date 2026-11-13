@@ -1,13 +1,14 @@
 "use client";
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import { dict, type Key } from "@/lib/i18n";
-import type { Lang } from "@/lib/types";
+import type { Lang, Mode } from "@/lib/types";
 
 export type TextSize = "normal" | "large";
 interface Ui {
   lang: Lang; setLang: (l: Lang) => void;
   textSize: TextSize; setTextSize: (s: TextSize) => void;
   studentName: string | null; setStudentName: (n: string | null) => void;
+  mode: Mode | null; setMode: (m: Mode | null) => void;
   t: (k: Key) => string;
 }
 const UiContext = createContext<Ui | null>(null);
@@ -20,6 +21,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<Lang>("en");
   const [textSize, setTextSizeState] = useState<TextSize>("normal");
   const [studentName, setNameState] = useState<string | null>(null);
+  const [mode, setModeState] = useState<Mode | null>(null);
 
   // Hydrate from sessionStorage after mount (the server render has no storage, so reading during render would mismatch).
   /* eslint-disable react-hooks/set-state-in-effect */
@@ -27,6 +29,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
     setLangState(read("lang") === "hi" ? "hi" : "en");
     setTextSizeState(read("textSize") === "large" ? "large" : "normal");
     setNameState(read("studentName"));
+    const m = read("mode");
+    setModeState(m === "personal" || m === "general" ? m : null);
   }, []);
   /* eslint-enable react-hooks/set-state-in-effect */
   useEffect(() => {
@@ -36,10 +40,12 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   const setLang = useCallback((l: Lang) => { setLangState(l); write("lang", l); }, []);
   const setTextSize = useCallback((s: TextSize) => { setTextSizeState(s); write("textSize", s); }, []);
+  // The server is the authority on consent; the UI only uses the mode to choose screens.
+  const setMode = useCallback((m: Mode | null) => { setModeState(m); write("mode", m); }, []);
   const setStudentName = useCallback((n: string | null) => { setNameState(n); write("studentName", n); }, []);
   const t = useCallback((k: Key) => dict[lang][k], [lang]);
 
-  return <UiContext.Provider value={{ lang, setLang, textSize, setTextSize, studentName, setStudentName, t }}>{children}</UiContext.Provider>;
+  return <UiContext.Provider value={{ lang, setLang, textSize, setTextSize, studentName, setStudentName, mode, setMode, t }}>{children}</UiContext.Provider>;
 }
 
 export function useUi(): Ui {
