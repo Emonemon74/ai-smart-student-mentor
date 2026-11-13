@@ -9,7 +9,7 @@ import type { ChatMessage, ChatReply, Contact } from "@/lib/types";
 import { speak, stopSpeaking, useRecorder } from "@/lib/voice";
 
 export default function Mentor() {
-  const { t, lang, mode } = useUi();
+  const { t, lang, mode, ready } = useUi();
   const router = useRouter();
   const [support, setSupport] = useState<Contact[] | null>(null);
   const [msgs, setMsgs] = useState<ChatMessage[]>([]);
@@ -42,11 +42,11 @@ export default function Mentor() {
 
   // Opening turn: the mentor speaks first. The ref guards React strict-mode double mounting.
   useEffect(() => {
-    if (started.current) return;
+    if (!ready || started.current) return;   // wait for the saved language, or a reload in Hindi opens in English
     started.current = true;
     void ask([]);
     return () => stopSpeaking();
-  }, [ask]);
+  }, [ask, ready]);
 
   useEffect(() => { bottom.current?.scrollIntoView({ block: "end" }); }, [msgs, busy]);
   // Keyboard users: the message box has focus on arrival and again after each reply.

@@ -9,6 +9,7 @@ interface Ui {
   textSize: TextSize; setTextSize: (s: TextSize) => void;
   studentName: string | null; setStudentName: (n: string | null) => void;
   mode: Mode | null; setMode: (m: Mode | null) => void;
+  ready: boolean;   // saved language, text size, name and mode have been read from sessionStorage
   t: (k: Key) => string;
 }
 const UiContext = createContext<Ui | null>(null);
@@ -22,6 +23,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const [textSize, setTextSizeState] = useState<TextSize>("normal");
   const [studentName, setNameState] = useState<string | null>(null);
   const [mode, setModeState] = useState<Mode | null>(null);
+  const [ready, setReady] = useState(false);
 
   // Hydrate from sessionStorage after mount (the server render has no storage, so reading during render would mismatch).
   /* eslint-disable react-hooks/set-state-in-effect */
@@ -31,6 +33,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     setNameState(read("studentName"));
     const m = read("mode");
     setModeState(m === "personal" || m === "general" ? m : null);
+    setReady(true);
   }, []);
   /* eslint-enable react-hooks/set-state-in-effect */
   useEffect(() => {
@@ -45,7 +48,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const setStudentName = useCallback((n: string | null) => { setNameState(n); write("studentName", n); }, []);
   const t = useCallback((k: Key) => dict[lang][k], [lang]);
 
-  return <UiContext.Provider value={{ lang, setLang, textSize, setTextSize, studentName, setStudentName, mode, setMode, t }}>{children}</UiContext.Provider>;
+  return <UiContext.Provider value={{ lang, setLang, textSize, setTextSize, studentName, setStudentName, mode, setMode, ready, t }}>{children}</UiContext.Provider>;
 }
 
 export function useUi(): Ui {
