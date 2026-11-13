@@ -158,3 +158,12 @@ def test_ai_down_with_a_keyword_still_returns_the_support_reply_otherwise_502(cl
     r = chat(client, [{"role": "user", "content": "I feel anxious"}])
     assert r.status_code == 200 and r.json()["support"] is True and r.json()["reply"]
     assert chat(client, [{"role": "user", "content": "hello"}]).status_code == 502
+
+
+# ---- F1: the API accepts 40 messages and rejects more (LLD_next C0) --------------------------------------------
+def test_forty_messages_are_accepted_and_forty_one_are_rejected(client, monkeypatch):
+    capture(monkeypatch)
+    login(client)
+    turn = [{"role": "user" if i % 2 == 0 else "assistant", "content": f"m{i}"} for i in range(41)]
+    assert chat(client, turn[:40]).status_code == 200
+    assert chat(client, turn).status_code == 422

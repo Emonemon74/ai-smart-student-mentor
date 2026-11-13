@@ -89,6 +89,21 @@ export const dict = {
     resp_PREREQ_GAP: "Repair the prerequisite topic first, then return to this topic.", resp_TARGETED_GAP: "Target this topic directly instead of repeating the whole subject.",
     resp_LOW_EVIDENCE: "Evidence is limited: answer a few questions and take a short concept check before drawing conclusions.",
     fmt_video: "Video", fmt_article: "Article", fmt_practice: "Practice", fmt_course: "Course", lang_en: "English", lang_hi: "Hindi",
+
+    // ---- v2: indicator labels, next steps and report limits (templates use {a} {b}) ------------------------------
+    ind_verified_change: "Comparable marks", ind_check_accuracy: "Concept check accuracy", ind_check_speed: "Time per question",
+    ind_task_completion: "Tasks done or partly done", ind_topic_coverage: "Plan topics started", ind_checkpoints_done: "Checkpoints done",
+    val_no_marks: "No comparable assessment yet", val_no_check: "No concept check yet", val_of: "{a} of {b}", val_of_topics: "{a} of {b} topics", val_seconds: "{a} s",
+    nsx_check: "Take the 5-question topic check to see where you are now.",
+    nsx_await_evidence: "New marks are not in yet. This report updates after the next assessment import.",
+    nsx_prerequisite: "Make a short plan for {a} first, then return to {b}.",
+    nsx_mentor: "Talk to a faculty mentor about {a}: the plan has not moved it yet.",
+    nsx_fit: "Fit the plan to the time you have: fewer minutes a day or fewer topics.",
+    nsx_revise: "Make a revised plan focused on {a}.",
+    nsx_continue: "Pick your next topic or goal.",
+    lim_thin: "{a} rests on {b} assessments.", lim_no_review: "No review assessment has been imported yet.",
+    lim_checks: "Concept checks have 5 questions; levels are provisional.", lim_ticks: "Task ticks are your own record and are not verified.",
+    lim_track: "{a} is a track without institutional marks.", lim_asof_none: "Records as of {a}; review data not yet imported.", lim_asof_rev: "Records as of {a}; review data imported {b}.",
   },
   hi: {
     app_name: "एआई स्टडी मेंटर", start: "शुरू करें", language: "भाषा", text_size: "अक्षर का आकार", normal: "अ", large: "अ+",
@@ -178,6 +193,21 @@ export const dict = {
     resp_PREREQ_GAP: "पहले पूर्वापेक्षा टॉपिक सुधारें, फिर इस टॉपिक पर लौटें।", resp_TARGETED_GAP: "पूरा विषय दोहराने के बजाय सीधे इसी टॉपिक पर ध्यान दें।",
     resp_LOW_EVIDENCE: "प्रमाण सीमित हैं: निष्कर्ष से पहले कुछ प्रश्न हल करें और छोटी कॉन्सेप्ट-चेक लें।",
     fmt_video: "वीडियो", fmt_article: "लेख", fmt_practice: "अभ्यास", fmt_course: "कोर्स", lang_en: "अंग्रेज़ी", lang_hi: "हिन्दी",
+
+    // ---- v2: indicator labels, next steps and report limits (templates use {a} {b}) ------------------------------
+    ind_verified_change: "तुलनीय अंक", ind_check_accuracy: "कॉन्सेप्ट चेक की सटीकता", ind_check_speed: "प्रति प्रश्न समय",
+    ind_task_completion: "पूरे या आंशिक कार्य", ind_topic_coverage: "शुरू किए गए योजना टॉपिक", ind_checkpoints_done: "पूरे चेकपॉइंट",
+    val_no_marks: "अभी कोई तुलनीय मूल्यांकन नहीं", val_no_check: "अभी कोई कॉन्सेप्ट चेक नहीं", val_of: "{b} में से {a}", val_of_topics: "{b} टॉपिक में से {a}", val_seconds: "{a} सेकंड",
+    nsx_check: "अभी आप कहाँ हैं, यह देखने के लिए 5 प्रश्नों की टॉपिक चेक लें।",
+    nsx_await_evidence: "नए अंक अभी नहीं आए हैं। अगले मूल्यांकन आयात के बाद यह रिपोर्ट अपडेट होगी।",
+    nsx_prerequisite: "पहले {a} के लिए एक छोटी योजना बनाएँ, फिर {b} पर लौटें।",
+    nsx_mentor: "{a} के बारे में संकाय मेंटर से बात करें: योजना ने अभी इसे आगे नहीं बढ़ाया है।",
+    nsx_fit: "योजना को अपने उपलब्ध समय के अनुसार ढालें: प्रतिदिन कम मिनट या कम टॉपिक।",
+    nsx_revise: "{a} पर केंद्रित एक संशोधित योजना बनाएँ।",
+    nsx_continue: "अपना अगला टॉपिक या लक्ष्य चुनें।",
+    lim_thin: "{a} केवल {b} मूल्यांकनों पर आधारित है।", lim_no_review: "अभी कोई समीक्षा मूल्यांकन आयात नहीं हुआ है।",
+    lim_checks: "कॉन्सेप्ट चेक में 5 प्रश्न होते हैं; स्तर अस्थायी हैं।", lim_ticks: "कार्यों के टिक आपके अपने रिकॉर्ड हैं और सत्यापित नहीं हैं।",
+    lim_track: "{a} संस्थागत अंकों के बिना एक ट्रैक है।", lim_asof_none: "रिकॉर्ड {a} तक के; समीक्षा डेटा अभी आयात नहीं हुआ।", lim_asof_rev: "रिकॉर्ड {a} तक के; समीक्षा डेटा {b} को आयात हुआ।",
   },
 } as const;
 

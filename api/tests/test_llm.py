@@ -105,3 +105,13 @@ def test_transcribe_failure_maps_to_stt_unavailable(monkeypatch):
     ok = SimpleNamespace(audio=SimpleNamespace(transcriptions=SimpleNamespace(create=lambda **kw: SimpleNamespace(text=" hi "))))
     monkeypatch.setattr(llm, "_clients", {"stt:g": ok})
     assert llm.transcribe(b"x", "a.webm", "hi") == "hi"
+
+
+# ---- F5: an empty `choices` list falls through to the next provider (LLD_next C5) ----------------------------
+def test_empty_choices_falls_through_to_the_next_provider(two):
+    a, b = two
+    a._create = lambda **kw: SimpleNamespace(choices=[], usage=None)
+    a.chat = SimpleNamespace(completions=SimpleNamespace(create=a._create))
+    b.outcomes = ["from two"]
+    assert llm.chat([{"role": "user", "content": "hi"}]) == "from two"
+    assert len(b.calls) == 1

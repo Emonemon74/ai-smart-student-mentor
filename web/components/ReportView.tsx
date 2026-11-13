@@ -1,6 +1,7 @@
 "use client";
 import { useUi } from "@/app/providers";
 import { dayRange, longDate } from "@/lib/dates";
+import { indicatorLabel, indicatorValue, limitationText, nextStepText } from "@/lib/report-i18n";
 import type { Indicator, Report } from "@/lib/types";
 
 const BADGE: Record<Indicator["source"], string> = {
@@ -81,7 +82,7 @@ export function ReportView({ r }: { r: Report }) {
           <ul className="mt-2 space-y-1 text-sm">
             {r.indicators.map((i) => (
               <li key={i.code} className="flex flex-wrap items-center justify-between gap-2">
-                <span>{i.label}: <b>{i.value}</b></span>
+                <span>{indicatorLabel(i.code, i.label, t)}: <b>{indicatorValue(i.value, t)}</b></span>
                 <span className={`rounded-full px-2 py-0.5 text-xs ${BADGE[i.source]}`}>{srcLabel(i.source)}</span>
               </li>
             ))}
@@ -100,7 +101,7 @@ export function ReportView({ r }: { r: Report }) {
         <section className="rounded-2xl border-2 border-emerald-200 bg-white p-4 shadow-sm">
           <h2 className="font-semibold text-emerald-900">{t("next_steps_h")}</h2>
           <ul className="mt-1 space-y-1 text-sm">
-            {r.next_steps.map((s, i) => <li key={i}><b>{t(`ns_${s.code}` as "ns_check")}:</b> {s.text}</li>)}
+            {r.next_steps.map((s, i) => <li key={i}><b>{t(`ns_${s.code}` as "ns_check")}:</b> {nextStepText(s.text, t)}</li>)}
           </ul>
         </section>
       )}
@@ -108,7 +109,7 @@ export function ReportView({ r }: { r: Report }) {
 
       <section className="rounded-2xl bg-white p-4 text-xs text-slate-600 shadow-sm">
         <h2 className="text-sm font-semibold text-slate-800">{t("limitations_h")}</h2>
-        <ul className="mt-1 list-disc space-y-0.5 pl-5">{r.limitations.map((l, i) => <li key={i}>{l}</li>)}</ul>
+        <ul className="mt-1 list-disc space-y-0.5 pl-5">{r.limitations.map((l, i) => <li key={i}>{limitationText(l, t, lang, (iso) => longDate(iso, lang))}</li>)}</ul>
         <p className="mt-2">{r.caveat}</p>
         <p className="mt-1 text-slate-500">{t("data_timestamps")} {d(r.baseline_as_of)}{r.review_imported_at ? ` · ${t("review_data")} ${d(r.review_imported_at)}` : ""}</p>
       </section>

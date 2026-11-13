@@ -27,6 +27,11 @@ function CheckInner() {
   // Subjects and topics that have questions, weakest first (levels are sorted weakest first by the API).
   const options = (p?.subjects ?? []).filter((s) => s.levels.some((l) => l.has_check));
   const topics = options.find((s) => s.code === subject)?.levels.filter((l) => l.has_check) ?? [];
+  // With nothing chosen yet, default to the weakest topic that has questions (LLD_next C12 /check).
+  const defSubject = options[0];
+  const defTopic = defSubject?.levels.find((l) => l.has_check)?.topic ?? "";
+  const subjectValue = subject || defSubject?.code || "";
+  const topicValue = topic || (subject ? "" : defTopic);
 
   if (started && subject && topic) {
     return <ConceptCheck subject={subject} topic={topic} push={router.push} onDone={() => router.push(next)} />;
@@ -39,16 +44,16 @@ function CheckInner() {
       {!p ? <p className="text-slate-500">{t("loading")}</p> : options.length === 0 ? <p>{t("no_check_bank")}</p> : (
         <>
           <label className="block text-sm font-medium">{t("check_choose_subject")}
-            <select value={subject} onChange={(e) => { setSubject(e.target.value); setTopic(""); }} className={field}>
+            <select value={subjectValue} onChange={(e) => { setSubject(e.target.value); setTopic(""); }} className={field}>
               <option value="">-</option>{options.map((s) => <option key={s.code} value={s.code}>{s.name}</option>)}
             </select>
           </label>
           <label className="block text-sm font-medium">{t("check_choose_topic")}
-            <select value={topic} onChange={(e) => setTopic(e.target.value)} className={field} disabled={!subject}>
+            <select value={topicValue} onChange={(e) => setTopic(e.target.value)} className={field} disabled={!subjectValue}>
               <option value="">-</option>{topics.map((l) => <option key={l.topic} value={l.topic}>{l.topic}</option>)}
             </select>
           </label>
-          <button onClick={() => setStarted(true)} disabled={!subject || !topic} className="min-h-14 rounded-xl bg-[#14284b] px-8 text-xl font-semibold text-white disabled:opacity-40">{t("start_check")}</button>
+          <button onClick={() => { setSubject(subjectValue); setTopic(topicValue); setStarted(true); }} disabled={!subjectValue || !topicValue} className="min-h-14 rounded-xl bg-[#14284b] px-8 text-xl font-semibold text-white disabled:opacity-40">{t("start_check")}</button>
         </>
       )}
     </section>

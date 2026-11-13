@@ -48,6 +48,8 @@ def chat(messages: list[dict], *, max_tokens: int = 300, temperature: float = 0.
         start = time.perf_counter()
         try:
             r = _client(p).chat.completions.create(model=p.model, messages=messages, max_tokens=max_tokens, temperature=temperature)
+            if not r.choices:                      # F5: a provider that answers with no choices falls through to the next one
+                raise ValueError("no choices")
             text = (r.choices[0].message.content or "").strip()
             if not text:
                 raise ValueError("empty reply")

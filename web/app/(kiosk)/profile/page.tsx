@@ -135,17 +135,24 @@ export default function ProfilePage() {
       <div className="rounded-2xl bg-white p-4 shadow-sm">
         <h2 className="font-semibold">{t("your_plans")}</h2>
         {plans.length === 0 ? <p className="mt-1 text-sm text-slate-500">-</p> : (
-          <ul className="mt-2 space-y-2">
-            {plans.map((pl) => (
-              <li key={pl.id} className="flex flex-wrap items-center justify-between gap-2 text-sm">
-                <span>{pl.goal_name} · {pl.subject_name} v{pl.version} · {d(pl.review_on)} · {pl.done}/{pl.total}{pl.status === "superseded" && <span className="text-slate-400"> (old)</span>}</span>
-                <span className="flex gap-2">
-                  <Link href={`/roadmap/${pl.id}`} className="min-h-12 rounded-lg border border-slate-300 px-3 py-3">{t("open")}</Link>
-                  <Link href={`/report/${pl.id}`} className="min-h-12 rounded-lg border border-slate-300 px-3 py-3">{t("report")}</Link>
-                </span>
-              </li>
+          <div className="mt-2 space-y-3">
+            {[...new Set(plans.map((pl) => pl.goal_name))].map((goalName) => (
+              <div key={goalName}>
+                <h3 className="text-xs font-semibold uppercase text-slate-500">{goalName}</h3>
+                <ul className="mt-1 space-y-2">
+                  {plans.filter((pl) => pl.goal_name === goalName).map((pl) => (
+                    <li key={pl.id} className="flex flex-wrap items-center justify-between gap-2 text-sm">
+                      <span>{pl.subject_name} v{pl.version} · {d(pl.review_on)} · {pl.done}/{pl.total}{pl.status === "superseded" && <span className="text-slate-400"> (old)</span>}</span>
+                      <span className="flex gap-2">
+                        <Link href={`/roadmap/${pl.id}`} className="min-h-12 rounded-lg border border-slate-300 px-3 py-3">{t("open")}</Link>
+                        <Link href={`/report/${pl.id}`} className="min-h-12 rounded-lg border border-slate-300 px-3 py-3">{t("report")}</Link>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         )}
         {plans.length > 0 && <p className="mt-2 text-sm text-slate-600">{t("total_minutes")}: {plans.filter((pl) => pl.status === "active").reduce((a, pl) => a + pl.daily_minutes, 0)}</p>}
         <button onClick={() => setConfirmDelete(true)} className="mt-3 min-h-12 rounded-lg border border-red-300 px-3 text-sm text-red-800">{t("delete_data")}</button>
