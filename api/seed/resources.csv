@@ -84,13 +84,13 @@ APT,Interview Preparation,Interview preparation (GeeksforGeeks),https://www.geek
 APT,Interview Preparation,DSA tutorial for interviews,https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/,course,intermediate,en,120,placement
 APT,Projects & Resume,Placement papers (IndiaBIX),https://www.indiabix.com/placement-papers/,practice,beginner,en,30,placement
 APT,Projects & Resume,Tree data structure project ideas,https://www.geeksforgeeks.org/dsa/tree-data-structure/,article,intermediate,en,30,placement
-UPSC,Polity,NCERT political science,https://ncert.nic.in/textbook.php?leps1=0-10,article,beginner,en,60,upsc
+UPSC,Polity,Civics and government basics (Khan Academy),https://www.khanacademy.org/humanities/us-government-and-civics,course,beginner,en,120,upsc
 UPSC,Polity,PRS legislative research,https://prsindia.org/billtrack,article,intermediate,en,30,upsc
-UPSC,History,NCERT history (class XII),https://ncert.nic.in/textbook.php?lehi1=0-12,article,beginner,en,60,upsc
-UPSC,History,NCERT history (class XI),https://ncert.nic.in/textbook.php?kehs1=0-9,article,beginner,en,60,upsc
-UPSC,Geography,NCERT geography (class X),https://ncert.nic.in/textbook.php?jess2=0-14,article,foundation,en,60,upsc
-UPSC,Geography,NCERT geography (class XI),https://ncert.nic.in/,article,beginner,en,60,upsc
-UPSC,Economy,NCERT economics textbooks,https://ncert.nic.in/textbook.php?less1=0-10,article,beginner,en,60,upsc
-UPSC,Economy,UPSC exam information,https://upsc.gov.in/,article,beginner,en,20,upsc
-UPSC,Current Affairs,PIB press releases,https://pib.gov.in/allRel.aspx,article,beginner,en,20,upsc
+UPSC,History,World history (Khan Academy),https://www.khanacademy.org/humanities/world-history,course,beginner,en,120,upsc
+UPSC,Geography,World History Project: origins (Khan Academy),https://www.khanacademy.org/humanities/whp-origins,course,beginner,en,120,upsc
+UPSC,Polity,Government and politics (Khan Academy),https://www.khanacademy.org/humanities/government-and-politics,course,foundation,en,90,upsc
+UPSC,Current Affairs,PRS vital statistics on Parliament,https://prsindia.org/parliamenttrack/vital-stats,article,intermediate,en,20,upsc
+UPSC,Economy,Macroeconomics (Khan Academy),https://www.khanacademy.org/economics-finance-domain/macroeconomics,course,beginner,en,120,upsc
+UPSC,Polity,UPSC exam information,https://upsc.gov.in/,article,beginner,en,20,upsc
 UPSC,Current Affairs,PRS policy blog,https://prsindia.org/theprsblog,article,intermediate,en,20,upsc
+UPSC,Economy,Microeconomics (Khan Academy),https://www.khanacademy.org/economics-finance-domain/microeconomics,course,beginner,en,120,upsc

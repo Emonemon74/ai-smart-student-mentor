@@ -476,13 +476,16 @@ def check_links(conn, client=None) -> list[dict]:
     rows = conn.execute("SELECT id, url FROM resources ORDER BY id").fetchall()
     try:
         for r in rows:
-            try:
-                resp = client.head(r["url"])
-                if resp.status_code in (403, 405):
-                    resp = client.get(r["url"])
-                ok = resp.status_code < 400 and config.approved_host(resp.url.host or "")
-            except httpx.HTTPError:
-                ok = False
+            ok = False
+            for _attempt in range(2):   # one retry: a single timeout or reset is not a broken link
+                try:
+                    resp = client.head(r["url"])
+                    if resp.status_code in (403, 405):
+                        resp = client.get(r["url"])
+                    ok = resp.status_code < 400 and config.approved_host(resp.url.host or "")
+                    break
+                except httpx.HTTPError:
+                    ok = False
             conn.execute("UPDATE resources SET link_ok=%s, checked_on=%s WHERE id=%s", (ok, date.today(), r["id"]))
             if not ok:
                 broken.append({"id": r["id"], "url": r["url"]})
