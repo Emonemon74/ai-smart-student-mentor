@@ -2,6 +2,12 @@
 
 Build contract: [docs/HLD.md](docs/HLD.md) and [docs/LLD.md](docs/LLD.md) for the first release, and [docs/HLD_next.md](docs/HLD_next.md) and [docs/LLD_next.md](docs/LLD_next.md) for the next release (v2: goals, concept check, levels, general mode, support path, review check-in). Synthetic data only.
 
+## What it does
+A campus kiosk (a browser in kiosk mode) that turns verified academic records and a short conversation into a time-bound study plan the student carries home on a phone.
+- **First release:** sign in, consent, rule-based diagnosis with evidence counts, an English or Hindi mentor (text and voice), a plan with approved resources, a single-use QR to the phone, a progress report that keeps verified marks apart from the student's own ticks, and a staff dashboard.
+- **Version 2:** six goals (semester, backlog, GATE, UPSC, placement, higher studies), a five-question concept check that gives a provisional level per topic, level and language aware resources with a link checker, five more diagnostic flags (backlog, theory-versus-practical, prerequisite, targeted, low evidence), a general mode for students who decline records, a support path with a private counsellor referral, a review check-in, and admin and counsellor staff roles.
+- **Rules that never change:** the AI never decides marks, flags or levels (rules do); no names or roll numbers are sent to AI providers; no camera, no face or emotion inference, no IQ or mental-health labels.
+
 ## Prerequisites
 Docker (running), [uv](https://docs.astral.sh/uv/), Node.js 20+ with npm, and optionally `cloudflared` for the phone hand-off (`brew install cloudflared`). Without it the phone link falls back to `PUBLIC_BASE_URL` (LAN or hotspot). You need at least one LLM key: a free Groq key is enough, and a second provider (for example Gemini) is used automatically if the first is rate limited.
 
@@ -22,9 +28,6 @@ If something already uses port 8000 on your machine, add `API_PORT=8010` to `api
 google-chrome --kiosk --user-data-dir=$HOME/.emon-kiosk http://localhost:3000
 ```
 On macOS use `open -na "Google Chrome" --args --kiosk --user-data-dir=$HOME/.emon-kiosk http://localhost:3000`, or simply open http://localhost:3000 in a normal Chrome window. Allow the microphone once for `localhost:3000`.
-
-Demo sequence: import baseline, run the student journey, scan the QR on a phone, then
-`cd api && uv run python -m app.connector import seed --batch review` and open the report.
 
 ## Demo script (about 4 minutes, v2)
 1. `./scripts/reset.sh` once after pulling v2 (the schema changed; it recreates the demo database with dated data), then `./scripts/dev.sh` and open the kiosk. Before a demo run `cd api && uv run python -m app.connector check-links`.
@@ -47,9 +50,11 @@ Hindi: switch with the language button (UI strings and mentor replies).  Wellbei
 Postgres is mapped to host port **5433** and the API defaults to port 8000 (set `API_PORT=8010` in `api/.env` if 8000 is busy).
 
 ## Tests
-`cd api && uv run pytest`   (200+ tests; uses database `emon_test`, which is recreated from the schema on every run; the LLM is never called; includes the v1 and v2 demo journeys, each run twice)
+`cd api && uv run pytest`   (204 tests; uses database `emon_test`, which is recreated from the schema on every run; the LLM is never called; includes the v1 and v2 demo journeys, each run twice)
 
 ## Reset
+After pulling v2 run `./scripts/reset.sh` once: the schema changed, so it recreates the demo database and regenerates the dated synthetic data. To only clear a finished demo run, use the command below.
+
 Clear sessions, plans, concept checks, reviews, requests, feedback and the audit log, and remove the imported review marks so the "review day" step works live again. The 30 students, baseline marks and resources are kept:
 ```bash
 docker compose exec postgres psql -U emon -c "TRUNCATE sessions, roadmaps, tasks, share_tokens, requests, feedback, audit_log, diagnostics, reviews RESTART IDENTITY CASCADE; DELETE FROM assessments WHERE batch='review'; DELETE FROM attendance WHERE batch='review'; DELETE FROM backlogs WHERE batch='review'; DELETE FROM imports WHERE batch='review';"
