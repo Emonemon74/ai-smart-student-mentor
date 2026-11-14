@@ -50,7 +50,7 @@ Hindi: switch with the language button (UI strings and mentor replies).  Wellbei
 Postgres is mapped to host port **5433** and the API defaults to port 8000 (set `API_PORT=8010` in `api/.env` if 8000 is busy).
 
 ## Tests
-`cd api && uv run pytest`   (204 tests; uses database `emon_test`, which is recreated from the schema on every run; the LLM is never called; includes the v1 and v2 demo journeys, each run twice)
+`cd api && uv run pytest`   (206 tests; uses database `emon_test`, which is recreated from the schema on every run; the LLM is never called; includes the v1 and v2 demo journeys, each run twice)
 
 ## Reset
 After pulling v2 run `./scripts/reset.sh` once: the schema changed, so it recreates the demo database and regenerates the dated synthetic data. To only clear a finished demo run, use the command below.
